@@ -189,6 +189,11 @@ describe('play reducer', () => {
     expect(ticked.elapsedMs).toBe(s.elapsedMs);
   });
 
+  it('tick ignores NaN and negative ms', () => {
+    const s = run(p, initialPlayState(p), { type: 'tick', ms: 100 });
+    for (const ms of [NaN, Infinity, -5]) expect(run(p, s, { type: 'tick', ms }).elapsedMs).toBe(100);
+  });
+
   it('reset keeps puzzleId and clears progress', () => {
     const p = basic();
     const s = run(p, typeAll(p, initialPlayState(p), 'ga'), { type: 'tick', ms: 100 }, { type: 'reset' });

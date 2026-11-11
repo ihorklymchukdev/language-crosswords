@@ -4,6 +4,7 @@ import { getEntries } from '../src/catalogue/catalogue';
 import { addDays } from '../src/daily/dates';
 import { dailySeed, generateDailyLayout } from '../src/daily/daily-layout';
 import type { DailySchedule } from '../src/daily/daily';
+import { checkLayout } from '../src/generator/grid-check';
 import { LEVELS } from '../src/domain/levels';
 
 const ANTI_REPEAT_DAYS = 7;
@@ -27,18 +28,24 @@ for (const level of LEVELS) {
     ? (JSON.parse(readFileSync(file, 'utf8')) as DailySchedule)
     : { version: 1, days: {} };
   const candidates = getEntries(level);
+  const words = new Map(candidates.map((e) => [e.id, e.word]));
+  const existing = Object.keys(schedule.days);
+  // Only extend past the last scheduled date; interior gaps are failed days and stay empty.
+  const last = existing.length > 0 ? existing.reduce((a, b) => (a > b ? a : b)) : undefined;
   let added = 0;
   const failed: string[] = [];
 
   for (let i = 0; i < days; i++) {
     const date = addDays(from, i);
-    if (schedule.days[date]) continue;
+    if (last !== undefined && date <= last) continue;
     const exclude = new Set<string>();
     for (let k = 1; k <= ANTI_REPEAT_DAYS; k++) {
       for (const p of schedule.days[addDays(date, -k)]?.placements ?? []) exclude.add(p.entryId);
     }
     const layout = generateDailyLayout(dailySeed(date, level), candidates, exclude);
-    if (layout) {
+    const problems = layout ? checkLayout(layout.placements, words, layout.rows, layout.cols) : [];
+    if (layout && problems.length > 0) console.error(`${level} ${date}: ${problems.join('; ')}`);
+    if (layout && problems.length === 0) {
       schedule.days[date] = layout;
       added++;
     } else {

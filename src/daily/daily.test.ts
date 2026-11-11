@@ -20,9 +20,11 @@ describe('daily specs', () => {
   const candidates = fixtureEntries(300);
 
   it('getDailySpec is identical across calls', () => {
-    const a = getDailySpec('2031-05-05', 'A2');
-    const b = getDailySpec('2031-05-05', 'A2');
-    expect(b).toEqual(a);
+    const empty: DailySchedule = { version: 1, days: {} };
+    const a = dailySpecFrom(empty, '2031-05-05', 'A2', candidates);
+    expect(a).toBeDefined();
+    expect(dailySpecFrom(empty, '2031-05-05', 'A2', candidates)).toEqual(a);
+    expect(() => getDailySpec('2031-05-05', 'A2')).not.toThrow();
   });
 
   it('serves the scheduled layout with the daily id', () => {

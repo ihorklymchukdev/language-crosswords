@@ -31,6 +31,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   const writeChain = useRef<Promise<void>>(Promise.resolve());
   const loaded = useRef(false);
   const writable = useRef(false);
+  const replaying = useRef(false);
   const queued = useRef<((s: StoredState) => StoredState)[]>([]);
 
   const flush = useCallback(() => {
@@ -62,7 +63,9 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       loaded.current = true;
       writable.current = r.writable;
       // Updates made before the load finished are replayed in order onto the stored state.
+      replaying.current = true;
       latest.current = queued.current.reduce((acc, fn) => fn(acc), r.state);
+      replaying.current = false;
       const hadQueued = queued.current.length > 0;
       queued.current = [];
       setState(latest.current);
@@ -85,7 +88,12 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   }, [flush]);
 
   const savePlay = useCallback<ProgressApi['savePlay']>(
-    (id, play) => update((s) => ({ ...s, plays: { ...withoutKey(s.plays, id), [id]: play } })),
+    (id, play) =>
+      update((s) => {
+        // A pre-load save is a fresh blank play; it must not clobber saved progress.
+        if (replaying.current && s.plays[id] !== undefined) return s;
+        return { ...s, plays: { ...withoutKey(s.plays, id), [id]: play } };
+      }),
     [update],
   );
 
@@ -118,6 +126,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   return <ProgressContext.Provider value={value}>{children}</ProgressContext.Provider>;
 }
 
+// Screens must wait for `ready` before reading or saving plays.
 export function useProgress(): ProgressApi {
   const ctx = useContext(ProgressContext);
   if (!ctx) throw new Error('useProgress must be used inside ProgressProvider');

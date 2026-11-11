@@ -183,7 +183,7 @@ export function playReducer(p: Puzzle, s: PlayState, a: PlayAction): PlayState {
     case 'nextSlot':
       return nextSlot(p, s, a.delta);
     case 'tick':
-      return s.completedAt !== undefined ? s : { ...s, elapsedMs: s.elapsedMs + a.ms };
+      return s.completedAt !== undefined || !Number.isFinite(a.ms) || a.ms < 0 ? s : { ...s, elapsedMs: s.elapsedMs + a.ms };
     case 'reset':
       return { ...initialPlayState(p), puzzleId: s.puzzleId };
   }
