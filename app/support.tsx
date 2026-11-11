@@ -13,7 +13,7 @@ export default function SupportScreen() {
 
       <H2>Where is my progress saved?</H2>
       <P>
-        On your device only. Your puzzles, streak and settings are kept in the app's storage (or your browser's local
+        On your device only. Your puzzle progress and streak are kept in the app's storage (or your browser's local
         storage on the web). Uninstalling the app or clearing the site's data removes them.
       </P>
 

@@ -4,6 +4,7 @@ import { LEVELS, type Level } from '../domain/levels';
 import type { DailyCompletion, StoredPlay } from '../progress/storage';
 
 export const MISSED_DAYS = 3;
+export const MISSED_MAX_ROWS = 3;
 
 export type DailyStatus = 'not-started' | 'in-progress' | 'solved';
 
@@ -40,22 +41,38 @@ export function todaysDailies(
   }));
 }
 
-// Newest date first; within a date, level order.
+// Earliest local date the learner did anything with a daily: a completion or a stored daily play.
+export function firstActivityDate(
+  completions: readonly DailyCompletion[],
+  plays: Readonly<Record<string, StoredPlay>>,
+): string | undefined {
+  const dates = [
+    ...completions.map((c) => c.completedOn),
+    ...Object.values(plays).flatMap((p) => (p.spec.kind === 'daily' && p.spec.date ? [p.spec.date] : [])),
+  ];
+  return dates.length === 0 ? undefined : dates.reduce((a, b) => (a < b ? a : b));
+}
+
+// Newest first, within a date in level order. Days before the learner's first activity aren't
+// "missed": a new user has nothing to catch up on.
 export function missedDailies(
   today: string,
   completions: readonly DailyCompletion[],
   plays: Readonly<Record<string, StoredPlay>>,
   hasSpec: HasSpec,
 ): DailyRef[] {
+  const first = firstActivityDate(completions, plays);
+  if (first === undefined) return [];
   const out: DailyRef[] = [];
   for (let i = 1; i <= MISSED_DAYS; i++) {
     const date = addDays(today, -i);
+    if (date < first) break;
     for (const level of LEVELS) {
       if (!hasSpec(date, level) || isCompleted(completions, date, level)) continue;
       out.push({ date, level, status: dailyStatus(completions, plays, date, level) });
     }
   }
-  return out;
+  return out.slice(0, MISSED_MAX_ROWS);
 }
 
 export function streakLine(streak: number, solvedToday: boolean): string {

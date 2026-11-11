@@ -31,7 +31,7 @@ export default function AboutScreen() {
       <View style={styles.section}>
         <SectionLabel>More</SectionLabel>
         <Card>
-          <LinkRow first label="Privacy policy" detail="No data collected" onPress={() => router.push('/privacy')} />
+          <LinkRow first label="Privacy Policy" detail="No data collected" onPress={() => router.push('/privacy')} />
           <LinkRow label="Support" detail="Questions and feedback" onPress={() => router.push('/support')} />
         </Card>
       </View>

@@ -1,19 +1,9 @@
-import { Head } from 'expo-router/head';
 import type { ReactNode } from 'react';
 import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { APP_NAME } from './app-info';
+import { DocumentTitle } from './DocumentTitle';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Header } from './ScreenFrame';
 import { MAX_CONTENT_WIDTH, MIN_TOUCH, radius, space, usePalette } from './theme';
-
-// Browser tab title on web; store reviewers open the policy pages as standalone URLs.
-function DocumentTitle({ title }: { title: string }) {
-  return (
-    <Head>
-      <title>{`${title} · ${APP_NAME}`}</title>
-    </Head>
-  );
-}
 
 // Unlike ScreenFrame, the scroll view spans the window so on desktop the scrollbar sits at the
 // window edge and the wheel works over the side margins; only the content is centred.

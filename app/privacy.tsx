@@ -5,7 +5,7 @@ const GITHUB_PRIVACY = 'https://docs.github.com/en/site-policy/privacy-policies/
 
 export default function PrivacyScreen() {
   return (
-    <TextPage title="Privacy policy">
+    <TextPage title="Privacy Policy">
       <P muted>Last updated: 11 November 2026</P>
       <P>
         {APP_NAME} is a Spanish crossword app. It collects no personal data. There is no account and nothing to sign up
@@ -23,7 +23,7 @@ export default function PrivacyScreen() {
 
       <H2>What stays on your device</H2>
       <P>
-        Your puzzle progress, streak and settings are stored only on your device (AsyncStorage in the app, local storage
+        Your puzzle progress and streak are stored only on your device (AsyncStorage in the app, local storage
         in your browser on the web). They never leave it. They are deleted when you uninstall the app or clear the
         site's data in your browser.
       </P>

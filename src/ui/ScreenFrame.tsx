@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import type { ReactNode } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { DocumentTitle } from './DocumentTitle';
 import { MAX_CONTENT_WIDTH, MIN_TOUCH, radius, space, usePalette, type Palette } from './theme';
 
 // Deep links on web open with no history to go back to.
@@ -40,6 +41,7 @@ export function ScreenFrame({ children, padBottom = true }: FrameProps) {
   const insets = useSafeAreaInsets();
   return (
     <View style={[styles.screen, { backgroundColor: palette.bg, paddingTop: insets.top }]}>
+      <DocumentTitle />
       <View style={[styles.column, { paddingBottom: padBottom ? insets.bottom : 0 }]}>{children}</View>
     </View>
   );

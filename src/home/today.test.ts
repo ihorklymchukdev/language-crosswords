@@ -48,35 +48,47 @@ describe('todaysDailies', () => {
 });
 
 describe('missedDailies', () => {
-  it('lists the previous 3 days newest first, crossing a month boundary', () => {
-    const refs = missedDailies(TODAY, [], {}, (_d, level) => level === 'A2');
+  // Activity well before the 3-day window, so every window date is eligible.
+  const veteran = [done('2026-10-01', 'A2')];
+  const key = (r: { date: string; level: Level }) => `${r.date} ${r.level}`;
+
+  it('fresh install has no missed dailies', () => {
+    expect(missedDailies(TODAY, [], {}, always)).toEqual([]);
+  });
+
+  it('missed only after first activity', () => {
+    const firstOpened = play('2026-10-30', 'B2', [null]);
+    const refs = missedDailies(TODAY, [], firstOpened, (_d, level) => level === 'A2');
+    expect(refs.map((r) => r.date)).toEqual(['2026-10-31', '2026-10-30']);
+  });
+
+  it('counts a completion by the day it was done, not the puzzle date', () => {
+    expect(missedDailies(TODAY, [done('2026-10-29', 'A2', TODAY)], {}, always)).toEqual([]);
+  });
+
+  it('caps at 3 rows, most recent first', () => {
+    const refs = missedDailies(TODAY, veteran, {}, always);
+    expect(refs.map(key)).toEqual(['2026-10-31 A2', '2026-10-31 B1', '2026-10-31 B2']);
+  });
+
+  it('looks back 3 days only, crossing a month boundary', () => {
+    const refs = missedDailies(TODAY, veteran, {}, (date, level) => level === 'A2' || date === '2026-10-28');
     expect(refs.map((r) => r.date)).toEqual(['2026-10-31', '2026-10-30', '2026-10-29']);
   });
 
-  it('never includes today or the 4th day back', () => {
-    const dates = new Set(missedDailies(TODAY, [], {}, always).map((r) => r.date));
-    expect(dates.has(TODAY)).toBe(false);
-    expect(dates.has('2026-10-28')).toBe(false);
-  });
-
   it('drops completed dailies, including ones caught up later', () => {
-    const c = [done('2026-10-31', 'A2'), done('2026-10-30', 'B2', TODAY)];
-    const refs = missedDailies(TODAY, c, {}, always).map((r) => `${r.date} ${r.level}`);
-    expect(refs).not.toContain('2026-10-31 A2');
-    expect(refs).not.toContain('2026-10-30 B2');
-    expect(refs).toContain('2026-10-31 B1');
-    expect(refs).toHaveLength(7);
+    const c = [...veteran, done('2026-10-31', 'A2'), done('2026-10-31', 'B2', TODAY)];
+    expect(missedDailies(TODAY, c, {}, always).map(key)).toEqual(['2026-10-31 B1', '2026-10-30 A2', '2026-10-30 B1']);
   });
 
   it('skips dates with no puzzle at that level', () => {
-    const refs = missedDailies(TODAY, [], {}, (date, level) => !(date === '2026-10-30' && level === 'B1'));
-    expect(refs.map((r) => `${r.date} ${r.level}`)).not.toContain('2026-10-30 B1');
-    expect(refs).toHaveLength(8);
+    const refs = missedDailies(TODAY, veteran, {}, (date, level) => !(date === '2026-10-31' && level === 'B1'));
+    expect(refs.map(key)).toEqual(['2026-10-31 A2', '2026-10-31 B2', '2026-10-30 A2']);
   });
 
   it('marks a missed daily that was started as in progress', () => {
-    const refs = missedDailies(TODAY, [], play('2026-10-30', 'B1', ['c']), always);
-    expect(refs.find((r) => r.date === '2026-10-30' && r.level === 'B1')?.status).toBe('in-progress');
+    const refs = missedDailies(TODAY, veteran, play('2026-10-31', 'B1', ['c']), always);
+    expect(refs.find((r) => r.level === 'B1')?.status).toBe('in-progress');
   });
 });
 
