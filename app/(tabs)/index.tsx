@@ -87,6 +87,7 @@ export default function TodayScreen() {
               <Pressable
                 onPress={() => openPractice({ level: unfinished.spec.level, id: unfinished.spec.id })}
                 accessibilityRole="button"
+                accessibilityLabel={`Continue ${[unfinished.spec.level, unfinishedTheme].filter(Boolean).join(' ')} crossword, ${formatTime(unfinished.elapsedMs)}`}
                 style={({ pressed }) => [styles.bigButton, { backgroundColor: palette.accent }, pressed && styles.dimmed]}
               >
                 <Text style={[styles.bigButtonText, { color: palette.accentText }]}>Continue</Text>

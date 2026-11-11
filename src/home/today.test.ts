@@ -101,11 +101,16 @@ describe('latestUnfinishedPractice', () => {
 
   it('picks the most recently saved unfinished practice, skipping solved ones and dailies', () => {
     const plays = { ...practice('old'), ...practice('newer'), ...practice('solved', 1000), ...play(TODAY, 'A2', ['a']) };
-    expect(latestUnfinishedPractice(plays)?.spec.id).toBe('newer');
+    expect(latestUnfinishedPractice(plays, always)?.spec.id).toBe('newer');
   });
 
   it('has nothing to continue when every practice is solved', () => {
-    expect(latestUnfinishedPractice({ ...practice('solved', 1000), ...play(TODAY, 'A2', ['a']) })).toBeUndefined();
+    expect(latestUnfinishedPractice({ ...practice('solved', 1000), ...play(TODAY, 'A2', ['a']) }, always)).toBeUndefined();
+  });
+
+  it('skips a newer practice whose words no longer resolve', () => {
+    const plays = { ...practice('older'), ...practice('broken') };
+    expect(latestUnfinishedPractice(plays, (spec) => spec.id !== 'broken')?.spec.id).toBe('older');
   });
 });
 
