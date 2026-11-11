@@ -151,6 +151,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-agrio",
+    "language": "es",
+    "word": "agrio",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "De gusto ácido, como el limón",
+    "clueEn": "With an acidic taste, like lemon",
+    "translationEn": "sour",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-aguacate",
     "language": "es",
     "word": "aguacate",
@@ -193,6 +208,21 @@
     "clue": "Guardar dinero para no gastarlo ahora",
     "clueEn": "Keep money so as not to spend it now",
     "translationEn": "to save",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ala",
+    "language": "es",
+    "word": "ala",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Parte del cuerpo con la que vuela un pájaro",
+    "clueEn": "Body part a bird flies with",
+    "translationEn": "wing",
     "status": "auto-only"
   },
   {
@@ -526,6 +556,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-aro",
+    "language": "es",
+    "word": "aro",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Círculo de metal por el que pasa la pelota en baloncesto",
+    "clueEn": "Metal circle the ball goes through in basketball",
+    "translationEn": "hoop",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-arrecife",
     "language": "es",
     "word": "arrecife",
@@ -571,6 +616,36 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-asa",
+    "language": "es",
+    "word": "asa",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Parte de una taza por donde se agarra",
+    "clueEn": "Part of a cup you hold it by",
+    "translationEn": "handle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-asar",
+    "language": "es",
+    "word": "asar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Cocinar carne al fuego o en el horno",
+    "clueEn": "To cook meat over fire or in the oven",
+    "translationEn": "to roast",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-asistir",
     "language": "es",
     "word": "asistir",
@@ -613,6 +688,21 @@
     "clue": "Que siente miedo por algo que ha visto u oído",
     "clueEn": "Feeling fear because of something seen or heard",
     "translationEn": "frightened",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-atar",
+    "language": "es",
+    "word": "atar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Unir con una cuerda o con un nudo",
+    "clueEn": "To join with a rope or a knot",
+    "translationEn": "to tie",
     "status": "auto-only"
   },
   {
@@ -688,6 +778,21 @@
     "clue": "Autobús cómodo para viajes largos entre ciudades (España)",
     "clueEn": "Comfortable bus for long trips between cities (Spain)",
     "translationEn": "coach",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ave",
+    "language": "es",
+    "word": "ave",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal con plumas y pico, como la paloma",
+    "clueEn": "Animal with feathers and a beak, like the pigeon",
+    "translationEn": "bird",
     "status": "auto-only"
   },
   {
@@ -838,6 +943,22 @@
     "clue": "Limpiar el suelo con una escoba",
     "clueEn": "To clean the floor with a broom",
     "translationEn": "to sweep",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-barro",
+    "language": "es",
+    "word": "barro",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature",
+      "weather"
+    ],
+    "clue": "Mezcla de tierra y agua que se forma cuando llueve",
+    "clueEn": "Mix of earth and water that forms when it rains",
+    "translationEn": "mud",
     "status": "auto-only"
   },
   {
@@ -1186,6 +1307,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-cabra",
+    "language": "es",
+    "word": "cabra",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal con cuernos que da leche para hacer queso",
+    "clueEn": "Animal with horns that gives milk for making cheese",
+    "translationEn": "goat",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-cacahuete",
     "language": "es",
     "word": "cacahuete",
@@ -1259,6 +1395,21 @@
     "clue": "Sustancia estimulante que te mantiene despierto",
     "clueEn": "Stimulant substance that keeps you awake",
     "translationEn": "caffeine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-cajón",
+    "language": "es",
+    "word": "cajón",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Parte de un mueble que se abre tirando hacia fuera",
+    "clueEn": "Part of a piece of furniture that opens by pulling outward",
+    "translationEn": "drawer",
     "status": "auto-only"
   },
   {
@@ -1892,6 +2043,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-ciego",
+    "language": "es",
+    "word": "ciego",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Que no puede ver",
+    "clueEn": "Who can't see",
+    "translationEn": "blind",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-ciervo",
     "language": "es",
     "word": "ciervo",
@@ -2069,6 +2235,21 @@
     "clue": "Almohadón blando que se pone en el sofá",
     "clueEn": "Soft pillow placed on the sofa",
     "translationEn": "cushion",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-col",
+    "language": "es",
+    "word": "col",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Verdura de hojas verdes, grande y redonda",
+    "clueEn": "Vegetable with green leaves, big and round",
+    "translationEn": "cabbage",
     "status": "auto-only"
   },
   {
@@ -2252,6 +2433,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-coser",
+    "language": "es",
+    "word": "coser",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Unir telas con aguja e hilo",
+    "clueEn": "To join fabric with needle and thread",
+    "translationEn": "to sew",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-crianza",
     "language": "es",
     "word": "crianza",
@@ -2354,6 +2550,21 @@
     "clue": "Cama pequeña con barras donde duerme un bebé",
     "clueEn": "Small bed with bars where a baby sleeps",
     "translationEn": "crib",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-cura",
+    "language": "es",
+    "word": "cura",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Tratamiento que hace que un enfermo se recupere",
+    "clueEn": "Treatment that makes a sick person recover",
+    "translationEn": "cure",
     "status": "auto-only"
   },
   {
@@ -2523,6 +2734,22 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-deuda",
+    "language": "es",
+    "word": "deuda",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "work"
+    ],
+    "clue": "Dinero que tienes que devolver a alguien",
+    "clueEn": "Money you have to pay back to someone",
+    "translationEn": "debt",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-dictado",
     "language": "es",
     "word": "dictado",
@@ -2643,6 +2870,37 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-don",
+    "language": "es",
+    "word": "don",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Talento natural: tiene un ___ para la música",
+    "clueEn": "Natural talent: she has a ___ for music",
+    "translationEn": "gift",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-duda",
+    "language": "es",
+    "word": "duda",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions",
+      "school"
+    ],
+    "clue": "Lo que tienes cuando no estás seguro de algo",
+    "clueEn": "What you have when you are not sure about something",
+    "translationEn": "doubt",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-duna",
     "language": "es",
     "word": "duna",
@@ -2673,6 +2931,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-duro",
+    "language": "es",
+    "word": "duro",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Difícil de romper o de cortar, como la piedra",
+    "clueEn": "Hard to break or cut, like stone",
+    "translationEn": "hard",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-débil",
     "language": "es",
     "word": "débil",
@@ -2700,6 +2973,36 @@
     "clue": "Periodo de diez años",
     "clueEn": "Period of ten years",
     "translationEn": "decade",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-eco",
+    "language": "es",
+    "word": "eco",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Sonido que se repite al gritar en una montaña",
+    "clueEn": "Sound that repeats when you shout on a mountain",
+    "translationEn": "echo",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-eje",
+    "language": "es",
+    "word": "eje",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Barra alrededor de la cual gira una rueda",
+    "clueEn": "Bar around which a wheel turns",
+    "translationEn": "axle",
     "status": "auto-only"
   },
   {
@@ -3258,6 +3561,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-falso",
+    "language": "es",
+    "word": "falso",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que no es verdad",
+    "clueEn": "That isn't true",
+    "translationEn": "false",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-faltar",
     "language": "es",
     "word": "faltar",
@@ -3270,6 +3588,22 @@
     "clue": "No ir a clase cuando deberías estar",
     "clueEn": "To not go to class when you should be there",
     "translationEn": "to be absent",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-faro",
+    "language": "es",
+    "word": "faro",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "travel",
+      "city"
+    ],
+    "clue": "Torre en la costa con una luz para los barcos",
+    "clueEn": "Tower on the coast with a light for ships",
+    "translationEn": "lighthouse",
     "status": "auto-only"
   },
   {
@@ -3303,6 +3637,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-fiel",
+    "language": "es",
+    "word": "fiel",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que siempre se queda al lado de alguien, como un buen perro",
+    "clueEn": "Who always stays by someone's side, like a good dog",
+    "translationEn": "faithful",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-filete",
     "language": "es",
     "word": "filete",
@@ -3315,6 +3664,21 @@
     "clue": "Trozo plano de carne o pescado para hacer a la plancha",
     "clueEn": "Flat piece of meat or fish for grilling",
     "translationEn": "fillet",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-firma",
+    "language": "es",
+    "word": "firma",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Nombre escrito a mano al final de un documento",
+    "clueEn": "Name written by hand at the end of a document",
+    "translationEn": "signature",
     "status": "auto-only"
   },
   {
@@ -3618,6 +3982,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-girar",
+    "language": "es",
+    "word": "girar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Dar vueltas alrededor de un punto",
+    "clueEn": "To go around a point",
+    "translationEn": "to turn",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-glacial",
     "language": "es",
     "word": "glacial",
@@ -3735,6 +4114,21 @@
     "clue": "Sentimiento de quien da las gracias de corazón",
     "clueEn": "Feeling of one who gives heartfelt thanks",
     "translationEn": "gratitude",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-grave",
+    "language": "es",
+    "word": "grave",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Muy serio o peligroso: una enfermedad ___",
+    "clueEn": "Very serious or dangerous: a ___ illness",
+    "translationEn": "serious",
     "status": "auto-only"
   },
   {
@@ -4023,6 +4417,51 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-huir",
+    "language": "es",
+    "word": "huir",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Escapar rápido de un peligro",
+    "clueEn": "To escape quickly from danger",
+    "translationEn": "to flee",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-humo",
+    "language": "es",
+    "word": "humo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Nube gris que sale cuando algo se quema",
+    "clueEn": "Gray cloud that comes out when something burns",
+    "translationEn": "smoke",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-humor",
+    "language": "es",
+    "word": "humor",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Capacidad de hacer reír o de ver lo gracioso",
+    "clueEn": "Ability to make people laugh or see what is funny",
+    "translationEn": "humor",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-huracán",
     "language": "es",
     "word": "huracán",
@@ -4279,6 +4718,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-ira",
+    "language": "es",
+    "word": "ira",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Enfado muy fuerte y repentino",
+    "clueEn": "Very strong, sudden anger",
+    "translationEn": "rage",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-jabalí",
     "language": "es",
     "word": "jabalí",
@@ -4414,6 +4868,22 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-lata",
+    "language": "es",
+    "word": "lata",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "drinks"
+    ],
+    "clue": "Envase de metal para bebidas o conservas",
+    "clueEn": "Metal container for drinks or preserves",
+    "translationEn": "can",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-lavabo",
     "language": "es",
     "word": "lavabo",
@@ -4441,6 +4911,21 @@
     "clue": "Electrodoméstico que limpia la ropa sucia con agua",
     "clueEn": "Appliance that cleans dirty clothes with water",
     "translationEn": "washing machine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-leal",
+    "language": "es",
+    "word": "leal",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que no traiciona a sus amigos",
+    "clueEn": "Who doesn't betray their friends",
+    "translationEn": "loyal",
     "status": "auto-only"
   },
   {
@@ -4519,6 +5004,36 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-leve",
+    "language": "es",
+    "word": "leve",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Poco grave o poco importante: un error ___",
+    "clueEn": "Not serious or not important: a ___ mistake",
+    "translationEn": "slight",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ley",
+    "language": "es",
+    "word": "ley",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Norma oficial que todos deben cumplir en un país",
+    "clueEn": "Official rule that everyone must follow in a country",
+    "translationEn": "law",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-licuado",
     "language": "es",
     "word": "licuado",
@@ -4594,6 +5109,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-lujo",
+    "language": "es",
+    "word": "lujo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Algo caro que no es necesario, como un yate",
+    "clueEn": "Something expensive that isn't necessary, like a yacht",
+    "translationEn": "luxury",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-lunar",
     "language": "es",
     "word": "lunar",
@@ -4636,6 +5166,21 @@
     "clue": "Gota que cae del ojo cuando lloras",
     "clueEn": "Drop that falls from the eye when you cry",
     "translationEn": "tear",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-lío",
+    "language": "es",
+    "word": "lío",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Situación confusa y desordenada; un problema",
+    "clueEn": "Confusing, messy situation; a problem",
+    "translationEn": "mess",
     "status": "auto-only"
   },
   {
@@ -4759,6 +5304,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-marca",
+    "language": "es",
+    "word": "marca",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Nombre de una empresa que aparece en sus productos",
+    "clueEn": "Name of a company that appears on its products",
+    "translationEn": "brand",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-medalla",
     "language": "es",
     "word": "medalla",
@@ -4786,6 +5346,21 @@
     "clue": "Prenda fina y ajustada que cubre las piernas de una mujer",
     "clueEn": "Thin, tight garment covering a woman's legs",
     "translationEn": "tights",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-medir",
+    "language": "es",
+    "word": "medir",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Calcular el tamaño de algo con una regla",
+    "clueEn": "To calculate the size of something with a ruler",
+    "translationEn": "to measure",
     "status": "auto-only"
   },
   {
@@ -4954,6 +5529,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-meta",
+    "language": "es",
+    "word": "meta",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Línea final de una carrera",
+    "clueEn": "Final line of a race",
+    "translationEn": "finish line",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-micrófono",
     "language": "es",
     "word": "micrófono",
@@ -4966,6 +5556,21 @@
     "clue": "Aparato que recoge la voz para grabarla o amplificarla",
     "clueEn": "Device that picks up the voice to record or amplify it",
     "translationEn": "microphone",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-miel",
+    "language": "es",
+    "word": "miel",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Producto dulce y dorado que hacen las abejas",
+    "clueEn": "Sweet golden product that bees make",
+    "translationEn": "honey",
     "status": "auto-only"
   },
   {
@@ -5089,6 +5694,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-mudo",
+    "language": "es",
+    "word": "mudo",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Que no puede hablar",
+    "clueEn": "Who can't speak",
+    "translationEn": "mute",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-muela",
     "language": "es",
     "word": "muela",
@@ -5131,6 +5751,21 @@
     "clue": "Pared gruesa que protegía las antiguas ciudades",
     "clueEn": "Thick wall that protected ancient cities",
     "translationEn": "city wall",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-muro",
+    "language": "es",
+    "word": "muro",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Pared gruesa y alta, a veces alrededor de un jardín",
+    "clueEn": "Thick, tall wall, sometimes around a garden",
+    "translationEn": "wall",
     "status": "auto-only"
   },
   {
@@ -5224,6 +5859,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-nido",
+    "language": "es",
+    "word": "nido",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Casa que hacen los pájaros con ramitas",
+    "clueEn": "Home that birds make with twigs",
+    "translationEn": "nest",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-nostalgia",
     "language": "es",
     "word": "nostalgia",
@@ -5269,6 +5919,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-nuez",
+    "language": "es",
+    "word": "nuez",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruto seco de cáscara dura con forma de cerebro",
+    "clueEn": "Nut with a hard shell shaped like a brain",
+    "translationEn": "walnut",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-náusea",
     "language": "es",
     "word": "náusea",
@@ -5284,6 +5949,36 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-obra",
+    "language": "es",
+    "word": "obra",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Creación de un artista: una ___ de teatro",
+    "clueEn": "Creation by an artist: a theater ___",
+    "translationEn": "work",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ocio",
+    "language": "es",
+    "word": "ocio",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Tiempo libre para descansar o divertirse",
+    "clueEn": "Free time to rest or have fun",
+    "translationEn": "leisure",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-oficio",
     "language": "es",
     "word": "oficio",
@@ -5296,6 +5991,53 @@
     "clue": "Trabajo manual, como el de carpintero o albañil",
     "clueEn": "Manual work, like that of a carpenter or bricklayer",
     "translationEn": "trade",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-oler",
+    "language": "es",
+    "word": "oler",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs",
+      "body"
+    ],
+    "clue": "Percibir algo con la nariz",
+    "clueEn": "To perceive something with the nose",
+    "translationEn": "to smell",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-olla",
+    "language": "es",
+    "word": "olla",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "house",
+      "food"
+    ],
+    "clue": "Recipiente hondo para cocinar sopas y guisos",
+    "clueEn": "Deep container for cooking soups and stews",
+    "translationEn": "pot",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-olor",
+    "language": "es",
+    "word": "olor",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Lo que percibimos con la nariz, como el de las flores",
+    "clueEn": "What we perceive with the nose, like that of flowers",
+    "translationEn": "smell",
     "status": "auto-only"
   },
   {
@@ -5344,6 +6086,36 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-oro",
+    "language": "es",
+    "word": "oro",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Metal amarillo y valioso de muchas joyas",
+    "clueEn": "Yellow, valuable metal of many jewels",
+    "translationEn": "gold",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-oído",
+    "language": "es",
+    "word": "oído",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Sentido que nos permite escuchar",
+    "clueEn": "Sense that lets us hear",
+    "translationEn": "hearing",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-padrino",
     "language": "es",
     "word": "padrino",
@@ -5356,6 +6128,21 @@
     "clue": "Hombre que acompaña a un niño en su bautizo o a unos novios en la boda",
     "clueEn": "Man who accompanies a child at a baptism or a couple at a wedding",
     "translationEn": "godfather",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-pago",
+    "language": "es",
+    "word": "pago",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dinero que se da a cambio de algo",
+    "clueEn": "Money given in exchange for something",
+    "translationEn": "payment",
     "status": "auto-only"
   },
   {
@@ -5416,6 +6203,22 @@
     "clue": "Caja envuelta que llega por correo",
     "clueEn": "Wrapped box that arrives by post",
     "translationEn": "package",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-par",
+    "language": "es",
+    "word": "par",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "clothing",
+      "shopping"
+    ],
+    "clue": "Dos cosas iguales: un ___ de zapatos",
+    "clueEn": "Two matching things: a ___ of shoes",
+    "translationEn": "pair",
     "status": "auto-only"
   },
   {
@@ -5524,6 +6327,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-paz",
+    "language": "es",
+    "word": "paz",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Estado de calma y tranquilidad, sin conflictos",
+    "clueEn": "State of calm and quiet, without conflicts",
+    "translationEn": "peace",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-peaje",
     "language": "es",
     "word": "peaje",
@@ -5569,6 +6387,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-pelar",
+    "language": "es",
+    "word": "pelar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Quitar la piel a una fruta",
+    "clueEn": "To remove the skin from a fruit",
+    "translationEn": "to peel",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-peligroso",
     "language": "es",
     "word": "peligroso",
@@ -5581,6 +6414,21 @@
     "clue": "Que puede hacerte daño",
     "clueEn": "That can hurt you",
     "translationEn": "dangerous",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-pena",
+    "language": "es",
+    "word": "pena",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Tristeza profunda: me da ___ verte así",
+    "clueEn": "Deep sadness: seeing you like this gives me ___",
+    "translationEn": "sorrow",
     "status": "auto-only"
   },
   {
@@ -5749,6 +6597,36 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-pico",
+    "language": "es",
+    "word": "pico",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Boca dura y puntiaguda de los pájaros",
+    "clueEn": "Hard, pointed mouth of birds",
+    "translationEn": "beak",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-pila",
+    "language": "es",
+    "word": "pila",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Pequeña fuente de energía para un reloj o un control remoto",
+    "clueEn": "Small energy source for a watch or a remote control",
+    "translationEn": "battery",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-pimienta",
     "language": "es",
     "word": "pimienta",
@@ -5836,6 +6714,36 @@
     "clue": "Tiempo límite para entregar o hacer algo",
     "clueEn": "Time limit to hand in or do something",
     "translationEn": "deadline",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-pluma",
+    "language": "es",
+    "word": "pluma",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Cada pieza suave que cubre el cuerpo de un pájaro",
+    "clueEn": "Each soft piece that covers a bird's body",
+    "translationEn": "feather",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-polvo",
+    "language": "es",
+    "word": "polvo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Tierra muy fina que se acumula sobre los muebles",
+    "clueEn": "Very fine dirt that builds up on furniture",
+    "translationEn": "dust",
     "status": "auto-only"
   },
   {
@@ -6034,6 +6942,22 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-pulso",
+    "language": "es",
+    "word": "pulso",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "health",
+      "body"
+    ],
+    "clue": "Latidos del corazón que se notan en la muñeca",
+    "clueEn": "Heartbeats you can feel at the wrist",
+    "translationEn": "pulse",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-puntual",
     "language": "es",
     "word": "puntual",
@@ -6109,6 +7033,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-queja",
+    "language": "es",
+    "word": "queja",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Protesta por un mal servicio en una tienda",
+    "clueEn": "Protest about bad service in a store",
+    "translationEn": "complaint",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-quemadura",
     "language": "es",
     "word": "quemadura",
@@ -6169,6 +7108,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-rama",
+    "language": "es",
+    "word": "rama",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Parte del árbol que sale del tronco y tiene hojas",
+    "clueEn": "Part of a tree that grows from the trunk and has leaves",
+    "translationEn": "branch",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-raro",
     "language": "es",
     "word": "raro",
@@ -6196,6 +7150,21 @@
     "clue": "Período corto de tiempo",
     "clueEn": "Short period of time",
     "translationEn": "a while",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-real",
+    "language": "es",
+    "word": "real",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que existe de verdad, no imaginado",
+    "clueEn": "That truly exists, not imagined",
+    "translationEn": "real",
     "status": "auto-only"
   },
   {
@@ -6244,6 +7213,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-red",
+    "language": "es",
+    "word": "red",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Conjunto de computadoras conectadas, como internet",
+    "clueEn": "Set of connected computers, like the internet",
+    "translationEn": "network",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-redacción",
     "language": "es",
     "word": "redacción",
@@ -6289,6 +7273,22 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-regar",
+    "language": "es",
+    "word": "regar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature",
+      "house"
+    ],
+    "clue": "Echar agua a las plantas",
+    "clueEn": "To pour water on the plants",
+    "translationEn": "to water",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-regatear",
     "language": "es",
     "word": "regatear",
@@ -6331,6 +7331,22 @@
     "clue": "Mover las palas de una barca para avanzar",
     "clueEn": "To move the paddles of a boat to move forward",
     "translationEn": "to row",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-remo",
+    "language": "es",
+    "word": "remo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "sports",
+      "transport"
+    ],
+    "clue": "Palo largo para mover una barca en el agua",
+    "clueEn": "Long pole for moving a boat in the water",
+    "translationEn": "oar",
     "status": "auto-only"
   },
   {
@@ -6425,6 +7441,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-roca",
+    "language": "es",
+    "word": "roca",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Piedra muy grande y dura",
+    "clueEn": "Very large, hard stone",
+    "translationEn": "rock",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-rocío",
     "language": "es",
     "word": "rocío",
@@ -6500,6 +7531,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-ruido",
+    "language": "es",
+    "word": "ruido",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Sonido fuerte y molesto",
+    "clueEn": "Loud, annoying sound",
+    "translationEn": "noise",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-ruta",
     "language": "es",
     "word": "ruta",
@@ -6527,6 +7573,36 @@
     "clue": "Mejor marca conseguida en una prueba",
     "clueEn": "Best mark achieved in an event",
     "translationEn": "record",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-sabio",
+    "language": "es",
+    "word": "sabio",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que tiene muchos conocimientos y buen juicio",
+    "clueEn": "Who has a lot of knowledge and good judgment",
+    "translationEn": "wise",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-sabor",
+    "language": "es",
+    "word": "sabor",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Lo que notas con la lengua al comer: dulce, salado...",
+    "clueEn": "What you notice with your tongue when eating: sweet, salty...",
+    "translationEn": "taste",
     "status": "auto-only"
   },
   {
@@ -6665,6 +7741,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-sello",
+    "language": "es",
+    "word": "sello",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Papel pequeño que se pega en un sobre para enviarlo",
+    "clueEn": "Small paper stuck on an envelope to send it",
+    "translationEn": "stamp",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-semanal",
     "language": "es",
     "word": "semanal",
@@ -6737,6 +7828,22 @@
     "clue": "Largo periodo sin lluvia",
     "clueEn": "Long period without rain",
     "translationEn": "drought",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-señal",
+    "language": "es",
+    "word": "señal",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "transport",
+      "city"
+    ],
+    "clue": "Dibujo en la calle que indica algo a los conductores",
+    "clueEn": "Sign on the street that tells drivers something",
+    "translationEn": "sign",
     "status": "auto-only"
   },
   {
@@ -7100,6 +8207,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-tecla",
+    "language": "es",
+    "word": "tecla",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Cada botón que pulsas para escribir en la computadora",
+    "clueEn": "Each button you press to type on the computer",
+    "translationEn": "key",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-tejado",
     "language": "es",
     "word": "tejado",
@@ -7217,6 +8339,21 @@
     "clue": "Dueño de una tienda pequeña de barrio",
     "clueEn": "Owner of a small neighborhood shop",
     "translationEn": "shopkeeper",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-tenso",
+    "language": "es",
+    "word": "tenso",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Nervioso y preocupado, sin poder relajarse",
+    "clueEn": "Nervous and worried, unable to relax",
+    "translationEn": "tense",
     "status": "auto-only"
   },
   {
@@ -7340,6 +8477,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-torre",
+    "language": "es",
+    "word": "torre",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Edificio alto y estrecho, como en un castillo",
+    "clueEn": "Tall, narrow building, like in a castle",
+    "translationEn": "tower",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-tortilla",
     "language": "es",
     "word": "tortilla",
@@ -7427,6 +8579,22 @@
     "clue": "Camino que se recorre de un lugar a otro",
     "clueEn": "Route covered from one place to another",
     "translationEn": "journey",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-trigo",
+    "language": "es",
+    "word": "trigo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food",
+      "nature"
+    ],
+    "clue": "Cereal con el que se hace la harina del pan",
+    "clueEn": "Cereal used to make bread flour",
+    "translationEn": "wheat",
     "status": "auto-only"
   },
   {
@@ -7535,6 +8703,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-unir",
+    "language": "es",
+    "word": "unir",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Juntar dos o más cosas",
+    "clueEn": "To put two or more things together",
+    "translationEn": "to join",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-usuario",
     "language": "es",
     "word": "usuario",
@@ -7638,6 +8821,37 @@
     "clue": "Rapidez con que se mueve un auto",
     "clueEn": "How fast a car moves",
     "translationEn": "speed",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-veloz",
+    "language": "es",
+    "word": "veloz",
+    "pos": "adjective",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Muy rápido",
+    "clueEn": "Very fast",
+    "translationEn": "swift",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-vena",
+    "language": "es",
+    "word": "vena",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "body",
+      "health"
+    ],
+    "clue": "Tubo del cuerpo que lleva la sangre al corazón",
+    "clueEn": "Tube in the body that carries blood to the heart",
+    "translationEn": "vein",
     "status": "auto-only"
   },
   {
@@ -7821,6 +9035,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-vía",
+    "language": "es",
+    "word": "vía",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Camino de hierro por el que circula el tren",
+    "clueEn": "Iron path the train runs on",
+    "translationEn": "track",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-zapatilla",
     "language": "es",
     "word": "zapatilla",
@@ -7923,6 +9152,21 @@
     "clue": "Periodo de tiempo con características propias",
     "clueEn": "Period of time with its own characteristics",
     "translationEn": "era",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-éxito",
+    "language": "es",
+    "word": "éxito",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Buen resultado: la fiesta fue un gran ___",
+    "clueEn": "Good result: the party was a great ___",
+    "translationEn": "success",
     "status": "auto-only"
   },
   {
