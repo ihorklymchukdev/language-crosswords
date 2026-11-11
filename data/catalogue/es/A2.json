@@ -1,32 +1,3870 @@
 [
   {
-    "id": "es-A2-perro",
+    "id": "es-A2-abeja",
     "language": "es",
-    "word": "perro",
+    "word": "abeja",
     "pos": "noun",
     "level": "A2",
     "region": "neutral",
     "themes": [
       "animals"
     ],
-    "clue": "Animal que ladra",
-    "clueEn": "Animal that barks",
-    "translationEn": "dog",
+    "clue": "Insecto que produce miel",
+    "clueEn": "Insect that produces honey",
+    "translationEn": "bee",
     "status": "auto-only"
   },
   {
-    "id": "es-A2-manzana",
+    "id": "es-A2-abrigo",
     "language": "es",
-    "word": "manzana",
+    "word": "abrigo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda gruesa para el frío del invierno",
+    "clueEn": "Thick garment for the winter cold",
+    "translationEn": "coat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-abrir",
+    "language": "es",
+    "word": "abrir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Mover una puerta para poder pasar",
+    "clueEn": "Move a door so you can pass through",
+    "translationEn": "to open",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-abuelo",
+    "language": "es",
+    "word": "abuelo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Padre de tu mamá o de tu papá",
+    "clueEn": "Father of your mom or your dad",
+    "translationEn": "grandfather",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-aburrido",
+    "language": "es",
+    "word": "aburrido",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Así te sientes cuando no tienes nada interesante que hacer",
+    "clueEn": "How you feel when you have nothing interesting to do",
+    "translationEn": "bored",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-aceite",
+    "language": "es",
+    "word": "aceite",
     "pos": "noun",
     "level": "A2",
     "region": "neutral",
     "themes": [
       "food"
     ],
-    "clue": "Fruta roja o verde de un árbol",
-    "clueEn": "Red or green tree fruit",
-    "translationEn": "apple",
+    "clue": "Líquido de oliva o girasol para cocinar y aliñar",
+    "clueEn": "Liquid from olives or sunflowers for cooking and dressing",
+    "translationEn": "oil",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-acera",
+    "language": "es",
+    "word": "acera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Parte de la calle por donde caminan las personas",
+    "clueEn": "Part of the street where people walk",
+    "translationEn": "pavement",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-aduana",
+    "language": "es",
+    "word": "aduana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Control en la frontera donde miran tus maletas",
+    "clueEn": "Checkpoint at the border where they look at your suitcases",
+    "translationEn": "customs",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-agua",
+    "language": "es",
+    "word": "agua",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Líquido transparente que bebemos todos los días",
+    "clueEn": "Transparent liquid we drink every day",
+    "translationEn": "water",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ahora",
+    "language": "es",
+    "word": "ahora",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "En este momento",
+    "clueEn": "At this moment",
+    "translationEn": "now",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-albergue",
+    "language": "es",
+    "word": "albergue",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Lugar barato donde duermen los jóvenes que viajan",
+    "clueEn": "Cheap place where young travellers sleep",
+    "translationEn": "hostel",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-alegre",
+    "language": "es",
+    "word": "alegre",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Que muestra buen humor y sonríe mucho",
+    "clueEn": "Showing good humor and smiling a lot",
+    "translationEn": "cheerful",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-alergia",
+    "language": "es",
+    "word": "alergia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Reacción del cuerpo al polen o a ciertos alimentos",
+    "clueEn": "Body reaction to pollen or certain foods",
+    "translationEn": "allergy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-alfombra",
+    "language": "es",
+    "word": "alfombra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Tela gruesa que cubre el suelo",
+    "clueEn": "Thick fabric that covers the floor",
+    "translationEn": "rug",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-almohada",
+    "language": "es",
+    "word": "almohada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Cojín blando donde apoyas la cabeza al dormir",
+    "clueEn": "Soft cushion where you rest your head when sleeping",
+    "translationEn": "pillow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-alumno",
+    "language": "es",
+    "word": "alumno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Persona que va a clase para aprender",
+    "clueEn": "Person who goes to class to learn",
+    "translationEn": "student",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-amor",
+    "language": "es",
+    "word": "amor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sentimiento muy fuerte hacia alguien que quieres",
+    "clueEn": "Very strong feeling toward someone you care about",
+    "translationEn": "love",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-andén",
+    "language": "es",
+    "word": "andén",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Zona junto a la vía donde esperas el tren",
+    "clueEn": "Area beside the track where you wait for the train",
+    "translationEn": "platform",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-araña",
+    "language": "es",
+    "word": "araña",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal de ocho patas que teje telas",
+    "clueEn": "Eight-legged animal that spins webs",
+    "translationEn": "spider",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-archivo",
+    "language": "es",
+    "word": "archivo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Documento o conjunto de datos guardado en una computadora",
+    "clueEn": "Document or set of data saved on a computer",
+    "translationEn": "file",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-arena",
+    "language": "es",
+    "word": "arena",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Polvo fino de la playa y del desierto",
+    "clueEn": "Fine powder of the beach and the desert",
+    "translationEn": "sand",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-armario",
+    "language": "es",
+    "word": "armario",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Mueble grande donde se guarda la ropa",
+    "clueEn": "Large piece of furniture where clothes are kept",
+    "translationEn": "wardrobe",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-arroz",
+    "language": "es",
+    "word": "arroz",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Grano blanco que se cocina para hacer paella",
+    "clueEn": "White grain cooked to make paella",
+    "translationEn": "rice",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-autobús",
+    "language": "es",
+    "word": "autobús",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo grande que lleva a muchas personas por la ciudad",
+    "clueEn": "Large vehicle that takes many people around the city",
+    "translationEn": "bus",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-autopista",
+    "language": "es",
+    "word": "autopista",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Carretera muy ancha y rápida con varios carriles",
+    "clueEn": "Very wide, fast road with several lanes",
+    "translationEn": "motorway",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-aventura",
+    "language": "es",
+    "word": "aventura",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Experiencia emocionante y fuera de lo normal",
+    "clueEn": "Exciting experience out of the ordinary",
+    "translationEn": "adventure",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-avión",
+    "language": "es",
+    "word": "avión",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo con alas que cruza el cielo",
+    "clueEn": "Vehicle with wings that crosses the sky",
+    "translationEn": "plane",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ayer",
+    "language": "es",
+    "word": "ayer",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "El día anterior a hoy",
+    "clueEn": "The day before today",
+    "translationEn": "yesterday",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ayudar",
+    "language": "es",
+    "word": "ayudar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Hacer algo para que otra persona lo tenga más fácil",
+    "clueEn": "Do something to make it easier for another person",
+    "translationEn": "to help",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-azúcar",
+    "language": "es",
+    "word": "azúcar",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Polvo blanco y dulce que se echa al café",
+    "clueEn": "Sweet white powder added to coffee",
+    "translationEn": "sugar",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-año",
+    "language": "es",
+    "word": "año",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Doce meses",
+    "clueEn": "Twelve months",
+    "translationEn": "year",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ballena",
+    "language": "es",
+    "word": "ballena",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "El animal más grande del mar",
+    "clueEn": "The largest animal in the sea",
+    "translationEn": "whale",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-balón",
+    "language": "es",
+    "word": "balón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Pelota grande que se usa en el fútbol",
+    "clueEn": "Large ball used in football",
+    "translationEn": "ball",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-barato",
+    "language": "es",
+    "word": "barato",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "common-adjectives"
+    ],
+    "clue": "Que cuesta poco dinero",
+    "clueEn": "Costing little money",
+    "translationEn": "cheap",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-barco",
+    "language": "es",
+    "word": "barco",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo que navega por el mar",
+    "clueEn": "Vehicle that sails on the sea",
+    "translationEn": "boat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-barriga",
+    "language": "es",
+    "word": "barriga",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte del cuerpo donde está el ombligo",
+    "clueEn": "Part of the body where the belly button is",
+    "translationEn": "belly",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-barrio",
+    "language": "es",
+    "word": "barrio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Zona pequeña de una ciudad donde viven los vecinos",
+    "clueEn": "Small area of a city where the neighbours live",
+    "translationEn": "neighbourhood",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-batería",
+    "language": "es",
+    "word": "batería",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Parte que guarda energía y hace funcionar el móvil sin enchufe",
+    "clueEn": "Part that stores energy and makes the phone work without a plug",
+    "translationEn": "battery",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-batido",
+    "language": "es",
+    "word": "batido",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida espesa de leche y fruta mezcladas",
+    "clueEn": "Thick drink of milk and fruit mixed together",
+    "translationEn": "milkshake",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-baño",
+    "language": "es",
+    "word": "baño",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Habitación con ducha, lavabo y váter",
+    "clueEn": "Room with a shower, sink and toilet",
+    "translationEn": "bathroom",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bebida",
+    "language": "es",
+    "word": "bebida",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Líquido que se toma, como el agua o el refresco",
+    "clueEn": "Liquid you take, like water or soda",
+    "translationEn": "drink",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bebé",
+    "language": "es",
+    "word": "bebé",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Niño muy pequeño que todavía no habla",
+    "clueEn": "Very small child who does not talk yet",
+    "translationEn": "baby",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bici",
+    "language": "es",
+    "word": "bici",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Tiene dos ruedas y la mueves con los pies",
+    "clueEn": "It has two wheels and you move it with your feet",
+    "translationEn": "bike",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bicicleta",
+    "language": "es",
+    "word": "bicicleta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo de dos ruedas con pedales y sin motor",
+    "clueEn": "Two-wheeled vehicle with pedals and no engine",
+    "translationEn": "bicycle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-billete",
+    "language": "es",
+    "word": "billete",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "transport"
+    ],
+    "clue": "Papel moneda de 5, 10 o 20 euros",
+    "clueEn": "Paper money of 5, 10 or 20 euros",
+    "translationEn": "banknote",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-boca",
+    "language": "es",
+    "word": "boca",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Tiene dientes y lengua",
+    "clueEn": "It has teeth and a tongue",
+    "translationEn": "mouth",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-boleto",
+    "language": "es",
+    "word": "boleto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Papel que compras para entrar al cine o subir al autobús (América Latina)",
+    "clueEn": "Paper you buy to enter the cinema or get on the bus (Latin America)",
+    "translationEn": "ticket",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bolsa",
+    "language": "es",
+    "word": "bolsa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Envase de plástico o papel para llevar lo que compras",
+    "clueEn": "Plastic or paper container for carrying what you buy",
+    "translationEn": "bag",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bolsillo",
+    "language": "es",
+    "word": "bolsillo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Hueco de la ropa donde guardas llaves y monedas",
+    "clueEn": "Pouch in clothes where you keep keys and coins",
+    "translationEn": "pocket",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bonito",
+    "language": "es",
+    "word": "bonito",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que gusta a la vista; agradable de mirar",
+    "clueEn": "Pleasing to the eye; nice to look at",
+    "translationEn": "pretty",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bosque",
+    "language": "es",
+    "word": "bosque",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Lugar con muchos árboles juntos",
+    "clueEn": "Place with many trees together",
+    "translationEn": "forest",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bota",
+    "language": "es",
+    "word": "bota",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Calzado que cubre el tobillo, ideal para la lluvia",
+    "clueEn": "Footwear covering the ankle, ideal for rain",
+    "translationEn": "boot",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-botella",
+    "language": "es",
+    "word": "botella",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Recipiente alto y estrecho para el agua o el aceite",
+    "clueEn": "Tall, narrow container for water or oil",
+    "translationEn": "bottle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-botón",
+    "language": "es",
+    "word": "botón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Pieza pequeña y redonda que cierra la camisa",
+    "clueEn": "Small round piece that fastens a shirt",
+    "translationEn": "button",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-brazo",
+    "language": "es",
+    "word": "brazo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Va del hombro a la mano",
+    "clueEn": "It goes from the shoulder to the hand",
+    "translationEn": "arm",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-bufanda",
+    "language": "es",
+    "word": "bufanda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Tela larga que se enrolla en el cuello",
+    "clueEn": "Long cloth wrapped around the neck",
+    "translationEn": "scarf",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-buscar",
+    "language": "es",
+    "word": "buscar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Intentar encontrar algo que no sabes dónde está",
+    "clueEn": "Try to find something when you do not know where it is",
+    "translationEn": "to look for",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-caballo",
+    "language": "es",
+    "word": "caballo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal grande que se monta y corre mucho",
+    "clueEn": "Large animal that you ride and that runs a lot",
+    "translationEn": "horse",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cabeza",
+    "language": "es",
+    "word": "cabeza",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte del cuerpo donde están los ojos y la boca",
+    "clueEn": "Part of the body with the eyes and mouth",
+    "translationEn": "head",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cable",
+    "language": "es",
+    "word": "cable",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Hilo cubierto de plástico por donde pasa la electricidad",
+    "clueEn": "Plastic-covered wire through which electricity passes",
+    "translationEn": "cable",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-café",
+    "language": "es",
+    "word": "café",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida caliente y oscura que muchos toman por la mañana",
+    "clueEn": "Hot, dark drink many people have in the morning",
+    "translationEn": "coffee",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-caja",
+    "language": "es",
+    "word": "caja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Lugar de la tienda donde se paga",
+    "clueEn": "Place in the shop where you pay",
+    "translationEn": "checkout",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cajero",
+    "language": "es",
+    "word": "cajero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "shopping"
+    ],
+    "clue": "Persona que cobra en una tienda o en un supermercado",
+    "clueEn": "Person who takes payments in a shop or a supermarket",
+    "translationEn": "cashier",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-calcetín",
+    "language": "es",
+    "word": "calcetín",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda que se pone en el pie antes del zapato",
+    "clueEn": "Garment worn on the foot before the shoe",
+    "translationEn": "sock",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-calle",
+    "language": "es",
+    "word": "calle",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Camino urbano con casas o tiendas a los lados",
+    "clueEn": "Urban way with houses or shops on both sides",
+    "translationEn": "street",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-calma",
+    "language": "es",
+    "word": "calma",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Estado de quien no tiene prisa ni nervios",
+    "clueEn": "State of someone with no rush or nerves",
+    "translationEn": "calm",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-calor",
+    "language": "es",
+    "word": "calor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Lo sientes mucho en un día de verano",
+    "clueEn": "You feel it a lot on a summer day",
+    "translationEn": "heat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cama",
+    "language": "es",
+    "word": "cama",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Mueble donde dormimos",
+    "clueEn": "Furniture where we sleep",
+    "translationEn": "bed",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-camarero",
+    "language": "es",
+    "word": "camarero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "food"
+    ],
+    "clue": "Persona que lleva platos y bebidas a las mesas de un restaurante",
+    "clueEn": "Person who takes dishes and drinks to the tables of a restaurant",
+    "translationEn": "waiter",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cambio",
+    "language": "es",
+    "word": "cambio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dinero que te devuelven si pagas de más",
+    "clueEn": "Money returned to you if you overpay",
+    "translationEn": "change",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-camisa",
+    "language": "es",
+    "word": "camisa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda con cuello y botones para la parte de arriba",
+    "clueEn": "Garment with a collar and buttons for the upper body",
+    "translationEn": "shirt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-camiseta",
+    "language": "es",
+    "word": "camiseta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda ligera de algodón con mangas cortas",
+    "clueEn": "Light cotton garment with short sleeves",
+    "translationEn": "T-shirt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-camión",
+    "language": "es",
+    "word": "camión",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo muy grande que lleva mercancías",
+    "clueEn": "Very large vehicle that carries goods",
+    "translationEn": "lorry",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-campeón",
+    "language": "es",
+    "word": "campeón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Persona o equipo que gana la competición",
+    "clueEn": "Person or team that wins the competition",
+    "translationEn": "champion",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-campo",
+    "language": "es",
+    "word": "campo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Zona lejos de la ciudad, con granjas y prados",
+    "clueEn": "Area far from the city, with farms and meadows",
+    "translationEn": "countryside",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cara",
+    "language": "es",
+    "word": "cara",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte delantera de la cabeza",
+    "clueEn": "Front part of the head",
+    "translationEn": "face",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cargador",
+    "language": "es",
+    "word": "cargador",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Aparato que se enchufa para dar energía a la batería",
+    "clueEn": "Device that you plug in to give power to the battery",
+    "translationEn": "charger",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-carne",
+    "language": "es",
+    "word": "carne",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Alimento que se saca de la vaca, el cerdo o el pollo",
+    "clueEn": "Food that comes from the cow, the pig or the chicken",
+    "translationEn": "meat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-caro",
+    "language": "es",
+    "word": "caro",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "common-adjectives"
+    ],
+    "clue": "Que cuesta mucho dinero",
+    "clueEn": "Costing a lot of money",
+    "translationEn": "expensive",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-carrera",
+    "language": "es",
+    "word": "carrera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Competición en la que gana el que llega primero",
+    "clueEn": "Competition in which the first to arrive wins",
+    "translationEn": "race",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-carretera",
+    "language": "es",
+    "word": "carretera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Camino ancho y largo para coches entre ciudades",
+    "clueEn": "Wide, long road for cars between cities",
+    "translationEn": "road",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-carrito",
+    "language": "es",
+    "word": "carrito",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Cesta con ruedas del supermercado",
+    "clueEn": "Basket with wheels at the supermarket",
+    "translationEn": "shopping cart",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-carro",
+    "language": "es",
+    "word": "carro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo de cuatro ruedas que se maneja por la calle (América Latina)",
+    "clueEn": "Four-wheeled vehicle that you drive along the street (Latin America)",
+    "translationEn": "car",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-casa",
+    "language": "es",
+    "word": "casa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Lugar donde vive una familia",
+    "clueEn": "Place where a family lives",
+    "translationEn": "house",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cascada",
+    "language": "es",
+    "word": "cascada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Agua de un río que cae desde lo alto",
+    "clueEn": "Water from a river that falls from a height",
+    "translationEn": "waterfall",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-celos",
+    "language": "es",
+    "word": "celos",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sentimiento malo cuando temes perder a tu pareja",
+    "clueEn": "Bad feeling when you fear losing your partner",
+    "translationEn": "jealousy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-celular",
+    "language": "es",
+    "word": "celular",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Aparato para llamar y mandar mensajes desde cualquier lugar (América Latina)",
+    "clueEn": "Device for calling and sending messages from anywhere (Latin America)",
+    "translationEn": "cell phone",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cena",
+    "language": "es",
+    "word": "cena",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Última comida del día, por la noche",
+    "clueEn": "Last meal of the day, at night",
+    "translationEn": "dinner",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-centro",
+    "language": "es",
+    "word": "centro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Zona principal de una ciudad, con tiendas y plazas",
+    "clueEn": "Main area of a city, with shops and squares",
+    "translationEn": "centre",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cerdo",
+    "language": "es",
+    "word": "cerdo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal rosa de granja que come mucho",
+    "clueEn": "Pink farm animal that eats a lot",
+    "translationEn": "pig",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cerrar",
+    "language": "es",
+    "word": "cerrar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Lo contrario de abrir una puerta o una ventana",
+    "clueEn": "The opposite of opening a door or a window",
+    "translationEn": "to close",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-chaqueta",
+    "language": "es",
+    "word": "chaqueta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda corta con mangas que se lleva sobre la camisa",
+    "clueEn": "Short garment with sleeves worn over the shirt",
+    "translationEn": "jacket",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ciclismo",
+    "language": "es",
+    "word": "ciclismo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Deporte que se practica sobre una bicicleta",
+    "clueEn": "Sport practised on a bicycle",
+    "translationEn": "cycling",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cielo",
+    "language": "es",
+    "word": "cielo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Espacio azul sobre nosotros donde están las nubes",
+    "clueEn": "Blue space above us where the clouds are",
+    "translationEn": "sky",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cine",
+    "language": "es",
+    "word": "cine",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Sala oscura donde ves películas en una pantalla grande",
+    "clueEn": "Dark room where you watch films on a big screen",
+    "translationEn": "cinema",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cinturón",
+    "language": "es",
+    "word": "cinturón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Tira de cuero que sujeta el pantalón",
+    "clueEn": "Leather strip that holds up trousers",
+    "translationEn": "belt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ciudad",
+    "language": "es",
+    "word": "ciudad",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Lugar grande donde viven muchas personas, más que en un pueblo",
+    "clueEn": "Large place where many people live, more than in a village",
+    "translationEn": "city",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-clase",
+    "language": "es",
+    "word": "clase",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Hora en que el profesor enseña a un grupo de alumnos",
+    "clueEn": "Hour when the teacher teaches a group of students",
+    "translationEn": "class",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-clave",
+    "language": "es",
+    "word": "clave",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Palabra secreta para entrar en una cuenta",
+    "clueEn": "Secret word to log in to an account",
+    "translationEn": "password",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cliente",
+    "language": "es",
+    "word": "cliente",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "work"
+    ],
+    "clue": "Persona que compra en una tienda",
+    "clueEn": "Person who buys in a shop",
+    "translationEn": "customer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-clima",
+    "language": "es",
+    "word": "clima",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Condiciones del aire de un lugar durante el año",
+    "clueEn": "Air conditions of a place over the year",
+    "translationEn": "climate",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-coche",
+    "language": "es",
+    "word": "coche",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo de cuatro ruedas para ir por la carretera (España)",
+    "clueEn": "Four-wheeled vehicle for going on the road (Spain)",
+    "translationEn": "car",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cocina",
+    "language": "es",
+    "word": "cocina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Habitación donde se prepara la comida",
+    "clueEn": "Room where food is prepared",
+    "translationEn": "kitchen",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cocinero",
+    "language": "es",
+    "word": "cocinero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "food"
+    ],
+    "clue": "Persona que prepara la comida en un restaurante",
+    "clueEn": "Person who prepares food in a restaurant",
+    "translationEn": "cook",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-codo",
+    "language": "es",
+    "word": "codo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte donde se dobla el brazo",
+    "clueEn": "Place where the arm bends",
+    "translationEn": "elbow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-colega",
+    "language": "es",
+    "word": "colega",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Persona que trabaja contigo en el mismo lugar",
+    "clueEn": "Person who works with you in the same place",
+    "translationEn": "colleague",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-colegio",
+    "language": "es",
+    "word": "colegio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Centro donde estudian niños y jóvenes",
+    "clueEn": "Centre where children and young people study",
+    "translationEn": "school",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-comprar",
+    "language": "es",
+    "word": "comprar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dar dinero para tener un producto",
+    "clueEn": "To give money to get a product",
+    "translationEn": "to buy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-conducir",
+    "language": "es",
+    "word": "conducir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Llevar un coche o un camión por la carretera",
+    "clueEn": "To take a car or a lorry along the road",
+    "translationEn": "to drive",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-conejo",
+    "language": "es",
+    "word": "conejo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal de orejas largas que salta y come zanahorias",
+    "clueEn": "Long-eared animal that hops and eats carrots",
+    "translationEn": "rabbit",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-contento",
+    "language": "es",
+    "word": "contento",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Satisfecho y con buen ánimo",
+    "clueEn": "Satisfied and in good spirits",
+    "translationEn": "glad",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-contrato",
+    "language": "es",
+    "word": "contrato",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Papel firmado entre un trabajador y su empresa",
+    "clueEn": "Signed paper between a worker and their company",
+    "translationEn": "contract",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-copa",
+    "language": "es",
+    "word": "copa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Recipiente con pie para tomar una bebida",
+    "clueEn": "Stemmed container for drinking a beverage",
+    "translationEn": "glass (stemmed)",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-corazón",
+    "language": "es",
+    "word": "corazón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Órgano que late y mueve la sangre",
+    "clueEn": "Organ that beats and moves the blood",
+    "translationEn": "heart",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-corbata",
+    "language": "es",
+    "word": "corbata",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Tira de tela que se anuda al cuello de la camisa",
+    "clueEn": "Strip of cloth knotted at the shirt collar",
+    "translationEn": "tie",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-correo",
+    "language": "es",
+    "word": "correo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Servicio para enviar cartas, paquetes o mensajes electrónicos",
+    "clueEn": "Service for sending letters, parcels or electronic messages",
+    "translationEn": "mail",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-correos",
+    "language": "es",
+    "word": "correos",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Oficina donde se envían cartas y paquetes",
+    "clueEn": "Office where letters and parcels are sent",
+    "translationEn": "post office",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cortina",
+    "language": "es",
+    "word": "cortina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Tela que cubre la ventana",
+    "clueEn": "Fabric that covers the window",
+    "translationEn": "curtain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-corto",
+    "language": "es",
+    "word": "corto",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que mide poco; lo contrario de largo",
+    "clueEn": "That measures little; the opposite of long",
+    "translationEn": "short",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-crucero",
+    "language": "es",
+    "word": "crucero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Viaje de vacaciones en un barco muy grande",
+    "clueEn": "Holiday trip on a very large ship",
+    "translationEn": "cruise",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cuaderno",
+    "language": "es",
+    "word": "cuaderno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Conjunto de hojas con tapas donde los alumnos escriben",
+    "clueEn": "Set of sheets with covers where students write",
+    "translationEn": "notebook",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cuello",
+    "language": "es",
+    "word": "cuello",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Une la cabeza con el cuerpo",
+    "clueEn": "Joins the head to the body",
+    "translationEn": "neck",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-curar",
+    "language": "es",
+    "word": "curar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Hacer que una persona enferma esté bien otra vez",
+    "clueEn": "To make a sick person well again",
+    "translationEn": "to heal",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-curso",
+    "language": "es",
+    "word": "curso",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Año escolar, o serie de clases sobre un tema",
+    "clueEn": "School year, or a series of classes on a subject",
+    "translationEn": "course",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cuñado",
+    "language": "es",
+    "word": "cuñado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hermano de tu pareja",
+    "clueEn": "Brother of your partner",
+    "translationEn": "brother-in-law",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-cámara",
+    "language": "es",
+    "word": "cámara",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel",
+      "technology"
+    ],
+    "clue": "Aparato para hacer fotos durante las vacaciones",
+    "clueEn": "Device for taking photos during the holidays",
+    "translationEn": "camera",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-decir",
+    "language": "es",
+    "word": "decir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Expresar algo con palabras",
+    "clueEn": "Express something with words",
+    "translationEn": "to say",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-dedo",
+    "language": "es",
+    "word": "dedo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Cada una de las cinco partes de la mano",
+    "clueEn": "Each of the five parts of the hand",
+    "translationEn": "finger",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-delfín",
+    "language": "es",
+    "word": "delfín",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal marino inteligente que salta sobre las olas",
+    "clueEn": "Intelligent sea animal that jumps over the waves",
+    "translationEn": "dolphin",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-dentista",
+    "language": "es",
+    "word": "dentista",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Médico que cuida tus dientes",
+    "clueEn": "Doctor who takes care of your teeth",
+    "translationEn": "dentist",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-deporte",
+    "language": "es",
+    "word": "deporte",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Actividad física con reglas, como correr o jugar al tenis",
+    "clueEn": "Physical activity with rules, like running or playing tennis",
+    "translationEn": "sport",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-desayuno",
+    "language": "es",
+    "word": "desayuno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Primera comida de la mañana",
+    "clueEn": "First meal of the morning",
+    "translationEn": "breakfast",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-descuento",
+    "language": "es",
+    "word": "descuento",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Bajada del precio de un producto",
+    "clueEn": "Reduction in the price of a product",
+    "translationEn": "discount",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-desierto",
+    "language": "es",
+    "word": "desierto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Lugar muy seco, con mucha arena y casi sin lluvia",
+    "clueEn": "Very dry place, with a lot of sand and almost no rain",
+    "translationEn": "desert",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-destino",
+    "language": "es",
+    "word": "destino",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Lugar al que quieres llegar en un viaje",
+    "clueEn": "Place you want to reach on a trip",
+    "translationEn": "destination",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-diente",
+    "language": "es",
+    "word": "diente",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Lo usas para morder la comida",
+    "clueEn": "You use it to bite food",
+    "translationEn": "tooth",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-difícil",
+    "language": "es",
+    "word": "difícil",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que cuesta mucho trabajo; no es fácil",
+    "clueEn": "That takes a lot of work; not easy",
+    "translationEn": "difficult",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-dinero",
+    "language": "es",
+    "word": "dinero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Billetes y monedas que usamos para pagar",
+    "clueEn": "Notes and coins we use to pay",
+    "translationEn": "money",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-dolor",
+    "language": "es",
+    "word": "dolor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Sensación mala cuando algo te duele",
+    "clueEn": "Bad feeling when something hurts",
+    "translationEn": "pain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-domingo",
+    "language": "es",
+    "word": "domingo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Día de descanso, el último de la semana",
+    "clueEn": "Day of rest, the last of the week",
+    "translationEn": "Sunday",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-dormir",
+    "language": "es",
+    "word": "dormir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Descansar con los ojos cerrados por la noche",
+    "clueEn": "Rest with your eyes closed at night",
+    "translationEn": "to sleep",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-día",
+    "language": "es",
+    "word": "día",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Veinticuatro horas",
+    "clueEn": "Twenty-four hours",
+    "translationEn": "day",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-edificio",
+    "language": "es",
+    "word": "edificio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Construcción alta con varios pisos y apartamentos",
+    "clueEn": "Tall construction with several floors and flats",
+    "translationEn": "building",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-efectivo",
+    "language": "es",
+    "word": "efectivo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dinero en billetes y monedas, no en tarjeta",
+    "clueEn": "Money in notes and coins, not on a card",
+    "translationEn": "cash",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-elefante",
+    "language": "es",
+    "word": "elefante",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal enorme con trompa y grandes orejas",
+    "clueEn": "Huge animal with a trunk and big ears",
+    "translationEn": "elephant",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-empezar",
+    "language": "es",
+    "word": "empezar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "La clase va a ___ a las nueve",
+    "clueEn": "The class is going to ___ at nine o'clock",
+    "translationEn": "to begin",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-empleo",
+    "language": "es",
+    "word": "empleo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Puesto de trabajo con sueldo fijo",
+    "clueEn": "Job position with a fixed salary",
+    "translationEn": "job",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-empresa",
+    "language": "es",
+    "word": "empresa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Organización que vende productos o servicios",
+    "clueEn": "Organization that sells products or services",
+    "translationEn": "company",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-enfadado",
+    "language": "es",
+    "word": "enfadado",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Que siente rabia por algo",
+    "clueEn": "Feeling anger about something",
+    "translationEn": "angry",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-enfermera",
+    "language": "es",
+    "word": "enfermera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Mujer que cuida a los pacientes en el hospital",
+    "clueEn": "Woman who looks after patients in the hospital",
+    "translationEn": "nurse",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-enfermo",
+    "language": "es",
+    "word": "enfermo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Que no tiene buena salud",
+    "clueEn": "Not in good health",
+    "translationEn": "sick",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-enlace",
+    "language": "es",
+    "word": "enlace",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Palabra o botón de una página web que te lleva a otro sitio",
+    "clueEn": "Word or button on a web page that takes you somewhere else",
+    "translationEn": "link",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-enojo",
+    "language": "es",
+    "word": "enojo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Rabia que sientes cuando algo te molesta",
+    "clueEn": "Anger you feel when something bothers you",
+    "translationEn": "anger",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ensalada",
+    "language": "es",
+    "word": "ensalada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Plato frío de lechuga, tomate y cebolla",
+    "clueEn": "Cold dish of lettuce, tomato and onion",
+    "translationEn": "salad",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-entrenar",
+    "language": "es",
+    "word": "entrenar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Practicar mucho para mejorar en un deporte",
+    "clueEn": "Practise a lot to improve at a sport",
+    "translationEn": "to train",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-equipaje",
+    "language": "es",
+    "word": "equipaje",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Maletas y bolsas que llevas contigo en un viaje",
+    "clueEn": "Suitcases and bags you carry with you on a trip",
+    "translationEn": "luggage",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-equipo",
+    "language": "es",
+    "word": "equipo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "sports"
+    ],
+    "clue": "Grupo de personas que trabajan o juegan juntas",
+    "clueEn": "Group of people who work or play together",
+    "translationEn": "team",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-escalera",
+    "language": "es",
+    "word": "escalera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Sirve para subir al piso de arriba",
+    "clueEn": "Used to go up to the floor above",
+    "translationEn": "stairs",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-escuchar",
+    "language": "es",
+    "word": "escuchar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Prestar atención a un sonido, una canción o una persona",
+    "clueEn": "Pay attention to a sound, a song or a person",
+    "translationEn": "to listen",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-escuela",
+    "language": "es",
+    "word": "escuela",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Lugar al que van los niños para aprender a leer y escribir",
+    "clueEn": "Place where children go to learn to read and write",
+    "translationEn": "school",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-espalda",
+    "language": "es",
+    "word": "espalda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte de atrás del cuerpo humano",
+    "clueEn": "Back part of the human body",
+    "translationEn": "back",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-espejo",
+    "language": "es",
+    "word": "espejo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Cristal donde ves tu cara",
+    "clueEn": "Glass where you see your face",
+    "translationEn": "mirror",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-esperar",
+    "language": "es",
+    "word": "esperar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Quedarse en un sitio hasta que llegue alguien o algo",
+    "clueEn": "Stay in a place until someone or something arrives",
+    "translationEn": "to wait",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-esposo",
+    "language": "es",
+    "word": "esposo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hombre casado con una mujer",
+    "clueEn": "Man married to a woman",
+    "translationEn": "husband",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-esquina",
+    "language": "es",
+    "word": "esquina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Lugar donde se encuentran dos calles",
+    "clueEn": "Place where two streets meet",
+    "translationEn": "corner",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-estación",
+    "language": "es",
+    "word": "estación",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Lugar donde paran los trenes y suben los viajeros",
+    "clueEn": "Place where trains stop and travellers get on",
+    "translationEn": "station",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-estadio",
+    "language": "es",
+    "word": "estadio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Gran edificio donde el público ve partidos",
+    "clueEn": "Large building where the public watches matches",
+    "translationEn": "stadium",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-estrella",
+    "language": "es",
+    "word": "estrella",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Punto brillante que vemos en el cielo de noche",
+    "clueEn": "Bright point we see in the sky at night",
+    "translationEn": "star",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-estudiar",
+    "language": "es",
+    "word": "estudiar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school",
+      "common-verbs"
+    ],
+    "clue": "Leer y repetir para preparar un examen",
+    "clueEn": "Read and repeat to prepare for an exam",
+    "translationEn": "to study",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-examen",
+    "language": "es",
+    "word": "examen",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Prueba para ver cuánto sabes de una materia",
+    "clueEn": "Test to see how much you know about a subject",
+    "translationEn": "exam",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-falda",
+    "language": "es",
+    "word": "falda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda que cuelga de la cintura y no separa las piernas",
+    "clueEn": "Garment hanging from the waist that does not separate the legs",
+    "translationEn": "skirt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-familia",
+    "language": "es",
+    "word": "familia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Padres, hijos, abuelos y tíos viven en ella",
+    "clueEn": "Parents, children, grandparents and uncles belong to it",
+    "translationEn": "family",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-farmacia",
+    "language": "es",
+    "word": "farmacia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Tienda donde compras medicinas",
+    "clueEn": "Shop where you buy medicine",
+    "translationEn": "pharmacy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fecha",
+    "language": "es",
+    "word": "fecha",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Día, mes y año de algo",
+    "clueEn": "Day, month and year of something",
+    "translationEn": "date",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-feliz",
+    "language": "es",
+    "word": "feliz",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Muy contento, sin ningún problema",
+    "clueEn": "Very glad, with no problems",
+    "translationEn": "happy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-feo",
+    "language": "es",
+    "word": "feo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que no es bonito ni agradable de ver",
+    "clueEn": "Not pretty or nice to look at",
+    "translationEn": "ugly",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fiebre",
+    "language": "es",
+    "word": "fiebre",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Temperatura del cuerpo muy alta",
+    "clueEn": "Very high body temperature",
+    "translationEn": "fever",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-flor",
+    "language": "es",
+    "word": "flor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Parte colorida y bonita de una planta",
+    "clueEn": "Colourful, pretty part of a plant",
+    "translationEn": "flower",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-foto",
+    "language": "es",
+    "word": "foto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Imagen que se saca con una cámara",
+    "clueEn": "Image taken with a camera",
+    "translationEn": "photo",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fresa",
+    "language": "es",
+    "word": "fresa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruta pequeña, roja y dulce, con semillas por fuera",
+    "clueEn": "Small, red, sweet fruit with seeds on the outside",
+    "translationEn": "strawberry",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-frontera",
+    "language": "es",
+    "word": "frontera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Línea que separa un país de otro",
+    "clueEn": "Line that separates one country from another",
+    "translationEn": "border",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-frío",
+    "language": "es",
+    "word": "frío",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Lo sientes en invierno y te pones abrigo",
+    "clueEn": "You feel it in winter and put on a coat",
+    "translationEn": "cold",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fuente",
+    "language": "es",
+    "word": "fuente",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Estructura de una plaza de la que sale agua",
+    "clueEn": "Structure in a square from which water flows",
+    "translationEn": "fountain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fuerte",
+    "language": "es",
+    "word": "fuerte",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que puede levantar cosas muy pesadas",
+    "clueEn": "Able to lift very heavy things",
+    "translationEn": "strong",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fábrica",
+    "language": "es",
+    "word": "fábrica",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Lugar con máquinas donde se hacen productos",
+    "clueEn": "Place with machines where products are made",
+    "translationEn": "factory",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fácil",
+    "language": "es",
+    "word": "fácil",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que se hace sin esfuerzo; no es difícil",
+    "clueEn": "Done without effort; not difficult",
+    "translationEn": "easy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-fútbol",
+    "language": "es",
+    "word": "fútbol",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Deporte en el que dos equipos intentan marcar goles con los pies",
+    "clueEn": "Sport in which two teams try to score goals with their feet",
+    "translationEn": "football",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-galleta",
+    "language": "es",
+    "word": "galleta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Dulce pequeño y crujiente que se moja en leche",
+    "clueEn": "Small, crunchy sweet dipped in milk",
+    "translationEn": "cookie",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gallina",
+    "language": "es",
+    "word": "gallina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Ave de granja que pone huevos",
+    "clueEn": "Farm bird that lays eggs",
+    "translationEn": "hen",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gasolina",
+    "language": "es",
+    "word": "gasolina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Líquido que necesita el coche para funcionar",
+    "clueEn": "Liquid a car needs to run",
+    "translationEn": "petrol",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gastar",
+    "language": "es",
+    "word": "gastar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Usar dinero para adquirir cosas",
+    "clueEn": "To use money to get things",
+    "translationEn": "to spend",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gato",
+    "language": "es",
+    "word": "gato",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal doméstico que maúlla y caza ratones",
+    "clueEn": "Pet animal that meows and hunts mice",
+    "translationEn": "cat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gemelo",
+    "language": "es",
+    "word": "gemelo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hermano que nació el mismo día y a la misma hora",
+    "clueEn": "Brother born on the same day at the same time",
+    "translationEn": "twin",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gimnasio",
+    "language": "es",
+    "word": "gimnasio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Sala con máquinas para hacer ejercicio",
+    "clueEn": "Room with machines for doing exercise",
+    "translationEn": "gym",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gol",
+    "language": "es",
+    "word": "gol",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Punto que se consigue al meter el balón en la portería",
+    "clueEn": "Point scored by putting the ball in the goal",
+    "translationEn": "goal",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gorra",
+    "language": "es",
+    "word": "gorra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda con visera para la cabeza",
+    "clueEn": "Headwear with a peak",
+    "translationEn": "cap",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-grande",
+    "language": "es",
+    "word": "grande",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "De mucho tamaño; lo contrario de pequeño",
+    "clueEn": "Of great size; the opposite of small",
+    "translationEn": "big",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-granizo",
+    "language": "es",
+    "word": "granizo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Bolitas de hielo que caen en una tormenta",
+    "clueEn": "Little balls of ice falling in a storm",
+    "translationEn": "hail",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-gripe",
+    "language": "es",
+    "word": "gripe",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Enfermedad con fiebre, tos y dolor de cabeza",
+    "clueEn": "Illness with fever, cough and headache",
+    "translationEn": "flu",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-guante",
+    "language": "es",
+    "word": "guante",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda que cubre la mano con cinco dedos",
+    "clueEn": "Garment that covers the hand with five fingers",
+    "translationEn": "glove",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-guía",
+    "language": "es",
+    "word": "guía",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Persona que enseña los lugares a los turistas",
+    "clueEn": "Person who shows places to tourists",
+    "translationEn": "guide",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hablar",
+    "language": "es",
+    "word": "hablar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Decir palabras para comunicarse con alguien",
+    "clueEn": "Say words to communicate with someone",
+    "translationEn": "to speak",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hacer",
+    "language": "es",
+    "word": "hacer",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Realizar o crear algo, como ___ la cama o ___ la comida",
+    "clueEn": "Do or make something, like ___ the bed or ___ the meal",
+    "translationEn": "to do",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-helada",
+    "language": "es",
+    "word": "helada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Frío tan fuerte que el agua se convierte en hielo",
+    "clueEn": "Cold so strong that water turns to ice",
+    "translationEn": "frost",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-helado",
+    "language": "es",
+    "word": "helado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Postre frío y dulce que se toma en verano",
+    "clueEn": "Cold, sweet dessert eaten in summer",
+    "translationEn": "ice cream",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-herida",
+    "language": "es",
+    "word": "herida",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Corte en la piel que a veces sangra",
+    "clueEn": "Cut in the skin that sometimes bleeds",
+    "translationEn": "wound",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hermana",
+    "language": "es",
+    "word": "hermana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Chica que tiene tus mismos padres",
+    "clueEn": "Girl who has your same parents",
+    "translationEn": "sister",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hermano",
+    "language": "es",
+    "word": "hermano",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Chico que tiene los mismos padres que tú",
+    "clueEn": "Boy who has the same parents as you",
+    "translationEn": "brother",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hielo",
+    "language": "es",
+    "word": "hielo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks",
+      "weather"
+    ],
+    "clue": "Agua congelada que se pone en las bebidas frías",
+    "clueEn": "Frozen water put in cold drinks",
+    "translationEn": "ice",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hijo",
+    "language": "es",
+    "word": "hijo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Chico visto por sus padres",
+    "clueEn": "Boy seen from his parents' point of view",
+    "translationEn": "son",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hoja",
+    "language": "es",
+    "word": "hoja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Parte verde y plana de una planta",
+    "clueEn": "Green, flat part of a plant",
+    "translationEn": "leaf",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hombro",
+    "language": "es",
+    "word": "hombro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Une el brazo con el cuerpo",
+    "clueEn": "Joins the arm to the body",
+    "translationEn": "shoulder",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hora",
+    "language": "es",
+    "word": "hora",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Sesenta minutos",
+    "clueEn": "Sixty minutes",
+    "translationEn": "hour",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-horario",
+    "language": "es",
+    "word": "horario",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "school"
+    ],
+    "clue": "Tabla que dice cuándo empiezan y terminan el trabajo o las clases",
+    "clueEn": "Table that says when work or classes start and end",
+    "translationEn": "schedule",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hormiga",
+    "language": "es",
+    "word": "hormiga",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Insecto diminuto que vive en grupos y trabaja mucho",
+    "clueEn": "Tiny insect that lives in groups and works hard",
+    "translationEn": "ant",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hospital",
+    "language": "es",
+    "word": "hospital",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health",
+      "city"
+    ],
+    "clue": "Lugar grande donde se atiende a los enfermos",
+    "clueEn": "Large place where sick people are treated",
+    "translationEn": "hospital",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hostal",
+    "language": "es",
+    "word": "hostal",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Hotel sencillo y barato",
+    "clueEn": "Simple, cheap hotel",
+    "translationEn": "hostel",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hotel",
+    "language": "es",
+    "word": "hotel",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Edificio con habitaciones donde duermen los turistas",
+    "clueEn": "Building with rooms where tourists sleep",
+    "translationEn": "hotel",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-hoy",
+    "language": "es",
+    "word": "hoy",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "En este mismo día",
+    "clueEn": "On this very day",
+    "translationEn": "today",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-huevo",
+    "language": "es",
+    "word": "huevo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Lo pone la gallina; se puede comer frito o cocido",
+    "clueEn": "A hen lays it; it can be eaten fried or boiled",
+    "translationEn": "egg",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-humedad",
+    "language": "es",
+    "word": "humedad",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Cantidad de agua que hay en el aire",
+    "clueEn": "Amount of water in the air",
+    "translationEn": "humidity",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-imprimir",
+    "language": "es",
+    "word": "imprimir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Pasar un documento de la pantalla al papel",
+    "clueEn": "Move a document from the screen to paper",
+    "translationEn": "to print",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-infusión",
+    "language": "es",
+    "word": "infusión",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida caliente de hierbas, como la manzanilla",
+    "clueEn": "Hot herbal drink, such as chamomile",
+    "translationEn": "herbal tea",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-internet",
+    "language": "es",
+    "word": "internet",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Red mundial donde buscamos información y páginas web",
+    "clueEn": "Worldwide network where we look for information and web pages",
+    "translationEn": "internet",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-invierno",
+    "language": "es",
+    "word": "invierno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Estación más fría del año",
+    "clueEn": "Coldest season of the year",
+    "translationEn": "winter",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-isla",
+    "language": "es",
+    "word": "isla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Tierra rodeada de agua por todas partes",
+    "clueEn": "Land surrounded by water on all sides",
+    "translationEn": "island",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jamón",
+    "language": "es",
+    "word": "jamón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Carne de cerdo curada que se corta en lonchas",
+    "clueEn": "Cured pork cut into slices",
+    "translationEn": "ham",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jardín",
+    "language": "es",
+    "word": "jardín",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Terreno con plantas y flores junto a la casa",
+    "clueEn": "Land with plants and flowers next to the house",
+    "translationEn": "garden",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jarra",
+    "language": "es",
+    "word": "jarra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Recipiente con asa para servir agua o zumo",
+    "clueEn": "Container with a handle for serving water or juice",
+    "translationEn": "pitcher",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jefe",
+    "language": "es",
+    "word": "jefe",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Persona que manda en un equipo o en una oficina",
+    "clueEn": "Person who is in charge of a team or an office",
+    "translationEn": "boss",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jersey",
+    "language": "es",
+    "word": "jersey",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda de lana que abriga el cuerpo (España)",
+    "clueEn": "Wool garment that keeps the body warm (Spain)",
+    "translationEn": "sweater",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jirafa",
+    "language": "es",
+    "word": "jirafa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal de cuello muy largo",
+    "clueEn": "Animal with a very long neck",
+    "translationEn": "giraffe",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-joven",
+    "language": "es",
+    "word": "joven",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que tiene pocos años",
+    "clueEn": "That has few years",
+    "translationEn": "young",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jugador",
+    "language": "es",
+    "word": "jugador",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Persona que participa en un partido",
+    "clueEn": "Person who takes part in a match",
+    "translationEn": "player",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-jugo",
+    "language": "es",
+    "word": "jugo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida de fruta exprimida (América Latina)",
+    "clueEn": "Drink of squeezed fruit (Latin America)",
+    "translationEn": "juice",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-labio",
+    "language": "es",
+    "word": "labio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Cada borde rojo de la boca",
+    "clueEn": "Each red edge of the mouth",
+    "translationEn": "lip",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lago",
+    "language": "es",
+    "word": "lago",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Agua tranquila rodeada de tierra",
+    "clueEn": "Calm water surrounded by land",
+    "translationEn": "lake",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-largo",
+    "language": "es",
+    "word": "largo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que mide mucho de un extremo a otro",
+    "clueEn": "That measures a lot from one end to the other",
+    "translationEn": "long",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lección",
+    "language": "es",
+    "word": "lección",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Parte de un libro o de un curso que se estudia de una vez",
+    "clueEn": "Part of a book or course that is studied in one go",
+    "translationEn": "lesson",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-leche",
+    "language": "es",
+    "word": "leche",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida blanca que da la vaca",
+    "clueEn": "White drink that a cow gives",
+    "translationEn": "milk",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lengua",
+    "language": "es",
+    "word": "lengua",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Está en la boca y sirve para saborear",
+    "clueEn": "It is in the mouth and is used for tasting",
+    "translationEn": "tongue",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lento",
+    "language": "es",
+    "word": "lento",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que tarda mucho o va despacio",
+    "clueEn": "That takes a long time or goes slowly",
+    "translationEn": "slow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-león",
+    "language": "es",
+    "word": "león",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Felino grande con melena, llamado el rey de la selva",
+    "clueEn": "Large feline with a mane, called the king of the jungle",
+    "translationEn": "lion",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-limonada",
+    "language": "es",
+    "word": "limonada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida fría de cítricos agrios, agua y azúcar",
+    "clueEn": "Cold drink of sour citrus, water and sugar",
+    "translationEn": "lemonade",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-limpio",
+    "language": "es",
+    "word": "limpio",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Sin manchas ni polvo",
+    "clueEn": "Without stains or dust",
+    "translationEn": "clean",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-llave",
+    "language": "es",
+    "word": "llave",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Objeto metálico que abre la puerta",
+    "clueEn": "Metal object that opens the door",
+    "translationEn": "key",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-llegada",
+    "language": "es",
+    "word": "llegada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Momento en que alcanzas tu destino",
+    "clueEn": "Moment when you reach your destination",
+    "translationEn": "arrival",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-llegar",
+    "language": "es",
+    "word": "llegar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Alcanzar el destino de un viaje",
+    "clueEn": "Reach the destination of a trip",
+    "translationEn": "to arrive",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lleno",
+    "language": "es",
+    "word": "lleno",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Con todo el espacio ocupado: el vaso está ___",
+    "clueEn": "With all the space taken: the glass is ___",
+    "translationEn": "full",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-llorar",
+    "language": "es",
+    "word": "llorar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Echar lágrimas por los ojos",
+    "clueEn": "To shed tears from the eyes",
+    "translationEn": "to cry",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-llover",
+    "language": "es",
+    "word": "llover",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Caer agua del cielo",
+    "clueEn": "For water to fall from the sky",
+    "translationEn": "to rain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lluvia",
+    "language": "es",
+    "word": "lluvia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Agua que cae de las nubes",
+    "clueEn": "Water that falls from the clouds",
+    "translationEn": "rain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lobo",
+    "language": "es",
+    "word": "lobo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal salvaje parecido a un perro grande que aúlla",
+    "clueEn": "Wild animal like a big dog that howls",
+    "translationEn": "wolf",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-luna",
+    "language": "es",
+    "word": "luna",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Astro que brilla en el cielo por la noche",
+    "clueEn": "Heavenly body that shines in the sky at night",
+    "translationEn": "moon",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lunes",
+    "language": "es",
+    "word": "lunes",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Primer día laboral de la semana",
+    "clueEn": "First working day of the week",
+    "translationEn": "Monday",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lámpara",
+    "language": "es",
+    "word": "lámpara",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Objeto que da luz en una habitación",
+    "clueEn": "Object that gives light in a room",
+    "translationEn": "lamp",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lápiz",
+    "language": "es",
+    "word": "lápiz",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Objeto de madera con una mina negra para escribir y dibujar",
+    "clueEn": "Wooden object with a black lead for writing and drawing",
+    "translationEn": "pencil",
     "status": "auto-only"
   },
   {
@@ -45,33 +3883,3386 @@
     "status": "auto-only"
   },
   {
-    "id": "es-A2-camisa",
+    "id": "es-A2-maestro",
     "language": "es",
-    "word": "camisa",
+    "word": "maestro",
     "pos": "noun",
     "level": "A2",
     "region": "neutral",
     "themes": [
-      "clothing"
+      "school"
     ],
-    "clue": "Prenda con botones para el torso",
-    "clueEn": "Buttoned garment for the torso",
-    "translationEn": "shirt",
+    "clue": "Persona que enseña a los niños en la escuela primaria",
+    "clueEn": "Person who teaches children in primary school",
+    "translationEn": "teacher",
     "status": "auto-only"
   },
   {
-    "id": "es-A2-lluvia",
+    "id": "es-A2-maleta",
     "language": "es",
-    "word": "lluvia",
+    "word": "maleta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Bolsa grande con ruedas donde pones tu ropa para viajar",
+    "clueEn": "Large bag with wheels where you put your clothes for travelling",
+    "translationEn": "suitcase",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mamá",
+    "language": "es",
+    "word": "mamá",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Forma cariñosa de llamar a tu madre",
+    "clueEn": "Affectionate way to call your mother",
+    "translationEn": "mom",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mano",
+    "language": "es",
+    "word": "mano",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Tiene cinco dedos y sirve para tocar",
+    "clueEn": "It has five fingers and is used to touch",
+    "translationEn": "hand",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-manzana",
+    "language": "es",
+    "word": "manzana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruta redonda, roja o verde, que se come cruda",
+    "clueEn": "Round fruit, red or green, eaten raw",
+    "translationEn": "apple",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mapa",
+    "language": "es",
+    "word": "mapa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Dibujo de una ciudad o un país para encontrar lugares",
+    "clueEn": "Drawing of a city or a country to find places",
+    "translationEn": "map",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mar",
+    "language": "es",
+    "word": "mar",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Gran masa de agua salada",
+    "clueEn": "Great mass of salt water",
+    "translationEn": "sea",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mareo",
+    "language": "es",
+    "word": "mareo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Sensación de que todo da vueltas",
+    "clueEn": "Feeling that everything is spinning",
+    "translationEn": "dizziness",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-marido",
+    "language": "es",
+    "word": "marido",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Otra palabra para el hombre con quien una mujer se casó",
+    "clueEn": "Another word for the man a woman married",
+    "translationEn": "husband",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mariposa",
+    "language": "es",
+    "word": "mariposa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Insecto de alas grandes y de colores",
+    "clueEn": "Insect with large, colourful wings",
+    "translationEn": "butterfly",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-martes",
+    "language": "es",
+    "word": "martes",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Día que viene después del lunes",
+    "clueEn": "Day that comes after Monday",
+    "translationEn": "Tuesday",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-medicina",
+    "language": "es",
+    "word": "medicina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Lo que tomas para curarte",
+    "clueEn": "What you take to get better",
+    "translationEn": "medicine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mensaje",
+    "language": "es",
+    "word": "mensaje",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Texto corto que envías a otra persona por el móvil",
+    "clueEn": "Short text you send to another person by phone",
+    "translationEn": "message",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mercado",
+    "language": "es",
+    "word": "mercado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "city"
+    ],
+    "clue": "Lugar con puestos donde se venden frutas y verduras",
+    "clueEn": "Place with stalls selling fruit and vegetables",
+    "translationEn": "market",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mes",
+    "language": "es",
+    "word": "mes",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Enero y marzo lo son",
+    "clueEn": "January and March are two of them",
+    "translationEn": "month",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mesa",
+    "language": "es",
+    "word": "mesa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Mueble con patas donde comemos",
+    "clueEn": "Furniture with legs where we eat",
+    "translationEn": "table",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-metro",
+    "language": "es",
+    "word": "metro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Tren que va por debajo de la ciudad",
+    "clueEn": "Train that runs beneath the city",
+    "translationEn": "underground",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-miedo",
+    "language": "es",
+    "word": "miedo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Lo sientes cuando algo te asusta",
+    "clueEn": "What you feel when something scares you",
+    "translationEn": "fear",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-minuto",
+    "language": "es",
+    "word": "minuto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Sesenta segundos",
+    "clueEn": "Sixty seconds",
+    "translationEn": "minute",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mirar",
+    "language": "es",
+    "word": "mirar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Dirigir los ojos hacia algo para verlo",
+    "clueEn": "Direct your eyes toward something to see it",
+    "translationEn": "to look at",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mochila",
+    "language": "es",
+    "word": "mochila",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel",
+      "school"
+    ],
+    "clue": "Bolsa que llevas en la espalda al caminar",
+    "clueEn": "Bag you carry on your back when walking",
+    "translationEn": "backpack",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-moneda",
+    "language": "es",
+    "word": "moneda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Pieza redonda de metal que vale dinero",
+    "clueEn": "Round piece of metal worth money",
+    "translationEn": "coin",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-mono",
+    "language": "es",
+    "word": "mono",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal que sube a los árboles y come plátanos",
+    "clueEn": "Animal that climbs trees and eats bananas",
+    "translationEn": "monkey",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-montaña",
+    "language": "es",
+    "word": "montaña",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Elevación muy alta de tierra, con nieve en la cima",
+    "clueEn": "Very high rise of land, with snow at the top",
+    "translationEn": "mountain",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-moto",
+    "language": "es",
+    "word": "moto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo de dos ruedas, rápido y con mucho ruido",
+    "clueEn": "Two-wheeled vehicle, fast and very noisy",
+    "translationEn": "motorbike",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-motor",
+    "language": "es",
+    "word": "motor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Parte del coche que le da fuerza para moverse",
+    "clueEn": "Part of the car that gives it power to move",
+    "translationEn": "engine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-museo",
+    "language": "es",
+    "word": "museo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Edificio donde se ven cuadros y objetos antiguos",
+    "clueEn": "Building where you see paintings and old objects",
+    "translationEn": "museum",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-médico",
+    "language": "es",
+    "word": "médico",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Profesional que te examina cuando estás mal",
+    "clueEn": "Professional who examines you when you feel bad",
+    "translationEn": "doctor",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-móvil",
+    "language": "es",
+    "word": "móvil",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Teléfono pequeño que llevas en el bolsillo (España)",
+    "clueEn": "Small phone that you carry in your pocket (Spain)",
+    "translationEn": "mobile phone",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nadar",
+    "language": "es",
+    "word": "nadar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports",
+      "common-verbs"
+    ],
+    "clue": "Moverse en el agua con brazos y piernas",
+    "clueEn": "Move in the water with arms and legs",
+    "translationEn": "to swim",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-naranja",
+    "language": "es",
+    "word": "naranja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Cítrico redondo y dulce con el que se hace zumo",
+    "clueEn": "Round, sweet citrus fruit used to make juice",
+    "translationEn": "orange",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nariz",
+    "language": "es",
+    "word": "nariz",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Sirve para oler, está en medio de la cara",
+    "clueEn": "Used for smelling, it is in the middle of the face",
+    "translationEn": "nose",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-natación",
+    "language": "es",
+    "word": "natación",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Deporte que se practica en la piscina o en el mar",
+    "clueEn": "Sport practised in the pool or in the sea",
+    "translationEn": "swimming",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nervioso",
+    "language": "es",
+    "word": "nervioso",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Así estás antes de un examen importante",
+    "clueEn": "How you feel before an important exam",
+    "translationEn": "nervous",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nevar",
+    "language": "es",
+    "word": "nevar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Caer copos blancos del cielo",
+    "clueEn": "For white flakes to fall from the sky",
+    "translationEn": "to snow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nevera",
+    "language": "es",
+    "word": "nevera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "house"
+    ],
+    "clue": "Aparato frío donde se guardan la leche y los huevos (España)",
+    "clueEn": "Cold appliance where milk and eggs are kept (Spain)",
+    "translationEn": "fridge",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-niebla",
+    "language": "es",
+    "word": "niebla",
     "pos": "noun",
     "level": "A2",
     "region": "neutral",
     "themes": [
       "weather"
     ],
-    "clue": "Agua que cae de las nubes",
-    "clueEn": "Water that falls from clouds",
-    "translationEn": "rain",
+    "clue": "Nube baja que no te deja ver lejos",
+    "clueEn": "Low cloud that stops you from seeing far",
+    "translationEn": "fog",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nieto",
+    "language": "es",
+    "word": "nieto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hijo de tu hijo",
+    "clueEn": "Child of your son",
+    "translationEn": "grandson",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nieve",
+    "language": "es",
+    "word": "nieve",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Agua helada, blanca y suave, que cae en invierno",
+    "clueEn": "Frozen water, white and soft, that falls in winter",
+    "translationEn": "snow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-noche",
+    "language": "es",
+    "word": "noche",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Cuando oscurece y casi todos duermen",
+    "clueEn": "When it gets dark and almost everyone sleeps",
+    "translationEn": "night",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nota",
+    "language": "es",
+    "word": "nota",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Número que te pone el profesor en un examen",
+    "clueEn": "Number the teacher gives you on an exam",
+    "translationEn": "grade",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nube",
+    "language": "es",
+    "word": "nube",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather",
+      "nature"
+    ],
+    "clue": "Masa blanca o gris que flota en el cielo",
+    "clueEn": "White or gray mass floating in the sky",
+    "translationEn": "cloud",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nublado",
+    "language": "es",
+    "word": "nublado",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Cielo cubierto de nubes",
+    "clueEn": "Sky covered in clouds",
+    "translationEn": "cloudy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nuera",
+    "language": "es",
+    "word": "nuera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Esposa de tu hijo",
+    "clueEn": "Wife of your son",
+    "translationEn": "daughter-in-law",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nuevo",
+    "language": "es",
+    "word": "nuevo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que acaba de hacerse o comprarse; no es viejo",
+    "clueEn": "Just made or bought; not old",
+    "translationEn": "new",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-nunca",
+    "language": "es",
+    "word": "nunca",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "En ningún momento",
+    "clueEn": "At no time",
+    "translationEn": "never",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-obrero",
+    "language": "es",
+    "word": "obrero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Persona que trabaja con las manos en una fábrica o en una obra",
+    "clueEn": "Person who works with their hands in a factory or on a building site",
+    "translationEn": "worker",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-odiar",
+    "language": "es",
+    "word": "odiar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sentir rechazo muy fuerte hacia algo",
+    "clueEn": "To feel very strong dislike toward something",
+    "translationEn": "to hate",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oferta",
+    "language": "es",
+    "word": "oferta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Precio especial más bajo durante un tiempo",
+    "clueEn": "Special lower price for a limited time",
+    "translationEn": "offer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oficina",
+    "language": "es",
+    "word": "oficina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Lugar donde se trabaja con papeles y teléfonos",
+    "clueEn": "Place where people work with papers and phones",
+    "translationEn": "office",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oficio",
+    "language": "es",
+    "word": "oficio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Trabajo manual, como el de carpintero o albañil",
+    "clueEn": "Manual work, like that of a carpenter or bricklayer",
+    "translationEn": "trade",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ojo",
+    "language": "es",
+    "word": "ojo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Con él ves el mundo",
+    "clueEn": "You see the world with it",
+    "translationEn": "eye",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ordenador",
+    "language": "es",
+    "word": "ordenador",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Máquina con pantalla y teclado para trabajar o navegar (España)",
+    "clueEn": "Machine with a screen and keyboard for working or browsing (Spain)",
+    "translationEn": "computer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oreja",
+    "language": "es",
+    "word": "oreja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte externa del oído",
+    "clueEn": "Outer part of the ear",
+    "translationEn": "ear",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oso",
+    "language": "es",
+    "word": "oso",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal grande y peludo que duerme en invierno",
+    "clueEn": "Large, hairy animal that sleeps in winter",
+    "translationEn": "bear",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-oveja",
+    "language": "es",
+    "word": "oveja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal de granja cuya lana sirve para hacer jerséis",
+    "clueEn": "Farm animal whose wool is used to make jumpers",
+    "translationEn": "sheep",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-padre",
+    "language": "es",
+    "word": "padre",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hombre que tiene hijos",
+    "clueEn": "Man who has children",
+    "translationEn": "father",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pagar",
+    "language": "es",
+    "word": "pagar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dar dinero por algo que adquieres",
+    "clueEn": "To give money for something you get",
+    "translationEn": "to pay",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pajita",
+    "language": "es",
+    "word": "pajita",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Tubo fino de plástico para sorber un refresco (España)",
+    "clueEn": "Thin plastic tube for sipping a soda (Spain)",
+    "translationEn": "straw",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pan",
+    "language": "es",
+    "word": "pan",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Alimento hecho con harina que se come con la comida",
+    "clueEn": "Food made from flour that is eaten with meals",
+    "translationEn": "bread",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pantalla",
+    "language": "es",
+    "word": "pantalla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Parte del televisor o del móvil donde ves las imágenes",
+    "clueEn": "Part of the television or phone where you see the images",
+    "translationEn": "screen",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pantalón",
+    "language": "es",
+    "word": "pantalón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda con dos perneras que va de la cintura a los tobillos",
+    "clueEn": "Garment with two legs going from waist to ankles",
+    "translationEn": "trousers",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-papa",
+    "language": "es",
+    "word": "papa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "food"
+    ],
+    "clue": "Tubérculo que se come frito, cocido o en puré (América Latina)",
+    "clueEn": "Tuber eaten fried, boiled or mashed (Latin America)",
+    "translationEn": "potato",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-papá",
+    "language": "es",
+    "word": "papá",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Forma cariñosa de llamar a tu padre",
+    "clueEn": "Affectionate way to call your father",
+    "translationEn": "dad",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-parada",
+    "language": "es",
+    "word": "parada",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Sitio donde se detiene el autobús a recoger gente",
+    "clueEn": "Place where the bus stops to pick up people",
+    "translationEn": "stop",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-paraguas",
+    "language": "es",
+    "word": "paraguas",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Lo abres si no quieres mojarte cuando llueve",
+    "clueEn": "You open it if you do not want to get wet when it rains",
+    "translationEn": "umbrella",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pared",
+    "language": "es",
+    "word": "pared",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Superficie vertical que divide las habitaciones de una casa",
+    "clueEn": "Vertical surface that divides the rooms of a house",
+    "translationEn": "wall",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pareja",
+    "language": "es",
+    "word": "pareja",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Dos personas que se quieren y están juntas",
+    "clueEn": "Two people who love each other and are together",
+    "translationEn": "couple",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-parque",
+    "language": "es",
+    "word": "parque",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Lugar con árboles y césped donde los niños juegan",
+    "clueEn": "Place with trees and grass where children play",
+    "translationEn": "park",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-partido",
+    "language": "es",
+    "word": "partido",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Encuentro entre dos equipos o dos jugadores",
+    "clueEn": "Match between two teams or two players",
+    "translationEn": "match",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pasaporte",
+    "language": "es",
+    "word": "pasaporte",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Documento que necesitas para viajar a otro país",
+    "clueEn": "Document you need to travel to another country",
+    "translationEn": "passport",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pastilla",
+    "language": "es",
+    "word": "pastilla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Medicina pequeña y redonda que se traga",
+    "clueEn": "Small round medicine that you swallow",
+    "translationEn": "pill",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-patata",
+    "language": "es",
+    "word": "patata",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "food"
+    ],
+    "clue": "Tubérculo con el que se hace la tortilla española (España)",
+    "clueEn": "Tuber used to make the Spanish omelette (Spain)",
+    "translationEn": "potato",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pato",
+    "language": "es",
+    "word": "pato",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Ave que nada en el lago y hace cuac",
+    "clueEn": "Bird that swims in the lake and goes quack",
+    "translationEn": "duck",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-peatón",
+    "language": "es",
+    "word": "peatón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Persona que va a pie por la calle",
+    "clueEn": "Person who goes on foot along the street",
+    "translationEn": "pedestrian",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pedir",
+    "language": "es",
+    "word": "pedir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Decir que quieres algo, por ejemplo en un restaurante",
+    "clueEn": "Say that you want something, for example in a restaurant",
+    "translationEn": "to ask for",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pelo",
+    "language": "es",
+    "word": "pelo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Crece en la cabeza y se lava y se peina",
+    "clueEn": "It grows on the head and is cut at the hairdresser's",
+    "translationEn": "hair",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pelota",
+    "language": "es",
+    "word": "pelota",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Objeto redondo que se lanza o se golpea en muchos juegos",
+    "clueEn": "Round object that is thrown or hit in many games",
+    "translationEn": "ball",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pensar",
+    "language": "es",
+    "word": "pensar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Usar la mente para tener ideas",
+    "clueEn": "Use the mind to have ideas",
+    "translationEn": "to think",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pequeño",
+    "language": "es",
+    "word": "pequeño",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "De poco tamaño; no es grande",
+    "clueEn": "Of little size; not big",
+    "translationEn": "small",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-perro",
+    "language": "es",
+    "word": "perro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal doméstico que ladra y es amigo del ser humano",
+    "clueEn": "Domestic animal that barks and is a friend of humans",
+    "translationEn": "dog",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pesado",
+    "language": "es",
+    "word": "pesado",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que cuesta levantar porque tiene mucha masa",
+    "clueEn": "Hard to lift because it has a lot of mass",
+    "translationEn": "heavy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pescado",
+    "language": "es",
+    "word": "pescado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Animal del mar o del río que se come frito o a la plancha",
+    "clueEn": "Sea or river animal eaten fried or grilled",
+    "translationEn": "fish",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pez",
+    "language": "es",
+    "word": "pez",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal que vive y respira en el agua",
+    "clueEn": "Animal that lives and breathes in water",
+    "translationEn": "fish",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pie",
+    "language": "es",
+    "word": "pie",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Lo llevas dentro del zapato",
+    "clueEn": "You wear it inside the shoe",
+    "translationEn": "foot",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-piedra",
+    "language": "es",
+    "word": "piedra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Material duro que se encuentra en el suelo o en las montañas",
+    "clueEn": "Hard material found on the ground or in the mountains",
+    "translationEn": "stone",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pierna",
+    "language": "es",
+    "word": "pierna",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte del cuerpo que usas para caminar",
+    "clueEn": "Part of the body you use to walk",
+    "translationEn": "leg",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pijama",
+    "language": "es",
+    "word": "pijama",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Ropa que te pones para dormir",
+    "clueEn": "Clothes you put on to sleep",
+    "translationEn": "pajamas",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-piscina",
+    "language": "es",
+    "word": "piscina",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Lugar con agua para nadar",
+    "clueEn": "Place with water for swimming",
+    "translationEn": "swimming pool",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-piso",
+    "language": "es",
+    "word": "piso",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "house"
+    ],
+    "clue": "Vivienda en un edificio con varios vecinos (España)",
+    "clueEn": "Home in a building with several neighbours (Spain)",
+    "translationEn": "apartment",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pizarra",
+    "language": "es",
+    "word": "pizarra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Superficie oscura donde el profesor escribe con tiza",
+    "clueEn": "Dark surface where the teacher writes with chalk",
+    "translationEn": "blackboard",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-planta",
+    "language": "es",
+    "word": "planta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Ser vivo verde que crece en la tierra y necesita agua",
+    "clueEn": "Green living thing that grows in the soil and needs water",
+    "translationEn": "plant",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-playa",
+    "language": "es",
+    "word": "playa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Zona de arena junto al mar donde tomas el sol",
+    "clueEn": "Sandy area next to the sea where you sunbathe",
+    "translationEn": "beach",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-playera",
+    "language": "es",
+    "word": "playera",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-MX",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda de algodón de manga corta, sin cuello (México)",
+    "clueEn": "Short-sleeved cotton garment without a collar (Mexico)",
+    "translationEn": "T-shirt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-plaza",
+    "language": "es",
+    "word": "plaza",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Espacio abierto en el centro de un pueblo, con bancos y gente",
+    "clueEn": "Open space in the centre of a town, with benches and people",
+    "translationEn": "square",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-plátano",
+    "language": "es",
+    "word": "plátano",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruta larga y amarilla con una cáscara que se pela",
+    "clueEn": "Long yellow fruit with a peel you remove",
+    "translationEn": "banana",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-poder",
+    "language": "es",
+    "word": "poder",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Tener la capacidad o el permiso de hacer algo",
+    "clueEn": "Have the ability or permission to do something",
+    "translationEn": "to be able to",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pollo",
+    "language": "es",
+    "word": "pollo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Ave de granja que se come asada con patatas",
+    "clueEn": "Farm bird eaten roasted with potatoes",
+    "translationEn": "chicken",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-portero",
+    "language": "es",
+    "word": "portero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Jugador que protege la meta de su equipo con las manos",
+    "clueEn": "Player who guards his team's goal with his hands",
+    "translationEn": "goalkeeper",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-postal",
+    "language": "es",
+    "word": "postal",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Tarjeta con una foto que envías desde un lugar de vacaciones",
+    "clueEn": "Card with a photo that you send from a holiday spot",
+    "translationEn": "postcard",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-precio",
+    "language": "es",
+    "word": "precio",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Cantidad de dinero que cuesta algo",
+    "clueEn": "Amount of money something costs",
+    "translationEn": "price",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pregunta",
+    "language": "es",
+    "word": "pregunta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Frase que dices para saber algo; lleva signos de interrogación",
+    "clueEn": "Sentence you say to find out something; it has question marks",
+    "translationEn": "question",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-primo",
+    "language": "es",
+    "word": "primo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hijo de tu tía o de tu tío",
+    "clueEn": "Son of your aunt or your uncle",
+    "translationEn": "cousin",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-profesor",
+    "language": "es",
+    "word": "profesor",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Persona que enseña una materia a los alumnos",
+    "clueEn": "Person who teaches a subject to students",
+    "translationEn": "teacher",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pronto",
+    "language": "es",
+    "word": "pronto",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Dentro de poco tiempo",
+    "clueEn": "In a short while",
+    "translationEn": "soon",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-puente",
+    "language": "es",
+    "word": "puente",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Sirve para cruzar un río sin mojarte",
+    "clueEn": "It lets you cross a river without getting wet",
+    "translationEn": "bridge",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-puerta",
+    "language": "es",
+    "word": "puerta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Se abre para entrar o salir de una habitación",
+    "clueEn": "You open it to enter or leave a room",
+    "translationEn": "door",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-puerto",
+    "language": "es",
+    "word": "puerto",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Lugar de la costa donde llegan y salen los barcos",
+    "clueEn": "Place on the coast where ships arrive and leave",
+    "translationEn": "port",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-página",
+    "language": "es",
+    "word": "página",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Cada hoja de un libro; también un sitio de internet",
+    "clueEn": "Each sheet of a book; also an internet site",
+    "translationEn": "page",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-pájaro",
+    "language": "es",
+    "word": "pájaro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal pequeño con alas y plumas que canta",
+    "clueEn": "Small animal with wings and feathers that sings",
+    "translationEn": "bird",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-querer",
+    "language": "es",
+    "word": "querer",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Desear algo, o sentir cariño por una persona",
+    "clueEn": "Want something, or feel affection for a person",
+    "translationEn": "to want",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-queso",
+    "language": "es",
+    "word": "queso",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Alimento lácteo fresco o curado, típico en los bocadillos",
+    "clueEn": "Fresh or aged dairy food, common in sandwiches",
+    "translationEn": "cheese",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-rana",
+    "language": "es",
+    "word": "rana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal verde que salta y vive cerca del agua",
+    "clueEn": "Green animal that hops and lives near water",
+    "translationEn": "frog",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-raqueta",
+    "language": "es",
+    "word": "raqueta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Objeto con cuerdas y mango para golpear la pelota",
+    "clueEn": "Object with strings and a handle for hitting the ball",
+    "translationEn": "racket",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ratón",
+    "language": "es",
+    "word": "ratón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals",
+      "technology"
+    ],
+    "clue": "Animal pequeño y gris que come queso",
+    "clueEn": "Small grey animal that eats cheese",
+    "translationEn": "mouse",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-rayo",
+    "language": "es",
+    "word": "rayo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Luz fuerte y rápida que cae del cielo en una tormenta",
+    "clueEn": "Strong, quick light that falls from the sky in a storm",
+    "translationEn": "lightning bolt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-raíz",
+    "language": "es",
+    "word": "raíz",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Parte de la planta que crece bajo tierra",
+    "clueEn": "Part of the plant that grows underground",
+    "translationEn": "root",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-receta",
+    "language": "es",
+    "word": "receta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Papel del médico con las medicinas que debes tomar",
+    "clueEn": "Doctor's paper listing the medicines you must take",
+    "translationEn": "prescription",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-recibo",
+    "language": "es",
+    "word": "recibo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Papel que prueba lo que has pagado",
+    "clueEn": "Paper that proves what you have paid",
+    "translationEn": "receipt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-recreo",
+    "language": "es",
+    "word": "recreo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Tiempo libre entre clases para jugar fuera",
+    "clueEn": "Free time between classes to play outside",
+    "translationEn": "break",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-recuerdo",
+    "language": "es",
+    "word": "recuerdo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Objeto pequeño que compras para acordarte de un lugar",
+    "clueEn": "Small object you buy to remember a place",
+    "translationEn": "souvenir",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-refresco",
+    "language": "es",
+    "word": "refresco",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida dulce con gas que se toma fría",
+    "clueEn": "Sweet fizzy drink served cold",
+    "translationEn": "soft drink",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-regla",
+    "language": "es",
+    "word": "regla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Objeto plano para medir y trazar líneas rectas",
+    "clueEn": "Flat object for measuring and drawing straight lines",
+    "translationEn": "ruler",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-reloj",
+    "language": "es",
+    "word": "reloj",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Lo miras para saber qué hora es",
+    "clueEn": "You look at it to know what time it is",
+    "translationEn": "clock",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-reserva",
+    "language": "es",
+    "word": "reserva",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Lo que haces antes de llegar para asegurar tu habitación",
+    "clueEn": "What you do before arriving to secure your room",
+    "translationEn": "booking",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-resfriado",
+    "language": "es",
+    "word": "resfriado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Enfermedad leve con mocos y estornudos",
+    "clueEn": "Mild illness with a runny nose and sneezing",
+    "translationEn": "cold",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-respuesta",
+    "language": "es",
+    "word": "respuesta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Lo que dices cuando alguien te hace una pregunta",
+    "clueEn": "What you say when someone asks you a question",
+    "translationEn": "answer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-reunión",
+    "language": "es",
+    "word": "reunión",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Encuentro de varias personas para hablar de un tema",
+    "clueEn": "Meeting of several people to talk about a subject",
+    "translationEn": "meeting",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-reír",
+    "language": "es",
+    "word": "reír",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Hacer ruido con la boca cuando algo es gracioso",
+    "clueEn": "To make noise with your mouth when something is funny",
+    "translationEn": "to laugh",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-risa",
+    "language": "es",
+    "word": "risa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sonido que haces cuando algo es muy gracioso",
+    "clueEn": "Sound you make when something is very funny",
+    "translationEn": "laughter",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-robot",
+    "language": "es",
+    "word": "robot",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Máquina que hace tareas sola, a veces con forma de persona",
+    "clueEn": "Machine that does tasks by itself, sometimes shaped like a person",
+    "translationEn": "robot",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-rodilla",
+    "language": "es",
+    "word": "rodilla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte que doblas en medio de la pierna",
+    "clueEn": "Part you bend in the middle of the leg",
+    "translationEn": "knee",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ropa",
+    "language": "es",
+    "word": "ropa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Conjunto de prendas que nos ponemos",
+    "clueEn": "Set of garments we put on",
+    "translationEn": "clothes",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-rueda",
+    "language": "es",
+    "word": "rueda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Pieza redonda que gira bajo el coche",
+    "clueEn": "Round part that turns beneath the car",
+    "translationEn": "wheel",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-rápido",
+    "language": "es",
+    "word": "rápido",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que va a mucha velocidad",
+    "clueEn": "That goes at great speed",
+    "translationEn": "fast",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-río",
+    "language": "es",
+    "word": "río",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Agua que corre desde la montaña hasta el mar",
+    "clueEn": "Water that runs from the mountain to the sea",
+    "translationEn": "river",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-saber",
+    "language": "es",
+    "word": "saber",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Tener información en la cabeza; conocer la respuesta",
+    "clueEn": "Have information in your head; know the answer",
+    "translationEn": "to know",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sala",
+    "language": "es",
+    "word": "sala",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-419",
+    "themes": [
+      "house"
+    ],
+    "clue": "Habitación de la casa donde se recibe a las visitas (América Latina)",
+    "clueEn": "Room of the house where guests are received (Latin America)",
+    "translationEn": "living room",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-salida",
+    "language": "es",
+    "word": "salida",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Puerta por donde se va; también, hora en que parte un tren",
+    "clueEn": "Door you go out through; also, the time a train leaves",
+    "translationEn": "exit",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-salir",
+    "language": "es",
+    "word": "salir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Pasar de dentro a fuera de un lugar",
+    "clueEn": "Go from inside to outside of a place",
+    "translationEn": "to go out",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-salud",
+    "language": "es",
+    "word": "salud",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Estado de tu cuerpo cuando estás bien",
+    "clueEn": "State of your body when you are well",
+    "translationEn": "health",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-salón",
+    "language": "es",
+    "word": "salón",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Habitación grande con sofá y televisión",
+    "clueEn": "Large room with a sofa and television",
+    "translationEn": "living room",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sandalia",
+    "language": "es",
+    "word": "sandalia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Calzado abierto para el verano",
+    "clueEn": "Open footwear for summer",
+    "translationEn": "sandal",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sangre",
+    "language": "es",
+    "word": "sangre",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Líquido rojo que corre por las venas",
+    "clueEn": "Red liquid that flows through the veins",
+    "translationEn": "blood",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sano",
+    "language": "es",
+    "word": "sano",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Que no tiene ninguna enfermedad",
+    "clueEn": "Having no illness",
+    "translationEn": "healthy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sed",
+    "language": "es",
+    "word": "sed",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Ganas de beber agua",
+    "clueEn": "The urge to drink water",
+    "translationEn": "thirst",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-segundo",
+    "language": "es",
+    "word": "segundo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Parte muy corta de un minuto",
+    "clueEn": "Very short part of a minute",
+    "translationEn": "second",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-selva",
+    "language": "es",
+    "word": "selva",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Bosque cálido, muy denso y con mucha lluvia",
+    "clueEn": "Warm, very dense forest with a lot of rain",
+    "translationEn": "jungle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-semana",
+    "language": "es",
+    "word": "semana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Siete días seguidos",
+    "clueEn": "Seven days in a row",
+    "translationEn": "week",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-semáforo",
+    "language": "es",
+    "word": "semáforo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Luz roja, amarilla o verde que regula el paso de los coches",
+    "clueEn": "Red, yellow or green light that controls the traffic of cars",
+    "translationEn": "traffic light",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-serpiente",
+    "language": "es",
+    "word": "serpiente",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal largo, sin patas, que se arrastra por el suelo",
+    "clueEn": "Long animal, without legs, that crawls along the ground",
+    "translationEn": "snake",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-siempre",
+    "language": "es",
+    "word": "siempre",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "En todo momento, sin excepción",
+    "clueEn": "At every moment, without exception",
+    "translationEn": "always",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-siglo",
+    "language": "es",
+    "word": "siglo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Periodo de cien años",
+    "clueEn": "Period of one hundred years",
+    "translationEn": "century",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-silla",
+    "language": "es",
+    "word": "silla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Mueble con respaldo para sentarse",
+    "clueEn": "Furniture with a back for sitting",
+    "translationEn": "chair",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sobrino",
+    "language": "es",
+    "word": "sobrino",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hijo de tu hermano o de tu hermana",
+    "clueEn": "Son of your brother or your sister",
+    "translationEn": "nephew",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sofá",
+    "language": "es",
+    "word": "sofá",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Asiento largo y blando para varias personas",
+    "clueEn": "Long, soft seat for several people",
+    "translationEn": "sofa",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sol",
+    "language": "es",
+    "word": "sol",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather",
+      "nature"
+    ],
+    "clue": "Estrella que da luz y calor a la Tierra",
+    "clueEn": "Star that gives light and heat to the Earth",
+    "translationEn": "sun",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-soleado",
+    "language": "es",
+    "word": "soleado",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Día con mucha luz y buen tiempo",
+    "clueEn": "Day with plenty of light and good weather",
+    "translationEn": "sunny",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sombrero",
+    "language": "es",
+    "word": "sombrero",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda con ala para la cabeza que protege del sol",
+    "clueEn": "Headwear with a brim that protects from the sun",
+    "translationEn": "hat",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sonreír",
+    "language": "es",
+    "word": "sonreír",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Mover los labios para mostrar alegría, sin hacer ruido",
+    "clueEn": "To move your lips to show joy, without a sound",
+    "translationEn": "to smile",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sopa",
+    "language": "es",
+    "word": "sopa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Plato caliente y líquido que se toma con cuchara",
+    "clueEn": "Hot liquid dish eaten with a spoon",
+    "translationEn": "soup",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sorpresa",
+    "language": "es",
+    "word": "sorpresa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Lo que sientes ante algo que no esperabas",
+    "clueEn": "What you feel at something you did not expect",
+    "translationEn": "surprise",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sucio",
+    "language": "es",
+    "word": "sucio",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Con manchas o polvo; no está limpio",
+    "clueEn": "With stains or dust; not clean",
+    "translationEn": "dirty",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-suegro",
+    "language": "es",
+    "word": "suegro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Padre de tu esposa o de tu esposo",
+    "clueEn": "Father of your wife or husband",
+    "translationEn": "father-in-law",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-sueldo",
+    "language": "es",
+    "word": "sueldo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Dinero que recibes cada mes por tu trabajo",
+    "clueEn": "Money you receive each month for your work",
+    "translationEn": "salary",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-suelo",
+    "language": "es",
+    "word": "suelo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Superficie que pisamos dentro de casa",
+    "clueEn": "Surface we step on inside the house",
+    "translationEn": "floor",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tableta",
+    "language": "es",
+    "word": "tableta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Aparato plano con pantalla táctil, más grande que un teléfono",
+    "clueEn": "Flat device with a touch screen, larger than a phone",
+    "translationEn": "tablet",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-talla",
+    "language": "es",
+    "word": "talla",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Medida de una prenda: S, M o L",
+    "clueEn": "Size of a garment: S, M or L",
+    "translationEn": "size",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-taller",
+    "language": "es",
+    "word": "taller",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Lugar donde se arreglan vehículos o máquinas",
+    "clueEn": "Place where vehicles or machines are repaired",
+    "translationEn": "workshop",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tarde",
+    "language": "es",
+    "word": "tarde",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "Parte del día entre el mediodía y la noche",
+    "clueEn": "Part of the day between noon and night",
+    "translationEn": "afternoon",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tarea",
+    "language": "es",
+    "word": "tarea",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work",
+      "school"
+    ],
+    "clue": "Trabajo que debes hacer, en casa o en la oficina",
+    "clueEn": "Work that you must do, at home or in the office",
+    "translationEn": "task",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tarjeta",
+    "language": "es",
+    "word": "tarjeta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Pieza de plástico para pagar sin efectivo",
+    "clueEn": "Plastic card for paying without cash",
+    "translationEn": "card",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-taxi",
+    "language": "es",
+    "word": "taxi",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Coche con conductor al que pagas para que te lleve",
+    "clueEn": "Car with a driver whom you pay to take you somewhere",
+    "translationEn": "taxi",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-taza",
+    "language": "es",
+    "word": "taza",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Recipiente con asa para el café o el té",
+    "clueEn": "Container with a handle for coffee or tea",
+    "translationEn": "cup",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-teatro",
+    "language": "es",
+    "word": "teatro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Edificio donde los actores presentan obras",
+    "clueEn": "Building where actors perform plays",
+    "translationEn": "theatre",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-teclado",
+    "language": "es",
+    "word": "teclado",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Lo que usas para escribir letras y números en una computadora",
+    "clueEn": "What you use to type letters and numbers on a computer",
+    "translationEn": "keyboard",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-temprano",
+    "language": "es",
+    "word": "temprano",
+    "pos": "adverb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "time"
+    ],
+    "clue": "A primera hora o antes de lo normal",
+    "clueEn": "At first hour or earlier than usual",
+    "translationEn": "early",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tenis",
+    "language": "es",
+    "word": "tenis",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Deporte de raqueta y pelota que se juega con una red en medio",
+    "clueEn": "Racket and ball sport played with a net in the middle",
+    "translationEn": "tennis",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tienda",
+    "language": "es",
+    "word": "tienda",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping",
+      "city"
+    ],
+    "clue": "Local donde se venden cosas",
+    "clueEn": "Place where things are sold",
+    "translationEn": "shop",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tierra",
+    "language": "es",
+    "word": "tierra",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Suelo donde crecen las plantas",
+    "clueEn": "Ground where plants grow",
+    "translationEn": "soil",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tigre",
+    "language": "es",
+    "word": "tigre",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Felino grande con rayas negras y naranjas",
+    "clueEn": "Large feline with black and orange stripes",
+    "translationEn": "tiger",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tiza",
+    "language": "es",
+    "word": "tiza",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Barrita blanca para escribir en la pizarra",
+    "clueEn": "Little white stick for writing on the blackboard",
+    "translationEn": "chalk",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tomate",
+    "language": "es",
+    "word": "tomate",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruto rojo y redondo que se pone en la ensalada",
+    "clueEn": "Red, round fruit put in the salad",
+    "translationEn": "tomato",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tormenta",
+    "language": "es",
+    "word": "tormenta",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Lluvia fuerte con truenos y rayos",
+    "clueEn": "Heavy rain with thunder and lightning",
+    "translationEn": "storm",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tortuga",
+    "language": "es",
+    "word": "tortuga",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal lento con un caparazón duro en la espalda",
+    "clueEn": "Slow animal with a hard shell on its back",
+    "translationEn": "turtle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tos",
+    "language": "es",
+    "word": "tos",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Sale de la garganta con ruido cuando estás resfriado",
+    "clueEn": "It comes out of the throat noisily when you have a cold",
+    "translationEn": "cough",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-toser",
+    "language": "es",
+    "word": "toser",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Echar aire de golpe por la garganta con ruido",
+    "clueEn": "To push air out of the throat suddenly and noisily",
+    "translationEn": "to cough",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-traje",
+    "language": "es",
+    "word": "traje",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Conjunto de chaqueta y pantalón para ocasiones formales",
+    "clueEn": "Jacket and trousers set for formal occasions",
+    "translationEn": "suit",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tranquilo",
+    "language": "es",
+    "word": "tranquilo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sin preocupaciones ni ruido",
+    "clueEn": "Without worries or noise",
+    "translationEn": "calm",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tranvía",
+    "language": "es",
+    "word": "tranvía",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo eléctrico que circula sobre vías por la calle",
+    "clueEn": "Electric vehicle that runs on tracks along the street",
+    "translationEn": "tram",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tren",
+    "language": "es",
+    "word": "tren",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Vehículo largo que va sobre raíles y para en estaciones",
+    "clueEn": "Long vehicle that runs on rails and stops at stations",
+    "translationEn": "train",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-triste",
+    "language": "es",
+    "word": "triste",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Lo contrario de contento",
+    "clueEn": "The opposite of happy",
+    "translationEn": "sad",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-trueno",
+    "language": "es",
+    "word": "trueno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Ruido fuerte que se oye en una tormenta",
+    "clueEn": "Loud noise heard in a storm",
+    "translationEn": "thunder",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tráfico",
+    "language": "es",
+    "word": "tráfico",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Muchos coches en la calle al mismo tiempo",
+    "clueEn": "Many cars on the street at the same time",
+    "translationEn": "traffic",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-turista",
+    "language": "es",
+    "word": "turista",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Persona que conoce un lugar durante sus vacaciones",
+    "clueEn": "Person who gets to know a place during their holidays",
+    "translationEn": "tourist",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-turno",
+    "language": "es",
+    "word": "turno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Parte del día en que te toca trabajar: mañana o noche",
+    "clueEn": "Part of the day when you have to work: morning or night",
+    "translationEn": "shift",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tímido",
+    "language": "es",
+    "word": "tímido",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Persona que habla poco con desconocidos",
+    "clueEn": "Person who speaks little with strangers",
+    "translationEn": "shy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-tío",
+    "language": "es",
+    "word": "tío",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Hermano de tu madre o de tu padre",
+    "clueEn": "Brother of your mother or your father",
+    "translationEn": "uncle",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-uña",
+    "language": "es",
+    "word": "uña",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "body"
+    ],
+    "clue": "Parte dura al final del dedo",
+    "clueEn": "Hard part at the end of the finger",
+    "translationEn": "nail",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vaca",
+    "language": "es",
+    "word": "vaca",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal de granja que da leche",
+    "clueEn": "Farm animal that gives milk",
+    "translationEn": "cow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vacuna",
+    "language": "es",
+    "word": "vacuna",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Te la ponen con una aguja para evitar enfermedades",
+    "clueEn": "They give it to you with a needle to prevent diseases",
+    "translationEn": "vaccine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vacío",
+    "language": "es",
+    "word": "vacío",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Sin nada dentro: la caja está ___",
+    "clueEn": "With nothing inside: the box is ___",
+    "translationEn": "empty",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-valle",
+    "language": "es",
+    "word": "valle",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Zona baja entre dos montañas",
+    "clueEn": "Low area between two mountains",
+    "translationEn": "valley",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vaso",
+    "language": "es",
+    "word": "vaso",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Recipiente de cristal para tomar agua",
+    "clueEn": "Glass container for drinking water",
+    "translationEn": "glass",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vecino",
+    "language": "es",
+    "word": "vecino",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Persona que vive cerca de tu casa",
+    "clueEn": "Person who lives near your home",
+    "translationEn": "neighbour",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vender",
+    "language": "es",
+    "word": "vender",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Dar un producto a cambio de dinero",
+    "clueEn": "To give a product in exchange for money",
+    "translationEn": "to sell",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-venir",
+    "language": "es",
+    "word": "venir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Moverse hacia el lugar donde está quien habla",
+    "clueEn": "Move toward the place where the speaker is",
+    "translationEn": "to come",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-ventana",
+    "language": "es",
+    "word": "ventana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Cristal en la pared por donde entra la luz",
+    "clueEn": "Glass in the wall where light comes in",
+    "translationEn": "window",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-verano",
+    "language": "es",
+    "word": "verano",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Estación más calurosa del año",
+    "clueEn": "Hottest season of the year",
+    "translationEn": "summer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-verdura",
+    "language": "es",
+    "word": "verdura",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Alimento vegetal como la zanahoria o la lechuga",
+    "clueEn": "Plant food such as carrot or lettuce",
+    "translationEn": "vegetable",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vergüenza",
+    "language": "es",
+    "word": "vergüenza",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Lo sientes y te pones rojo cuando haces el ridículo",
+    "clueEn": "You feel it and turn red when you embarrass yourself",
+    "translationEn": "shame",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vestido",
+    "language": "es",
+    "word": "vestido",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda de una pieza que llevan muchas mujeres",
+    "clueEn": "One-piece garment worn by many women",
+    "translationEn": "dress",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-viaje",
+    "language": "es",
+    "word": "viaje",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Salida a un lugar lejano, por ejemplo en vacaciones",
+    "clueEn": "Trip to a faraway place, for example on holiday",
+    "translationEn": "trip",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-viejo",
+    "language": "es",
+    "word": "viejo",
+    "pos": "adjective",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Que tiene muchos años; no es nuevo",
+    "clueEn": "That has many years; not new",
+    "translationEn": "old",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-viento",
+    "language": "es",
+    "word": "viento",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Aire que se mueve con fuerza",
+    "clueEn": "Air moving with force",
+    "translationEn": "wind",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-visita",
+    "language": "es",
+    "word": "visita",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Rato que pasas viendo un museo o a un amigo",
+    "clueEn": "Time you spend seeing a museum or a friend",
+    "translationEn": "visit",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vivir",
+    "language": "es",
+    "word": "vivir",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Tener tu casa en una ciudad o un pueblo",
+    "clueEn": "Have your home in a city or a town",
+    "translationEn": "to live",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-volar",
+    "language": "es",
+    "word": "volar",
+    "pos": "verb",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "transport"
+    ],
+    "clue": "Moverse por el aire, como un avión o un pájaro",
+    "clueEn": "To move through the air, like a plane or a bird",
+    "translationEn": "to fly",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-volcán",
+    "language": "es",
+    "word": "volcán",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Montaña que echa fuego y lava",
+    "clueEn": "Mountain that throws out fire and lava",
+    "translationEn": "volcano",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-vuelo",
+    "language": "es",
+    "word": "vuelo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Viaje en avión de una ciudad a otra",
+    "clueEn": "Journey by plane from one city to another",
+    "translationEn": "flight",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-yerno",
+    "language": "es",
+    "word": "yerno",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Marido de tu hija",
+    "clueEn": "Husband of your daughter",
+    "translationEn": "son-in-law",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-zapato",
+    "language": "es",
+    "word": "zapato",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Calzado que cubre el pie, con cordones",
+    "clueEn": "Footwear that covers the foot, with laces",
+    "translationEn": "shoe",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-zumo",
+    "language": "es",
+    "word": "zumo",
+    "pos": "noun",
+    "level": "A2",
+    "region": "es-ES",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida que se saca al exprimir naranjas (España)",
+    "clueEn": "Drink obtained by squeezing oranges (Spain)",
+    "translationEn": "juice",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-árbitro",
+    "language": "es",
+    "word": "árbitro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Persona que vigila las reglas durante un partido",
+    "clueEn": "Person who watches the rules during a match",
+    "translationEn": "referee",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-árbol",
+    "language": "es",
+    "word": "árbol",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Planta alta con tronco, ramas y hojas",
+    "clueEn": "Tall plant with a trunk, branches and leaves",
+    "translationEn": "tree",
     "status": "auto-only"
   }
 ]
