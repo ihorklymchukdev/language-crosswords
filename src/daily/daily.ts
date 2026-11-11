@@ -58,6 +58,12 @@ export function dailySpecFrom(
   return layout ? toSpec(layout, date, level) : undefined;
 }
 
+// Inputs are bundled data, so a (date, level) always resolves the same; past the schedule's end
+// each lookup would otherwise rerun the generator.
+const specCache = new Map<string, PuzzleSpec | undefined>();
+
 export function getDailySpec(date: string, level: Level): PuzzleSpec | undefined {
-  return dailySpecFrom(SCHEDULES[level], date, level, getEntries(level));
+  const key = dailyPuzzleId(date, level);
+  if (!specCache.has(key)) specCache.set(key, dailySpecFrom(SCHEDULES[level], date, level, getEntries(level)));
+  return specCache.get(key);
 }
