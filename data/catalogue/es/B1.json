@@ -1,0 +1,77 @@
+[
+  {
+    "id": "es-B1-aeropuerto",
+    "language": "es",
+    "word": "aeropuerto",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Lugar donde despegan los aviones",
+    "clueEn": "Place where planes take off",
+    "translationEn": "airport",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-medicina",
+    "language": "es",
+    "word": "medicina",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Remedio que te receta el médico",
+    "clueEn": "Remedy a doctor prescribes",
+    "translationEn": "medicine",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ordenador",
+    "language": "es",
+    "word": "ordenador",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "technology"
+    ],
+    "clue": "Máquina para trabajar con datos",
+    "clueEn": "Machine for working with data",
+    "translationEn": "computer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-cansado",
+    "language": "es",
+    "word": "cansado",
+    "pos": "adj",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "common-adjectives"
+    ],
+    "clue": "Sin energía después de trabajar",
+    "clueEn": "Without energy after working",
+    "translationEn": "tired",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-entrenar",
+    "language": "es",
+    "word": "entrenar",
+    "pos": "verb",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "sports"
+    ],
+    "clue": "Practicar para mejorar en un deporte",
+    "clueEn": "Practise to improve at a sport",
+    "translationEn": "to train",
+    "status": "auto-only"
+  }
+]

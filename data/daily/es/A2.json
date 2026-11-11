@@ -1,0 +1,41 @@
+{
+ "version": 1,
+ "days": {
+  "2026-11-01": {
+   "rows": 7,
+   "cols": 7,
+   "placements": [
+    {
+     "entryId": "es-A2-camisa",
+     "row": 1,
+     "col": 1,
+     "direction": "down"
+    },
+    {
+     "entryId": "es-A2-madre",
+     "row": 2,
+     "col": 0,
+     "direction": "across"
+    },
+    {
+     "entryId": "es-A2-manzana",
+     "row": 6,
+     "col": 0,
+     "direction": "across"
+    },
+    {
+     "entryId": "es-A2-lluvia",
+     "row": 1,
+     "col": 6,
+     "direction": "down"
+    },
+    {
+     "entryId": "es-A2-perro",
+     "row": 0,
+     "col": 3,
+     "direction": "down"
+    }
+   ]
+  }
+ }
+}

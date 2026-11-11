@@ -1,0 +1,112 @@
+[
+  {
+    "id": "food",
+    "nameEn": "Food",
+    "nameEs": "Comida"
+  },
+  {
+    "id": "drinks",
+    "nameEn": "Drinks",
+    "nameEs": "Bebidas"
+  },
+  {
+    "id": "family",
+    "nameEn": "Family",
+    "nameEs": "Familia"
+  },
+  {
+    "id": "body",
+    "nameEn": "Body",
+    "nameEs": "Cuerpo"
+  },
+  {
+    "id": "health",
+    "nameEn": "Health",
+    "nameEs": "Salud"
+  },
+  {
+    "id": "house",
+    "nameEn": "House",
+    "nameEs": "Casa"
+  },
+  {
+    "id": "clothing",
+    "nameEn": "Clothing",
+    "nameEs": "Ropa"
+  },
+  {
+    "id": "city",
+    "nameEn": "City",
+    "nameEs": "Ciudad"
+  },
+  {
+    "id": "transport",
+    "nameEn": "Transport",
+    "nameEs": "Transporte"
+  },
+  {
+    "id": "travel",
+    "nameEn": "Travel",
+    "nameEs": "Viajes"
+  },
+  {
+    "id": "nature",
+    "nameEn": "Nature",
+    "nameEs": "Naturaleza"
+  },
+  {
+    "id": "animals",
+    "nameEn": "Animals",
+    "nameEs": "Animales"
+  },
+  {
+    "id": "weather",
+    "nameEn": "Weather",
+    "nameEs": "Clima"
+  },
+  {
+    "id": "time",
+    "nameEn": "Time",
+    "nameEs": "Tiempo"
+  },
+  {
+    "id": "work",
+    "nameEn": "Work",
+    "nameEs": "Trabajo"
+  },
+  {
+    "id": "school",
+    "nameEn": "School",
+    "nameEs": "Escuela"
+  },
+  {
+    "id": "emotions",
+    "nameEn": "Emotions",
+    "nameEs": "Emociones"
+  },
+  {
+    "id": "sports",
+    "nameEn": "Sports",
+    "nameEs": "Deportes"
+  },
+  {
+    "id": "shopping",
+    "nameEn": "Shopping",
+    "nameEs": "Compras"
+  },
+  {
+    "id": "technology",
+    "nameEn": "Technology",
+    "nameEs": "Tecnología"
+  },
+  {
+    "id": "common-verbs",
+    "nameEn": "Common verbs",
+    "nameEs": "Verbos comunes"
+  },
+  {
+    "id": "common-adjectives",
+    "nameEn": "Common adjectives",
+    "nameEs": "Adjetivos comunes"
+  }
+]

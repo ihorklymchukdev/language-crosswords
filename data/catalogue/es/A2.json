@@ -1,0 +1,77 @@
+[
+  {
+    "id": "es-A2-perro",
+    "language": "es",
+    "word": "perro",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Animal que ladra",
+    "clueEn": "Animal that barks",
+    "translationEn": "dog",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-manzana",
+    "language": "es",
+    "word": "manzana",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruta roja o verde de un árbol",
+    "clueEn": "Red or green tree fruit",
+    "translationEn": "apple",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-madre",
+    "language": "es",
+    "word": "madre",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "family"
+    ],
+    "clue": "Mujer que tiene hijos",
+    "clueEn": "Woman who has children",
+    "translationEn": "mother",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-camisa",
+    "language": "es",
+    "word": "camisa",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Prenda con botones para el torso",
+    "clueEn": "Buttoned garment for the torso",
+    "translationEn": "shirt",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-A2-lluvia",
+    "language": "es",
+    "word": "lluvia",
+    "pos": "noun",
+    "level": "A2",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Agua que cae de las nubes",
+    "clueEn": "Water that falls from clouds",
+    "translationEn": "rain",
+    "status": "auto-only"
+  }
+]

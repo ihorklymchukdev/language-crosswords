@@ -1,0 +1,77 @@
+[
+  {
+    "id": "es-B2-alegría",
+    "language": "es",
+    "word": "alegría",
+    "pos": "noun",
+    "level": "B2",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sentimiento de gran felicidad",
+    "clueEn": "Feeling of great happiness",
+    "translationEn": "joy",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B2-presupuesto",
+    "language": "es",
+    "word": "presupuesto",
+    "pos": "noun",
+    "level": "B2",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Cantidad de dinero planeada para gastar",
+    "clueEn": "Planned amount of money to spend",
+    "translationEn": "budget",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B2-ascensor",
+    "language": "es",
+    "word": "ascensor",
+    "pos": "noun",
+    "level": "B2",
+    "region": "neutral",
+    "themes": [
+      "house"
+    ],
+    "clue": "Cabina que sube y baja en un edificio",
+    "clueEn": "Cabin that goes up and down a building",
+    "translationEn": "elevator",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B2-entrevista",
+    "language": "es",
+    "word": "entrevista",
+    "pos": "noun",
+    "level": "B2",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Reunión para evaluar a un candidato",
+    "clueEn": "Meeting to assess a candidate",
+    "translationEn": "interview",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B2-surgir",
+    "language": "es",
+    "word": "surgir",
+    "pos": "verb",
+    "level": "B2",
+    "region": "neutral",
+    "themes": [
+      "common-verbs"
+    ],
+    "clue": "Aparecer de repente",
+    "clueEn": "To appear suddenly",
+    "translationEn": "to arise",
+    "status": "auto-only"
+  }
+]
