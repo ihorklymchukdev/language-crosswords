@@ -21,6 +21,12 @@ const config: ExpoConfig = {
       foregroundImage: './assets/adaptive-icon.png',
       backgroundColor: '#C8553D',
     },
+    blockedPermissions: [
+      'android.permission.SYSTEM_ALERT_WINDOW',
+      'android.permission.READ_EXTERNAL_STORAGE',
+      'android.permission.WRITE_EXTERNAL_STORAGE',
+      'android.permission.VIBRATE',
+    ],
   },
   web: { output: 'static', bundler: 'metro', favicon: './assets/favicon.png' },
   plugins: [

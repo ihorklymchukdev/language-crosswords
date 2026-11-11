@@ -13,23 +13,26 @@ const ROWS: readonly (readonly string[])[] = [
 // Every row is laid out on the same 10-unit width so keys line up between rows.
 const ROW_UNITS = 10;
 const BACKSPACE_UNITS = 1.5;
-export const KEY_HEIGHT = 46;
+const KEY_HEIGHT = 46;
 const KEY_GAP = 6;
+const COMPACT_KEY_HEIGHT = 38;
+const COMPACT_KEY_GAP = 5;
 
 type Props = {
   palette: Palette;
+  compact: boolean;
   onLetter: (letter: string) => void;
   onBackspace: () => void;
 };
 
-export const Keyboard = memo(function Keyboard({ palette, onLetter, onBackspace }: Props) {
+export const Keyboard = memo(function Keyboard({ palette, compact, onLetter, onBackspace }: Props) {
   return (
-    <View style={styles.keyboard}>
+    <View style={[styles.keyboard, compact && styles.keyboardCompact]}>
       {ROWS.map((row, i) => {
         const units = row.reduce((sum, k) => sum + (k === BACKSPACE ? BACKSPACE_UNITS : 1), 0);
         const side = (ROW_UNITS - units) / 2;
         return (
-          <View key={i} style={styles.row}>
+          <View key={i} style={[styles.row, compact && styles.rowCompact]}>
             {side > 0 && <View style={{ flex: side }} />}
             {row.map((k) => {
               const isBack = k === BACKSPACE;
@@ -41,6 +44,7 @@ export const Keyboard = memo(function Keyboard({ palette, onLetter, onBackspace 
                   accessibilityLabel={isBack ? 'Delete' : upper(k)}
                   style={({ pressed }) => [
                     styles.key,
+                    compact && styles.keyCompact,
                     {
                       flex: isBack ? BACKSPACE_UNITS : 1,
                       backgroundColor: pressed ? palette.border : palette.surface,
@@ -67,7 +71,9 @@ export const Keyboard = memo(function Keyboard({ palette, onLetter, onBackspace 
 
 const styles = StyleSheet.create({
   keyboard: { gap: KEY_GAP + 2, paddingHorizontal: space.xs, userSelect: 'none' },
+  keyboardCompact: { gap: COMPACT_KEY_GAP },
   row: { flexDirection: 'row', gap: KEY_GAP },
+  rowCompact: { gap: COMPACT_KEY_GAP },
   key: {
     height: KEY_HEIGHT,
     minWidth: 0,
@@ -76,6 +82,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  keyCompact: { height: COMPACT_KEY_HEIGHT },
   label: { fontSize: 19, fontWeight: '500' },
   backLabel: { fontSize: 20 },
 });

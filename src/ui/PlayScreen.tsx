@@ -1,11 +1,20 @@
 import { useCallback, useMemo, useState } from 'react';
-import { Modal, Pressable, ScrollView, StyleSheet, Text, View, type LayoutChangeEvent } from 'react-native';
+import {
+  Modal,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+  type LayoutChangeEvent,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { lettersMatch } from '../play/matching';
 import { activeSlot, displayLetter, type PlayState } from '../play/play-state';
 import type { Puzzle } from '../play/puzzle';
 import { usePlay } from '../play/usePlay';
-import { CLUE_BAR_MIN_HEIGHT, ClueBar } from './ClueBar';
+import { CLUE_BAR_MIN_HEIGHT, ClueBar, ClueBarSizer } from './ClueBar';
 import { ClueList } from './ClueList';
 import { CompletionCard, type CardAction } from './CompletionCard';
 import { formatTime } from './format';
@@ -18,6 +27,8 @@ const MAX_GRID_WIDTH = 420;
 const MAX_CELL = 60;
 // Below this much spare height the inline clue list would be a sliver; the Clues sheet covers it.
 const MIN_INLINE_LIST = 150;
+// Shorter windows get a tighter keyboard and spacing so the grid keeps a usable size.
+const SHORT_SCREEN = 720;
 const NO_CELLS: readonly number[] = [];
 
 type Props = {
@@ -32,19 +43,24 @@ type Props = {
 };
 
 type Area = { w: number; h: number };
+type Fit = { cellSize: number; heightBound: boolean };
 
-function cellSizeFor(area: Area, rows: number, cols: number): number {
-  const w = Math.min(area.w - space.l * 2, MAX_GRID_WIDTH);
-  const h = area.h - CLUE_BAR_MIN_HEIGHT - space.m * 2;
-  const fit = (extent: number, n: number) => (extent - GRID_PAD * 2 - (n - 1) * GRID_GAP) / n;
-  return Math.max(16, Math.floor(Math.min(fit(w, cols), fit(h, rows), MAX_CELL)));
+const fit = (extent: number, n: number) => (extent - GRID_PAD * 2 - (n - 1) * GRID_GAP) / n;
+
+// The clue bar's tallest (translated) height is held back, so translating never pushes it off screen.
+function fitGrid(area: Area, rows: number, cols: number, barHeight: number, gap: number): Fit {
+  const byWidth = Math.min(fit(Math.min(area.w - space.l * 2, MAX_GRID_WIDTH), cols), MAX_CELL);
+  const byHeight = fit(area.h - space.s - gap - barHeight, rows);
+  return { cellSize: Math.max(16, Math.floor(Math.min(byWidth, byHeight))), heightBound: byHeight < byWidth };
 }
 
 export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onComplete, onNext }: Props) {
   const palette = usePalette();
   const insets = useSafeAreaInsets();
+  const compact = useWindowDimensions().height < SHORT_SCREEN;
   const [cluesOpen, setCluesOpen] = useState(false);
   const [area, setArea] = useState<Area | undefined>(undefined);
+  const [barHeight, setBarHeight] = useState<number | undefined>(undefined);
   const { state, dispatch, green } = usePlay({ puzzle, initial, onChange, onComplete, physicalKeys: !cluesOpen });
   const styles = useMemo(() => makeStyles(palette), [palette]);
 
@@ -87,8 +103,12 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
   }, []);
 
   const { rows, cols } = puzzle.spec;
-  const cellSize = area ? cellSizeFor(area, rows, cols) : 0;
-  const spare = area ? area.h - gridExtent(rows, cellSize) - CLUE_BAR_MIN_HEIGHT - space.m * 3 : 0;
+  const gap = compact ? space.s : space.m;
+  const grid = area && barHeight !== undefined ? fitGrid(area, rows, cols, barHeight, gap) : undefined;
+  const cellSize = grid?.cellSize ?? 0;
+  // When height is what limits the grid, the bar keeps its tallest size so nothing shifts on Translate.
+  const barMin = grid?.heightBound && barHeight !== undefined ? barHeight : CLUE_BAR_MIN_HEIGHT;
+  const spare = area ? area.h - gridExtent(rows, cellSize) - barMin - space.s - gap * 2 : 0;
   const translated = slot !== undefined && state.translated.includes(slot.index);
   const cursorLocked = (green[state.cursor] ?? false) || (state.revealed[state.cursor] ?? false);
   const revealedCount = state.revealed.filter(Boolean).length;
@@ -135,8 +155,11 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
         }
       />
 
-      <View style={styles.middle} onLayout={onLayout}>
+      <View style={[styles.middle, { gap }]} onLayout={onLayout}>
         {area && (
+          <ClueBarSizer slots={puzzle.slots} width={area.w - space.l * 2} palette={palette} onHeight={setBarHeight} />
+        )}
+        {grid && (
           <>
             <Grid
               puzzle={puzzle}
@@ -152,6 +175,7 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
             <ClueBar
               slot={slot}
               translated={translated}
+              minHeight={barMin}
               palette={palette}
               onPrev={onPrev}
               onNext={onNextSlot}
@@ -170,7 +194,7 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
         )}
       </View>
 
-      <View style={[styles.bottom, { paddingBottom: insets.bottom + space.s }]}>
+      <View style={[styles.bottom, compact && styles.bottomCompact, { paddingBottom: insets.bottom + space.s }]}>
         {complete ? (
           <CompletionCard
             palette={palette}
@@ -197,7 +221,7 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
               />
               <ActionButton label="⇄" a11yLabel="Switch direction" palette={palette} narrow onPress={onToggle} />
             </View>
-            <Keyboard palette={palette} onLetter={onLetter} onBackspace={onBackspace} />
+            <Keyboard palette={palette} compact={compact} onLetter={onLetter} onBackspace={onBackspace} />
           </>
         )}
       </View>
@@ -283,7 +307,7 @@ function makeStyles(p: Palette) {
     },
     headerButtonText: { color: p.text, fontSize: 14, fontWeight: '600' },
     pressed: { backgroundColor: p.surfaceAlt },
-    middle: { flex: 1, paddingHorizontal: space.l, paddingTop: space.s, gap: space.m, overflow: 'hidden' },
+    middle: { flex: 1, paddingHorizontal: space.l, paddingTop: space.s, overflow: 'hidden' },
     inlineList: { flex: 1 },
     inlineListContent: { paddingBottom: space.l },
     bottom: {
@@ -294,6 +318,7 @@ function makeStyles(p: Palette) {
       borderTopLeftRadius: 16,
       borderTopRightRadius: 16,
     },
+    bottomCompact: { paddingTop: space.s, gap: space.s },
     actions: { flexDirection: 'row', gap: space.s, paddingHorizontal: space.xs },
     sheetRoot: { flex: 1, justifyContent: 'flex-end' },
     backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
