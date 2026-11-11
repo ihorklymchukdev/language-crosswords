@@ -24,7 +24,8 @@ export default function PrivacyScreen() {
       <H2>What stays on your device</H2>
       <P>
         Your puzzle progress and streak are stored only on your device (AsyncStorage in the app, local storage
-        in your browser on the web). They never leave it. They are deleted when you uninstall the app or clear the
+        in your browser on the web). They are never sent to us or anyone else (your device's own backups may include
+        them). They are deleted when you uninstall the app or clear the
         site's data in your browser.
       </P>
 

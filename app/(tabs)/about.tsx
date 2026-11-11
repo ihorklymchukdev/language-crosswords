@@ -20,7 +20,7 @@ export default function AboutScreen() {
     <TabPage eyebrow="About" title={APP_NAME}>
       <Text style={[styles.lead, { color: palette.textMuted }]}>
         Small Spanish crosswords for learners at A2, B1 and B2. A new daily puzzle at each level, and practice
-        whenever you like. Works offline.
+        whenever you like. The iOS and Android apps work offline.
       </Text>
 
       <View style={styles.section}>

@@ -105,7 +105,7 @@ export function ExternalLink({ url, children }: { url: string; children: string 
   return (
     <Text
       accessibilityRole="link"
-      onPress={() => void Linking.openURL(url)}
+      onPress={() => void Linking.openURL(url).catch(() => {})}
       style={[styles.link, { color: palette.accent }]}
     >
       {children}

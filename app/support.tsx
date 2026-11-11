@@ -8,7 +8,7 @@ export default function SupportScreen() {
     <TextPage title="Support">
       <P>
         {APP_NAME} is a small crossword app for learning Spanish. Each day brings a new puzzle at levels A2, B1 and B2,
-        and Practice makes a fresh themed crossword whenever you want one. Everything works offline.
+        and Practice makes a fresh themed crossword whenever you want one. The iOS and Android apps work offline.
       </P>
 
       <H2>Where is my progress saved?</H2>
@@ -18,7 +18,7 @@ export default function SupportScreen() {
       </P>
 
       <H2>Can I sync between devices?</H2>
-      <P>Not yet. There are no accounts, so each device keeps its own progress.</P>
+      <P>No. There are no accounts; progress stays on each device.</P>
 
       <H2>A word or clue looks wrong</H2>
       <P>

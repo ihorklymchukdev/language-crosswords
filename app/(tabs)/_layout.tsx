@@ -3,6 +3,7 @@ import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { TabIcon, type TabIconName } from '../../src/ui/TabIcon';
 import { MAX_CONTENT_WIDTH, usePalette } from '../../src/ui/theme';
+import { useHydrated } from '../../src/ui/useHydrated';
 
 // The default height clips labels under a 22px drawn icon.
 const TAB_BAR_HEIGHT = 62;
@@ -15,7 +16,8 @@ const TABS: readonly { name: string; title: string; icon: TabIconName }[] = [
 
 export default function TabsLayout() {
   const palette = usePalette();
-  const { width } = useWindowDimensions();
+  const dims = useWindowDimensions();
+  const width = useHydrated() ? dims.width : 0;
   const insets = useSafeAreaInsets();
   // The bar spans the window but its items line up with the centred content column.
   const inset = Math.max(0, (width - MAX_CONTENT_WIDTH) / 2);

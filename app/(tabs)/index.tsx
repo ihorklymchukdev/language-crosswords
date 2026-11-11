@@ -7,6 +7,7 @@ import { missedDailies, streakLine, todaysDailies, type DailyRef, type DailyStat
 import { useLocalToday } from '../../src/home/useLocalToday';
 import { useProgress } from '../../src/progress/progress-context';
 import { currentStreak } from '../../src/progress/streak';
+import { useHydrated } from '../../src/ui/useHydrated';
 import { formatLongDate, formatShortDate } from '../../src/ui/format';
 import { Card, LinkRow, SectionLabel, TabPage } from '../../src/ui/Page';
 import { MIN_TOUCH, radius, space, usePalette, type Palette } from '../../src/ui/theme';
@@ -24,6 +25,7 @@ function openDaily(date: string, level: Level) {
 export default function TodayScreen() {
   const palette = usePalette();
   const today = useLocalToday();
+  const hydrated = useHydrated();
   const { state, ready } = useProgress();
 
   const { cards, missed, streak } = useMemo(() => {
@@ -40,7 +42,8 @@ export default function TodayScreen() {
   const solvedToday = cards.some((c) => c.status === 'solved');
 
   return (
-    <TabPage eyebrow="Today" title={formatLongDate(today)}>
+    // The static HTML was rendered on another day; a non-breaking space keeps the heading's height.
+    <TabPage eyebrow="Today" title={hydrated ? formatLongDate(today) : '\u00a0'}>
       {!ready ? (
         <ActivityIndicator color={palette.accent} accessibilityLabel="Loading" style={styles.loading} />
       ) : (

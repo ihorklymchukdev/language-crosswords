@@ -1,4 +1,5 @@
 import { Platform, useColorScheme } from 'react-native';
+import { useHydrated } from './useHydrated';
 
 export type Palette = {
   scheme: 'light' | 'dark';
@@ -60,8 +61,11 @@ export const radius = { card: 10, cell: 4 } as const;
 export const MAX_CONTENT_WIDTH = 480;
 export const MIN_TOUCH = 44;
 
+// The static web HTML is rendered light; dark applies once hydrated.
 export function usePalette(): Palette {
-  return useColorScheme() === 'dark' ? palettes.dark : palettes.light;
+  const hydrated = useHydrated();
+  const scheme = useColorScheme();
+  return hydrated && scheme === 'dark' ? palettes.dark : palettes.light;
 }
 
 // Web: RN Web holds onPressIn back 50 ms and drops it on a faster tap, so press-in with no delay
