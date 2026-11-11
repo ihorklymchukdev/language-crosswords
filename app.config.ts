@@ -19,7 +19,7 @@ const config: ExpoConfig = {
     package: 'com.ihorklymchuk.crosswords',
     adaptiveIcon: {
       foregroundImage: './assets/adaptive-icon.png',
-      backgroundColor: '#C8553D',
+      backgroundColor: '#2F5BEA',
     },
     blockedPermissions: [
       'android.permission.SYSTEM_ALERT_WINDOW',

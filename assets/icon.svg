@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <rect width="1024" height="1024" rx="224" fill="#C8553D"/>
-  <g>
-    <rect x="166" y="166" width="220" height="220" rx="26" fill="#2B2F38"/>
-    <rect x="402" y="166" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="638" y="166" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="166" y="402" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="402" y="402" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="638" y="402" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="166" y="638" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="402" y="638" width="220" height="220" rx="26" fill="#FBF7F0"/>
-    <rect x="638" y="638" width="220" height="220" rx="26" fill="#2B2F38"/>
-    <g transform="translate(512 522) scale(1.4) translate(-512 -512)" fill="none" stroke="#C8553D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M472 504V560M472 526C472 498 552 492 552 526V560"/>
-      <path d="M466 470C474 454 488 452 500 460C512 468 526 468 538 452"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024"><rect width="1024" height="1024"  fill="#2F5BEA"/><rect x="172" y="172" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/><rect x="408" y="172" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/><rect x="172" y="408" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/><rect x="408" y="408" width="208" height="208" rx="20" fill="#FFFFFF"/><rect x="500" y="452" width="24" height="120" rx="12" fill="#2F5BEA"/><rect x="644" y="408" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/><rect x="408" y="644" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/><rect x="644" y="644" width="208" height="208" rx="20" fill="#FFFFFF" fill-opacity="0.26"/></svg>
