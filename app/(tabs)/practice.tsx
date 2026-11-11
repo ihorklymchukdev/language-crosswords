@@ -82,7 +82,7 @@ export default function PracticeScreen() {
       }
     >
       <Text style={[styles.lead, { color: palette.textMuted }]}>
-        Pick a level and a theme. Every puzzle is new, and you can play as many as you like.
+        Pick a level and a theme. Any theme gives a full-size grid of 20+ words; a single theme makes a mini. Every puzzle is new.
       </Text>
 
       <View style={styles.section} accessibilityRole="radiogroup">

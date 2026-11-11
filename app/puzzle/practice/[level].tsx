@@ -27,8 +27,7 @@ export default function PracticePuzzleScreen() {
   const create = useCallback(
     (themeId: string | undefined) => {
       if (!level) return;
-      const recent = new Set(latest.current.practiceHistory[level].flat());
-      const spec = makePracticeSpec(level, themeId, recent, newSeed());
+      const spec = makePracticeSpec(level, themeId, latest.current.practiceHistory[level], newSeed());
       const puzzle = 'reason' in spec ? undefined : resolvePuzzle(spec);
       if (!puzzle) {
         setSession({ reason: 'reason' in spec ? spec.reason : 'quality-gate-failed' });
