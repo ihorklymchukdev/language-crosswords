@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useCallback, useEffect, useRef, type ReactNode } from 'react';
 import {
   Platform,
   ScrollView,
@@ -58,17 +58,24 @@ export function GridViewport({
   // Web scrollbars take layout space and would cover the last column.
   const indicators = Platform.OS !== 'web';
 
-  useEffect(() => {
-    if (cursor < 0 || (!scrollX && !scrollY)) return;
-    const f = focusOf(cursor, activeCells, cols, cellSize);
-    const x = revealOffset(offset.current.x, width, contentWidth, f.x, f.cx);
-    const y = revealOffset(offset.current.y, height, contentHeight, f.y, f.cy);
-    // Always issued: a scroll dropped before the first layout would otherwise never be retried.
-    if (scrollX) inner.current?.scrollTo({ x, animated: true });
-    if (scrollY) outer.current?.scrollTo({ y, animated: true });
-    // Store the target now so a quick second move measures from where we are heading.
-    offset.current = { x, y };
-  }, [cursor, activeCells, cols, cellSize, width, height, contentWidth, contentHeight, scrollX, scrollY]);
+  const reveal = useCallback(
+    (animated: boolean) => {
+      if (cursor < 0 || (!scrollX && !scrollY)) return;
+      const f = focusOf(cursor, activeCells, cols, cellSize);
+      const x = revealOffset(offset.current.x, width, contentWidth, f.x, f.cx);
+      const y = revealOffset(offset.current.y, height, contentHeight, f.y, f.cy);
+      if (scrollX) inner.current?.scrollTo({ x, animated });
+      if (scrollY) outer.current?.scrollTo({ y, animated });
+      // Store the target now so a quick second move measures from where we are heading.
+      offset.current = { x, y };
+    },
+    [cursor, activeCells, cols, cellSize, width, height, contentWidth, contentHeight, scrollX, scrollY],
+  );
+
+  useEffect(() => reveal(true), [reveal]);
+  // A scroll issued before the content is laid out is dropped on native (e.g. resuming with the
+  // cursor far from the corner), so repeat it once the content has a size.
+  const onContentSizeChange = useCallback(() => reveal(false), [reveal]);
 
   const onScrollX = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     offset.current.x = e.nativeEvent.contentOffset.x;
@@ -83,6 +90,7 @@ export function GridViewport({
       style={[styles.viewport, { width, height }]}
       scrollEnabled={scrollY}
       onScroll={onScrollY}
+      onContentSizeChange={onContentSizeChange}
       scrollEventThrottle={16}
       showsVerticalScrollIndicator={indicators && scrollY}
       bounces={false}
