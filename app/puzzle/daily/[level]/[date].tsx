@@ -56,7 +56,8 @@ export default function DailyPuzzleScreen() {
       key={session.puzzle.spec.id}
       puzzle={session.puzzle}
       initial={session.initial}
-      title={`Daily · ${level} · ${formatDayMonth(date)}`}
+      title={`Daily · ${formatDayMonth(date)}`}
+      badge={level}
       doneMessage={`You solved the ${level} daily for ${formatDayMonth(date)}.`}
       onChange={onChange}
       onComplete={onComplete}

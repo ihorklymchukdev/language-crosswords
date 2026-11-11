@@ -20,10 +20,11 @@ import { CompletionCard, type CardAction } from './CompletionCard';
 import { formatTime } from './format';
 import { GRID_GAP, GRID_PAD, Grid, gridExtent } from './Grid';
 import { Keyboard } from './Keyboard';
+import { Icon, type IconName } from './Icon';
 import { Header, ScreenFrame, goBack } from './ScreenFrame';
-import { MAX_CONTENT_WIDTH, MIN_TOUCH, radius, space, usePalette, type Palette } from './theme';
+import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette, type Palette } from './theme';
 
-const MAX_GRID_WIDTH = 420;
+const MAX_GRID_WIDTH = MAX_CONTENT_WIDTH;
 const MAX_CELL = 60;
 // Below this much spare height the inline clue list would be a sliver; the Clues sheet covers it.
 const MIN_INLINE_LIST = 150;
@@ -35,6 +36,7 @@ type Props = {
   puzzle: Puzzle;
   initial: PlayState;
   title: string;
+  badge?: string;
   doneMessage: string;
   onChange: (s: PlayState) => void;
   onComplete: (s: PlayState) => void;
@@ -48,13 +50,14 @@ type Fit = { cellSize: number; heightBound: boolean };
 const fit = (extent: number, n: number) => (extent - GRID_PAD * 2 - (n - 1) * GRID_GAP) / n;
 
 // The clue bar's tallest (translated) height is held back, so translating never pushes it off screen.
+// The grid runs edge to edge; only the clue bar and list are inset.
 function fitGrid(area: Area, rows: number, cols: number, barHeight: number, gap: number): Fit {
-  const byWidth = Math.min(fit(Math.min(area.w - space.l * 2, MAX_GRID_WIDTH), cols), MAX_CELL);
+  const byWidth = Math.min(fit(Math.min(area.w, MAX_GRID_WIDTH), cols), MAX_CELL);
   const byHeight = fit(area.h - space.s - gap - barHeight, rows);
   return { cellSize: Math.max(16, Math.floor(Math.min(byWidth, byHeight))), heightBound: byHeight < byWidth };
 }
 
-export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onComplete, onNext }: Props) {
+export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChange, onComplete, onNext }: Props) {
   const palette = usePalette();
   const insets = useSafeAreaInsets();
   const compact = useWindowDimensions().height < SHORT_SCREEN;
@@ -138,18 +141,21 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
     <ScreenFrame padBottom={false}>
       <Header
         title={title}
+        badge={badge}
         palette={palette}
         right={
           <>
-            <Text style={styles.timer} accessibilityLabel={`Time ${formatTime(state.completedAt ?? state.elapsedMs)}`}>
-              {formatTime(state.completedAt ?? state.elapsedMs)}
-            </Text>
+            <View style={styles.timer} accessible accessibilityLabel={`Time ${formatTime(state.completedAt ?? state.elapsedMs)}`}>
+              <Icon name="clock" size={16} color={palette.textMuted} />
+              <Text style={styles.timerText}>{formatTime(state.completedAt ?? state.elapsedMs)}</Text>
+            </View>
             <Pressable
               onPress={() => setCluesOpen(true)}
               accessibilityRole="button"
-              style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
+              accessibilityLabel="Clues"
+              style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
             >
-              <Text style={styles.headerButtonText}>Clues</Text>
+              <Icon name="list" size={18} color={palette.text} />
             </Pressable>
           </>
         }
@@ -157,7 +163,7 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
 
       <View style={[styles.middle, { gap }]} onLayout={onLayout}>
         {area && (
-          <ClueBarSizer slots={puzzle.slots} width={area.w - space.l * 2} palette={palette} onHeight={setBarHeight} />
+          <ClueBarSizer slots={puzzle.slots} width={area.w - INSET * 2} palette={palette} onHeight={setBarHeight} />
         )}
         {grid && (
           <>
@@ -172,15 +178,17 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
               palette={palette}
               onSelect={onSelect}
             />
-            <ClueBar
-              slot={slot}
-              translated={translated}
-              minHeight={barMin}
-              palette={palette}
-              onPrev={onPrev}
-              onNext={onNextSlot}
-              onToggle={onToggle}
-            />
+            <View style={styles.inset}>
+              <ClueBar
+                slot={slot}
+                translated={translated}
+                minHeight={barMin}
+                palette={palette}
+                onPrev={onPrev}
+                onNext={onNextSlot}
+                onToggle={onToggle}
+              />
+            </View>
             {spare >= MIN_INLINE_LIST && (
               <ScrollView
                 style={styles.inlineList}
@@ -209,17 +217,19 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
             <View style={styles.actions}>
               <ActionButton
                 label="Reveal letter"
+                icon="bulb"
                 palette={palette}
                 disabled={cursorLocked}
                 onPress={() => dispatch({ type: 'reveal' })}
               />
               <ActionButton
                 label={translated ? 'Translated' : 'Translate'}
+                icon="translate"
                 palette={palette}
                 disabled={translated || slot === undefined}
                 onPress={() => dispatch({ type: 'translate' })}
               />
-              <ActionButton label="⇄" a11yLabel="Switch direction" palette={palette} narrow onPress={onToggle} />
+              <ActionButton icon="swap" a11yLabel="Switch direction" palette={palette} narrow onPress={onToggle} />
             </View>
             <Keyboard palette={palette} compact={compact} onLetter={onLetter} onBackspace={onBackspace} />
           </>
@@ -230,6 +240,7 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
         <View style={styles.sheetRoot}>
           <Pressable style={styles.backdrop} onPress={() => setCluesOpen(false)} accessibilityLabel="Close clues" />
           <View style={[styles.sheet, { paddingBottom: insets.bottom + space.l }]}>
+            <View style={styles.grabber} />
             <View style={styles.sheetHeader}>
               <Text style={styles.sheetTitle}>Clues</Text>
               <Pressable
@@ -249,7 +260,8 @@ export function PlayScreen({ puzzle, initial, title, doneMessage, onChange, onCo
 }
 
 type ActionProps = {
-  label: string;
+  label?: string;
+  icon: IconName;
   a11yLabel?: string;
   palette: Palette;
   disabled?: boolean;
@@ -257,7 +269,7 @@ type ActionProps = {
   onPress: () => void;
 };
 
-function ActionButton({ label, a11yLabel, palette, disabled = false, narrow = false, onPress }: ActionProps) {
+function ActionButton({ label, icon, a11yLabel, palette, disabled = false, narrow = false, onPress }: ActionProps) {
   return (
     <Pressable
       onPress={onPress}
@@ -268,11 +280,16 @@ function ActionButton({ label, a11yLabel, palette, disabled = false, narrow = fa
       style={({ pressed }) => [
         actionStyles.button,
         narrow ? actionStyles.narrow : actionStyles.wide,
-        { borderColor: palette.border, backgroundColor: pressed ? palette.border : palette.surface },
+        { backgroundColor: pressed ? palette.keyAlt : palette.raised },
         disabled && actionStyles.disabled,
       ]}
     >
-      <Text style={[actionStyles.text, { color: palette.text }, narrow && actionStyles.glyph]}>{label}</Text>
+      <Icon name={icon} size={narrow ? 18 : 16} color={narrow ? palette.text : palette.accent} />
+      {label !== undefined && (
+        <Text style={[actionStyles.text, { color: palette.text }]} numberOfLines={1}>
+          {label}
+        </Text>
+      )}
     </Pressable>
   );
 }
@@ -280,66 +297,86 @@ function ActionButton({ label, a11yLabel, palette, disabled = false, narrow = fa
 const actionStyles = StyleSheet.create({
   button: {
     minHeight: MIN_TOUCH,
-    borderRadius: radius.card,
-    borderWidth: 1,
+    borderRadius: 14,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: space.m,
+    gap: space.s,
+    paddingHorizontal: space.s,
   },
-  wide: { flex: 1 },
-  narrow: { width: 64 },
+  wide: { flex: 1, minWidth: 0 },
+  narrow: { width: 52 },
   disabled: { opacity: 0.45 },
-  text: { fontSize: 15, fontWeight: '600' },
-  glyph: { fontSize: 20 },
+  text: { flexShrink: 1, fontFamily: font.semibold, fontSize: 14 },
 });
+
+const INSET = space.l;
 
 function makeStyles(p: Palette) {
   return StyleSheet.create({
-    timer: { color: p.textMuted, fontSize: 15, fontWeight: '600', fontVariant: ['tabular-nums'], minWidth: 40 },
-    headerButton: {
-      minHeight: MIN_TOUCH,
-      paddingHorizontal: space.m,
-      borderRadius: radius.card,
-      borderWidth: 1,
-      borderColor: p.border,
+    timer: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+    timerText: {
+      color: p.textMuted,
+      fontFamily: font.displaySemibold,
+      fontSize: 15,
+      fontVariant: ['tabular-nums'],
+      minWidth: 34,
+    },
+    iconButton: {
+      width: MIN_TOUCH,
+      height: MIN_TOUCH,
+      borderRadius: MIN_TOUCH / 2,
+      backgroundColor: p.surface,
       alignItems: 'center',
       justifyContent: 'center',
     },
-    headerButtonText: { color: p.text, fontSize: 14, fontWeight: '600' },
-    pressed: { backgroundColor: p.surfaceAlt },
-    middle: { flex: 1, paddingHorizontal: space.l, paddingTop: space.s, overflow: 'hidden' },
-    inlineList: { flex: 1 },
+    headerButton: {
+      minHeight: MIN_TOUCH,
+      paddingHorizontal: space.l,
+      borderRadius: MIN_TOUCH / 2,
+      backgroundColor: p.surface,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: space.s,
+    },
+    headerButtonText: { color: p.text, fontFamily: font.semibold, fontSize: 14 },
+    pressed: { backgroundColor: p.border },
+    middle: { flex: 1, paddingTop: space.xs, overflow: 'hidden' },
+    inset: { paddingHorizontal: INSET },
+    inlineList: { flex: 1, paddingHorizontal: INSET - space.s },
     inlineListContent: { paddingBottom: space.l },
     bottom: {
-      backgroundColor: p.surfaceAlt,
+      backgroundColor: p.panel,
       paddingTop: space.m,
       paddingHorizontal: space.s,
-      gap: space.m,
-      borderTopLeftRadius: 16,
-      borderTopRightRadius: 16,
+      gap: space.s,
+      borderTopLeftRadius: radius.sheet,
+      borderTopRightRadius: radius.sheet,
     },
-    bottomCompact: { paddingTop: space.s, gap: space.s },
-    actions: { flexDirection: 'row', gap: space.s, paddingHorizontal: space.xs },
+    bottomCompact: { paddingTop: space.s, gap: 6 },
+    actions: { flexDirection: 'row', gap: space.s, paddingHorizontal: space.xs, paddingBottom: space.xs },
     sheetRoot: { flex: 1, justifyContent: 'flex-end' },
-    backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
+    backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(16,19,25,0.4)' },
     sheet: {
       maxHeight: '75%',
       width: '100%',
       maxWidth: MAX_CONTENT_WIDTH,
       alignSelf: 'center',
       backgroundColor: p.bg,
-      borderTopLeftRadius: 16,
-      borderTopRightRadius: 16,
+      borderTopLeftRadius: 28,
+      borderTopRightRadius: 28,
       paddingTop: space.s,
     },
+    grabber: { width: 40, height: 5, borderRadius: 3, alignSelf: 'center', backgroundColor: p.border },
     sheetHeader: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      paddingHorizontal: space.l,
+      paddingHorizontal: space.l + 4,
       paddingVertical: space.s,
     },
-    sheetTitle: { color: p.text, fontSize: 18, fontWeight: '700' },
+    sheetTitle: { color: p.text, fontFamily: font.display, fontSize: 22, letterSpacing: -0.3 },
     sheetContent: { paddingHorizontal: space.s, paddingBottom: space.s },
   });
 }

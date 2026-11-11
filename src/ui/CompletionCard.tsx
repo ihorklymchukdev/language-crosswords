@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { formatTime } from './format';
-import { MIN_TOUCH, radius, space, type Palette } from './theme';
+import { font, radius, space, type Palette } from './theme';
 
 export type CardAction = { label: string; onPress: () => void; primary?: boolean };
 
@@ -21,14 +21,14 @@ export function CompletionCard({ palette, timeMs, revealed, translated, message,
   ];
   return (
     <View
-      style={[styles.card, { backgroundColor: palette.surface, borderColor: palette.border }]}
+      style={[styles.card, { backgroundColor: palette.raised }]}
       accessibilityLiveRegion="polite"
     >
       <Text style={[styles.title, { color: palette.text }]} accessibilityRole="header">
         ¡Bien hecho!
       </Text>
       <Text style={[styles.message, { color: palette.textMuted }]}>{message}</Text>
-      <View style={[styles.stats, { borderColor: palette.border }]}>
+      <View style={[styles.stats, { backgroundColor: palette.surface }]}>
         {stats.map((s) => (
           <View key={s.label} style={styles.stat}>
             <Text style={[styles.value, { color: palette.text }]}>{s.value}</Text>
@@ -44,9 +44,7 @@ export function CompletionCard({ palette, timeMs, revealed, translated, message,
             accessibilityRole="button"
             style={({ pressed }) => [
               styles.button,
-              a.primary
-                ? { backgroundColor: palette.accent, borderColor: palette.accent }
-                : { borderColor: palette.border, backgroundColor: palette.surface },
+              { backgroundColor: a.primary ? palette.accent : palette.surface },
               pressed && styles.pressed,
             ]}
           >
@@ -59,28 +57,23 @@ export function CompletionCard({ palette, timeMs, revealed, translated, message,
 }
 
 const styles = StyleSheet.create({
-  card: { borderRadius: radius.card, borderWidth: 1, padding: space.l, gap: space.m },
-  title: { fontSize: 26, fontWeight: '700', textAlign: 'center' },
-  message: { fontSize: 15, textAlign: 'center', marginTop: -space.s },
-  stats: {
-    flexDirection: 'row',
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingVertical: space.m,
-  },
+  card: { borderRadius: radius.sheet, padding: space.l + 4, gap: space.m, marginHorizontal: space.xs },
+  title: { fontFamily: font.display, fontSize: 28, letterSpacing: -0.4, textAlign: 'center' },
+  message: { fontFamily: font.regular, fontSize: 15, textAlign: 'center', marginTop: -space.s },
+  stats: { flexDirection: 'row', borderRadius: radius.m, paddingVertical: space.m },
   stat: { flex: 1, alignItems: 'center', gap: 2 },
-  value: { fontSize: 22, fontWeight: '700', fontVariant: ['tabular-nums'] },
-  statLabel: { fontSize: 12, textAlign: 'center' },
-  actions: { flexDirection: 'row', gap: space.m },
+  value: { fontFamily: font.display, fontSize: 22, fontVariant: ['tabular-nums'] },
+  statLabel: { fontFamily: font.medium, fontSize: 12, textAlign: 'center' },
+  actions: { flexDirection: 'row', gap: 10 },
   button: {
     flex: 1,
-    minHeight: MIN_TOUCH + 4,
-    borderRadius: radius.card,
-    borderWidth: 1,
+    minHeight: 54,
+    paddingVertical: space.s,
+    borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: space.m,
   },
-  pressed: { opacity: 0.75 },
-  buttonText: { fontSize: 16, fontWeight: '600' },
+  pressed: { opacity: 0.8 },
+  buttonText: { fontFamily: font.semibold, fontSize: 16 },
 });

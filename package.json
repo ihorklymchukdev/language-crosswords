@@ -15,10 +15,13 @@
     "daily:preview": "tsx scripts/daily-preview.ts"
   },
   "dependencies": {
+    "@expo-google-fonts/gabarito": "^0.4.2",
+    "@expo-google-fonts/onest": "^0.4.2",
     "@expo/metro-runtime": "~58.0.17",
     "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "^58.0.23",
     "expo-constants": "~58.0.15",
+    "expo-font": "~58.0.12",
     "expo-linking": "~58.0.16",
     "expo-router": "~58.0.30",
     "expo-splash-screen": "~58.0.13",
@@ -29,6 +32,7 @@
     "react-native": "0.88.1",
     "react-native-safe-area-context": "~5.11.1",
     "react-native-screens": "~4.30.1",
+    "react-native-svg": "15.16.0",
     "react-native-web": "^0.21.4"
   },
   "devDependencies": {
