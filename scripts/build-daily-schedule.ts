@@ -7,7 +7,8 @@ import type { DailySchedule } from '../src/daily/daily';
 import { checkLayout } from '../src/generator/grid-check';
 import { LEVELS } from '../src/domain/levels';
 
-const ANTI_REPEAT_DAYS = 7;
+// Prefer a long window; 7 days is the required minimum.
+const ANTI_REPEAT_WINDOWS = [30, 14, 7];
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function arg(name: string): string | undefined {
@@ -34,17 +35,29 @@ for (const level of LEVELS) {
   const last = existing.length > 0 ? existing.reduce((a, b) => (a > b ? a : b)) : undefined;
   let added = 0;
   const failed: string[] = [];
+  const fallbacks: Record<number, number> = {};
 
   for (let i = 0; i < days; i++) {
     const date = addDays(from, i);
     if (last !== undefined && date <= last) continue;
-    const exclude = new Set<string>();
-    for (let k = 1; k <= ANTI_REPEAT_DAYS; k++) {
-      for (const p of schedule.days[addDays(date, -k)]?.placements ?? []) exclude.add(p.entryId);
+    let layout: ReturnType<typeof generateDailyLayout> | undefined;
+    let problems: string[] = [];
+    for (const window of ANTI_REPEAT_WINDOWS) {
+      const exclude = new Set<string>();
+      for (let k = 1; k <= window; k++) {
+        for (const p of schedule.days[addDays(date, -k)]?.placements ?? []) exclude.add(p.entryId);
+      }
+      layout = generateDailyLayout(dailySeed(date, level), candidates, exclude);
+      problems = layout ? checkLayout(layout.placements, words, layout.rows, layout.cols) : ['no layout'];
+      if (layout && problems.length === 0) {
+        if (window !== ANTI_REPEAT_WINDOWS[0]) {
+          console.log(`${level} ${date}: fell back to ${window}-day window`);
+          fallbacks[window] = (fallbacks[window] ?? 0) + 1;
+        }
+        break;
+      }
     }
-    const layout = generateDailyLayout(dailySeed(date, level), candidates, exclude);
-    const problems = layout ? checkLayout(layout.placements, words, layout.rows, layout.cols) : [];
-    if (layout && problems.length > 0) console.error(`${level} ${date}: ${problems.join('; ')}`);
+    if (layout && problems.length > 0 && problems[0] !== 'no layout') console.error(`${level} ${date}: ${problems.join('; ')}`);
     if (layout && problems.length === 0) {
       schedule.days[date] = layout;
       added++;
@@ -56,5 +69,6 @@ for (const level of LEVELS) {
   // Sorted keys keep diffs append-only; existing entries are never modified.
   const sorted = Object.fromEntries(Object.entries(schedule.days).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(file, `${JSON.stringify({ version: 1, days: sorted }, null, 1)}\n`);
+  console.log(`${level} fallbacks: ${JSON.stringify(fallbacks)}`);
   console.log(`${level}: +${added} added, ${failed.length} failed${failed.length ? ` (${failed.join(', ')})` : ''}`);
 }

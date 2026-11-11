@@ -1,4 +1,5 @@
 import type { Direction, Entry, Placement } from '../domain/types';
+import { normalizeBase } from '../catalogue/normalize';
 import type { Rng } from './rng';
 
 export type GenerateRequest = {
@@ -22,7 +23,7 @@ const DEFAULT_ATTEMPTS = 40;
 const SEED_MIN_LENGTH = 5;
 const SEED_MAX_LENGTH = 7;
 
-type Candidate = { id: string; word: string; reviewed: boolean };
+type Candidate = { id: string; word: string; reviewed: boolean; base: string; clueWords: ReadonlySet<string> };
 type Layout = { rows: number; cols: number; placements: Placement[]; score: number };
 
 function shuffle<T>(items: T[], rng: Rng): T[] {
@@ -51,7 +52,13 @@ function usableCandidates(req: GenerateRequest): Candidate[] {
         e.word.length <= maxLength &&
         !/\s/.test(e.word),
     )
-    .map((e) => ({ id: e.id, word: e.word, reviewed: e.status === 'human-reviewed' }));
+    .map((e) => ({
+      id: e.id,
+      word: e.word,
+      reviewed: e.status === 'human-reviewed',
+      base: normalizeBase(e.word),
+      clueWords: new Set(normalizeBase(e.clue).split(/[^a-zñ]+/)),
+    }));
   const seen = new Set<string>();
   return reviewedFirst(usable, req.rng).filter((c) => {
     if (seen.has(c.word)) return false;
@@ -196,6 +203,16 @@ class Board {
   }
 }
 
+const STEM_LENGTH = 4;
+
+// Same-root words (freno/frenar) or an answer visible in another clue would give the solution away.
+function clashes(a: Candidate, b: Candidate): boolean {
+  if (a.base.length >= STEM_LENGTH && b.base.length >= STEM_LENGTH && a.base.slice(0, STEM_LENGTH) === b.base.slice(0, STEM_LENGTH)) {
+    return true;
+  }
+  return a.clueWords.has(b.base) || b.clueWords.has(a.base);
+}
+
 function pickSeed(order: Candidate[], req: GenerateRequest, rng: Rng): { seed: Candidate; direction: Direction } | undefined {
   const fits = (c: Candidate, d: Direction): boolean => c.word.length <= (d === 'across' ? req.maxCols : req.maxRows);
   const preferred: Direction = rng() < 0.5 ? 'across' : 'down';
@@ -236,6 +253,7 @@ function runAttempt(pool: Candidate[], req: GenerateRequest): Layout | undefined
     let placedIndex = -1;
     for (let i = 0; i < remaining.length; i++) {
       const item = remaining[i]!;
+      if (board.placed.some((p) => clashes(p.candidate, item.candidate))) continue;
       const spot = board.bestSpot(item.candidate.word, item.checkedUpTo);
       if (spot) {
         board.place(item.candidate, spot.row, spot.col, spot.direction);
