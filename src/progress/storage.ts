@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LEVELS, type Level } from '../domain/levels';
 import type { PuzzleSpec } from '../domain/types';
+import { addDays, localDateKey } from '../daily/dates';
 import type { PlayState } from '../play/play-state';
 
 const STORAGE_KEY = 'lc:state';
@@ -32,19 +33,56 @@ function isCompletion(v: unknown): v is DailyCompletion {
   );
 }
 
+const isArrayOf = (v: unknown, type: 'string' | 'number' | 'boolean' | 'any'): boolean =>
+  Array.isArray(v) && (type === 'any' || v.every((x) => x === null || typeof x === type));
+
+export function isValidPlay(v: unknown): v is StoredPlay {
+  if (!isRecord(v) || !isRecord(v['spec'])) return false;
+  return (
+    Array.isArray(v['spec']['placements']) &&
+    isArrayOf(v['letters'], 'string') &&
+    isArrayOf(v['revealed'], 'boolean') &&
+    isArrayOf(v['translated'], 'number') &&
+    typeof v['elapsedMs'] === 'number'
+  );
+}
+
+const DAILY_PLAY_KEEP_DAYS = 14;
+const PRACTICE_PLAY_KEEP = 20;
+
+// Plays are re-inserted on save, so key order is least to most recently updated.
+export function prunePlays(plays: Record<string, StoredPlay>, today: string): Record<string, StoredPlay> {
+  const cutoff = addDays(today, -DAILY_PLAY_KEEP_DAYS);
+  const entries = Object.entries(plays);
+  const practice = entries.filter(([, p]) => p.spec.kind !== 'daily').slice(-PRACTICE_PLAY_KEEP);
+  const keepPractice = new Set(practice.map(([id]) => id));
+  return Object.fromEntries(
+    entries.filter(([id, p]) => (p.spec.kind === 'daily' ? (p.spec.date ?? '') >= cutoff : keepPractice.has(id))),
+  );
+}
+
+export type ParsedState = { state: StoredState; writable: boolean };
+
 // v0 had only `plays`; every field is validated so a bad one resets to its default.
-export function parseState(raw: string | null): StoredState {
+// A newer schemaVersion is read-only so an old build never overwrites newer data.
+export function parseStateChecked(raw: string | null): ParsedState {
   const state = defaultState();
-  if (raw === null) return state;
+  if (raw === null) return { state, writable: true };
   let data: unknown;
   try {
     data = JSON.parse(raw);
   } catch {
-    return state;
+    return { state, writable: true };
   }
-  if (!isRecord(data)) return state;
+  if (!isRecord(data)) return { state, writable: true };
+  if (typeof data['schemaVersion'] === 'number' && data['schemaVersion'] > 1) return { state, writable: false };
 
-  if (isRecord(data['plays'])) state.plays = data['plays'] as Record<string, StoredPlay>;
+  if (isRecord(data['plays'])) {
+    state.plays = Object.fromEntries(Object.entries(data['plays']).filter(([, p]) => isValidPlay(p))) as Record<
+      string,
+      StoredPlay
+    >;
+  }
   if (Array.isArray(data['dailyCompletions'])) state.dailyCompletions = data['dailyCompletions'].filter(isCompletion);
   const history = data['practiceHistory'];
   if (isRecord(history)) {
@@ -57,20 +95,29 @@ export function parseState(raw: string | null): StoredState {
       }
     }
   }
-  return state;
+  return { state, writable: true };
+}
+
+export function parseState(raw: string | null): StoredState {
+  return parseStateChecked(raw).state;
+}
+
+// writable=false means the stored blob could not be read or is newer: never overwrite it.
+export async function readState(): Promise<ParsedState> {
+  try {
+    return parseStateChecked(await AsyncStorage.getItem(STORAGE_KEY));
+  } catch {
+    return { state: defaultState(), writable: false };
+  }
 }
 
 export async function loadState(): Promise<StoredState> {
-  try {
-    return parseState(await AsyncStorage.getItem(STORAGE_KEY));
-  } catch {
-    return defaultState();
-  }
+  return (await readState()).state;
 }
 
 export async function saveState(state: StoredState): Promise<void> {
   try {
-    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify({ ...state, plays: prunePlays(state.plays, localDateKey()) }));
   } catch {
     // Persistence is best-effort; the in-memory state keeps the session going.
   }
