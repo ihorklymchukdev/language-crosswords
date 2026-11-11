@@ -4,7 +4,7 @@ import type { Entry, PuzzleSpec } from '../domain/types';
 import { generateLayout, type RejectReason } from '../generator/generate';
 import { seededRng } from '../generator/rng';
 
-export const PRACTICE_LIMITS = { maxRows: 13, maxCols: 13, minWords: 20, maxWords: 30, attempts: 20 };
+export const PRACTICE_LIMITS = { maxRows: 13, maxCols: 13, minWords: 20, maxWords: 30, attempts: 10 };
 // Theme pools hold 12–60 words: too few to fill a 20-word grid, so themed puzzles stay mini.
 export const THEMED_PRACTICE_LIMITS = { maxRows: 9, maxCols: 9, minWords: 6, maxWords: 12 };
 
