@@ -190,6 +190,7 @@ describe('play reducer', () => {
   });
 
   it('tick ignores NaN and negative ms', () => {
+    const p = basic();
     const s = run(p, initialPlayState(p), { type: 'tick', ms: 100 });
     for (const ms of [NaN, Infinity, -5]) expect(run(p, s, { type: 'tick', ms }).elapsedMs).toBe(100);
   });
