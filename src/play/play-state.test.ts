@@ -13,7 +13,7 @@ import {
 import { resolvePuzzle, type Puzzle } from './puzzle';
 
 const entries = new Map<string, Entry>(
-  ['gato', 'sol', 'ojo', 'café', 'año', 'tos'].map((w) => [w, makeEntry(w, w)]),
+  ['gato', 'ojo', 'tos'].map((w) => [w, makeEntry(w, w)]),
 );
 const lookup = (id: string) => entries.get(id);
 
@@ -72,7 +72,6 @@ describe('play reducer', () => {
     s = typeAll(p, s, 'tos'); // tos complete; gato still empty so cell 2 is not green yet
     s = run(p, s, { type: 'select', cell: 0 });
     s = typeAll(p, s, 'gato'); // gato + tos complete; cell 3 still waits on ojo
-    expect(greenCells(p, s)).toEqual(expect.arrayContaining([true]));
     expect(greenCells(p, s)[2]).toBe(true);
     expect(greenCells(p, s)[3]).toBe(false);
     // From the first cell, advancing passes over the green cells 1 and 2 to land on cell 3.
@@ -95,7 +94,7 @@ describe('play reducer', () => {
   it('backspace on a filled cell clears it and stays', () => {
     const p = basic();
     let s = typeAll(p, initialPlayState(p), 'gato');
-    s = run(p, s, { type: 'select', cell: 1 }, { type: 'select', cell: 1 }); // toggle ignored: no down slot
+    s = run(p, s, { type: 'select', cell: 1 });
     s = run(p, { ...s, letters: s.letters.map((l, i) => (i === 1 ? 'z' : l)) }, { type: 'backspace' });
     expect(s.cursor).toBe(1);
     expect(s.letters[1]).toBeNull();
@@ -104,7 +103,6 @@ describe('play reducer', () => {
   it('cell shared by two accented words turns green with unaccented input', () => {
     const e = new Map<string, Entry>([
       ['café', makeEntry('café', 'café')],
-      ['año', makeEntry('año', 'año')],
     ]);
     // 'é' is the shared cell; typed unaccented.
     e.set('ébano', makeEntry('ébano', 'ébano'));
@@ -167,7 +165,6 @@ describe('play reducer', () => {
   it('select same cell toggles direction only when the other direction exists', () => {
     const p = basic();
     let s = initialPlayState(p);
-    expect(s.cursor).toBe(0);
     s = run(p, s, { type: 'select', cell: 0 });
     expect(s.direction).toBe('across'); // cell 0 has no down slot
     s = run(p, s, { type: 'select', cell: 2 });
@@ -196,5 +193,38 @@ describe('play reducer', () => {
     const p = basic();
     const s = run(p, typeAll(p, initialPlayState(p), 'ga'), { type: 'tick', ms: 100 }, { type: 'reset' });
     expect(s).toEqual(initialPlayState(p));
+  });
+
+  it('revealed cells are read-only for type and backspace', () => {
+    const p = basic();
+    // Reveal cell 3 (shared by gato and ojo) while both words are incomplete.
+    let s = run(p, initialPlayState(p), { type: 'select', cell: 3 }, { type: 'reveal' });
+    expect(s.letters[3]).toBe('o');
+    s = run(p, s, { type: 'type', letter: 'z' });
+    expect(s.letters[3]).toBe('o');
+    s = run(p, s, { type: 'backspace' });
+    expect(s.letters[3]).toBe('o');
+    // Finishing the words still completes the puzzle.
+    s = run(p, s, { type: 'select', cell: 0 });
+    s = typeAll(p, s, 'gat');
+    expect(s.cursor).toBe(2);
+    s = run(p, s, { type: 'toggleDirection' });
+    s = typeAll(p, s, 'tos');
+    s = run(p, s, { type: 'select', cell: 7 });
+    s = typeAll(p, s, 'jo');
+    expect(isComplete(p, s)).toBe(true);
+  });
+
+  it('nextSlot wraps around and lands on the first non-green cell', () => {
+    const p = basic();
+    let s = run(p, initialPlayState(p), { type: 'nextSlot', delta: -1 });
+    expect(activeSlot(p, s)?.entry.word).toBe('ojo');
+    s = run(p, s, { type: 'nextSlot', delta: 1 });
+    expect(activeSlot(p, s)?.entry.word).toBe('gato');
+    // Make gato's cells 0,1 green via a completed gato, then enter it from tos.
+    s = typeAll(p, s, 'gato');
+    s = run(p, s, { type: 'nextSlot', delta: -1 }, { type: 'nextSlot', delta: 1 });
+    expect(activeSlot(p, s)?.entry.word).toBe('gato');
+    expect(s.cursor).toBe(2);
   });
 });

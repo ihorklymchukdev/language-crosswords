@@ -61,10 +61,10 @@ export function activeSlot(p: Puzzle, s: PlayState): Slot | undefined {
   return slotAt(p, s.cursor, s.direction);
 }
 
-export function displayLetter(p: Puzzle, s: PlayState, cell: number): string {
+export function displayLetter(p: Puzzle, s: PlayState, cell: number, green?: boolean[]): string {
   const answer = p.solution[cell];
   if (answer == null) return '';
-  if (s.revealed[cell] || greenCells(p, s)[cell]) return answer;
+  if (s.revealed[cell] || (green ?? greenCells(p, s))[cell]) return answer;
   return s.letters[cell] ?? '';
 }
 
@@ -82,7 +82,7 @@ export function initialPlayState(p: Puzzle): PlayState {
 }
 
 // completedAt records elapsedMs at completion so the reducer stays pure.
-function withCompletion(p: Puzzle, prev: PlayState, next: PlayState): PlayState {
+function withCompletion(p: Puzzle, next: PlayState): PlayState {
   if (next.completedAt === undefined && isComplete(p, next)) {
     return { ...next, completedAt: next.elapsedMs };
   }
@@ -101,26 +101,30 @@ function selectCell(p: Puzzle, s: PlayState, cell: number): PlayState {
 
 function typeLetter(p: Puzzle, s: PlayState, letter: string): PlayState {
   if (!/^\p{L}$/u.test(letter)) return s;
-  const green = greenCells(p, s);
+  const locked = (st: PlayState) => {
+    const g = greenCells(p, st);
+    return (c: number) => g[c]! || st.revealed[c]!;
+  };
   let letters = s.letters;
-  if (!green[s.cursor]) {
+  if (!locked(s)(s.cursor)) {
     letters = s.letters.slice();
     letters[s.cursor] = letter.toLowerCase();
   }
   const after = { ...s, letters };
   // Green is recomputed so a cell turned green by this keystroke is skipped like any other.
-  const nowGreen = greenCells(p, after);
+  const isLocked = locked(after);
   const slot = activeSlot(p, s);
   let cursor = s.cursor;
   if (slot) {
-    const next = slot.cells.slice(slot.cells.indexOf(s.cursor) + 1).find((c) => !nowGreen[c]);
+    const next = slot.cells.slice(slot.cells.indexOf(s.cursor) + 1).find((c) => !isLocked(c));
     if (next !== undefined) cursor = next;
   }
-  return withCompletion(p, s, { ...after, cursor });
+  return withCompletion(p, { ...after, cursor });
 }
 
 function backspace(p: Puzzle, s: PlayState): PlayState {
-  const green = greenCells(p, s);
+  const g = greenCells(p, s);
+  const green = g.map((x, c) => x || s.revealed[c]!);
   const clear = (cell: number, cursor: number): PlayState => {
     const letters = s.letters.slice();
     letters[cell] = null;
@@ -144,7 +148,7 @@ function reveal(p: Puzzle, s: PlayState): PlayState {
   const revealed = s.revealed.slice();
   letters[s.cursor] = answer;
   revealed[s.cursor] = true;
-  return withCompletion(p, s, { ...s, letters, revealed });
+  return withCompletion(p, { ...s, letters, revealed });
 }
 
 function nextSlot(p: Puzzle, s: PlayState, delta: 1 | -1): PlayState {
@@ -153,7 +157,8 @@ function nextSlot(p: Puzzle, s: PlayState, delta: 1 | -1): PlayState {
   const current = activeSlot(p, s);
   const from = current ? current.index : delta === 1 ? -1 : 0;
   const target = p.slots[(from + delta + n) % n]!;
-  const green = greenCells(p, s);
+  const g = greenCells(p, s);
+  const green = g.map((x, c) => x || s.revealed[c]!);
   const cursor = target.cells.find((c) => !green[c]) ?? target.cells[0]!;
   return { ...s, cursor, direction: target.direction };
 }
