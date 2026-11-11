@@ -1,6 +1,8 @@
 import { addDays } from '../daily/dates';
 import { dailyPuzzleId } from '../daily/daily';
 import { LEVELS, type Level } from '../domain/levels';
+import type { PuzzleSpec } from '../domain/types';
+import { resolvePuzzle } from '../play/puzzle';
 import type { DailyCompletion, StoredPlay } from '../progress/storage';
 
 export const MISSED_DAYS = 3;
@@ -79,4 +81,18 @@ export function streakLine(streak: number, solvedToday: boolean): string {
   if (streak === 0) return 'Start your streak today';
   const days = `${streak}-day streak`;
   return solvedToday ? days : `${days} · solve one today to keep it going`;
+}
+
+// Plays are re-inserted on save, so key order runs from least to most recently touched.
+// A catalogue update can leave a stored spec unplayable; skip it rather than resume a different puzzle.
+export function latestUnfinishedPractice(
+  plays: Readonly<Record<string, StoredPlay>>,
+  playable: (spec: PuzzleSpec) => boolean = (spec) => resolvePuzzle(spec) !== undefined,
+): StoredPlay | undefined {
+  const all = Object.values(plays);
+  for (let i = all.length - 1; i >= 0; i--) {
+    const p = all[i]!;
+    if (p.spec.kind === 'practice' && p.completedAt === undefined && playable(p.spec)) return p;
+  }
+  return undefined;
 }
