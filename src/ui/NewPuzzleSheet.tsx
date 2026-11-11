@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
   grabber: { width: 40, height: 5, borderRadius: 3, alignSelf: 'center', marginBottom: space.s },
   title: { fontFamily: font.display, fontSize: 24, letterSpacing: -0.3, marginBottom: space.xs },
   row: {
-    height: 68,
+    minHeight: 68,
+    paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
@@ -86,6 +87,6 @@ const styles = StyleSheet.create({
   badge: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
   badgeText: { fontFamily: font.display, fontSize: 16 },
   label: { flex: 1, fontFamily: font.semibold, fontSize: 16 },
-  cancel: { height: 56, marginTop: space.xs, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  cancel: { minHeight: 56, paddingVertical: space.m, marginTop: space.xs, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
   cancelText: { fontFamily: font.semibold, fontSize: 17 },
 });

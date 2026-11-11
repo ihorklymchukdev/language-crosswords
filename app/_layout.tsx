@@ -1,5 +1,10 @@
-import { Gabarito_600SemiBold, Gabarito_700Bold } from '@expo-google-fonts/gabarito';
-import { Onest_400Regular, Onest_500Medium, Onest_600SemiBold, Onest_700Bold } from '@expo-google-fonts/onest';
+// Per-weight paths: the package root would bundle every weight.
+import { Gabarito_600SemiBold } from '@expo-google-fonts/gabarito/600SemiBold';
+import { Gabarito_700Bold } from '@expo-google-fonts/gabarito/700Bold';
+import { Onest_400Regular } from '@expo-google-fonts/onest/400Regular';
+import { Onest_500Medium } from '@expo-google-fonts/onest/500Medium';
+import { Onest_600SemiBold } from '@expo-google-fonts/onest/600SemiBold';
+import { Onest_700Bold } from '@expo-google-fonts/onest/700Bold';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';

@@ -153,10 +153,9 @@ export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChang
               onPress={() => setCluesOpen(true)}
               accessibilityRole="button"
               accessibilityLabel="Clues"
-              style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
             >
-              <Icon name="list" size={16} color={palette.text} />
-              <Text style={styles.headerButtonText}>Clues</Text>
+              <Icon name="list" size={18} color={palette.text} />
             </Pressable>
           </>
         }
@@ -286,25 +285,29 @@ function ActionButton({ label, icon, a11yLabel, palette, disabled = false, narro
       ]}
     >
       <Icon name={icon} size={narrow ? 18 : 16} color={narrow ? palette.text : palette.accent} />
-      {label !== undefined && <Text style={[actionStyles.text, { color: palette.text }]}>{label}</Text>}
+      {label !== undefined && (
+        <Text style={[actionStyles.text, { color: palette.text }]} numberOfLines={1}>
+          {label}
+        </Text>
+      )}
     </Pressable>
   );
 }
 
 const actionStyles = StyleSheet.create({
   button: {
-    height: MIN_TOUCH,
+    minHeight: MIN_TOUCH,
     borderRadius: 14,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: space.s,
-    paddingHorizontal: space.m,
+    paddingHorizontal: space.s,
   },
-  wide: { flex: 1 },
+  wide: { flex: 1, minWidth: 0 },
   narrow: { width: 52 },
   disabled: { opacity: 0.45 },
-  text: { fontFamily: font.semibold, fontSize: 14 },
+  text: { flexShrink: 1, fontFamily: font.semibold, fontSize: 14 },
 });
 
 const INSET = space.l;
@@ -319,8 +322,16 @@ function makeStyles(p: Palette) {
       fontVariant: ['tabular-nums'],
       minWidth: 34,
     },
-    headerButton: {
+    iconButton: {
+      width: MIN_TOUCH,
       height: MIN_TOUCH,
+      borderRadius: MIN_TOUCH / 2,
+      backgroundColor: p.surface,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    headerButton: {
+      minHeight: MIN_TOUCH,
       paddingHorizontal: space.l,
       borderRadius: MIN_TOUCH / 2,
       backgroundColor: p.surface,

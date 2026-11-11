@@ -55,7 +55,7 @@ export const palettes: Record<'light' | 'dark', Palette> = {
     keyAlt: '#CDD1D9',
     correctBg: '#D7F2E1',
     correctText: '#17703D',
-    revealedText: '#9A5B00',
+    revealedText: '#804C00',
   },
   dark: {
     scheme: 'dark',
@@ -67,7 +67,7 @@ export const palettes: Record<'light' | 'dark', Palette> = {
     text: '#F2F4F7',
     textMuted: '#A0A7B4',
     accent: '#5B82FF',
-    accentText: '#FFFFFF',
+    accentText: '#0E1116',
     accentTint: '#1C2747',
     accentStrong: '#A9BEFF',
     inverse: '#F2F4F7',
@@ -76,7 +76,7 @@ export const palettes: Record<'light' | 'dark', Palette> = {
     segment: '#262B35',
     cell: '#232833',
     slotTint: '#28396A',
-    cursorText: '#FFFFFF',
+    cursorText: '#0E1116',
     keyAlt: '#3A414F',
     correctBg: '#163824',
     correctText: '#6FD69A',
@@ -85,13 +85,16 @@ export const palettes: Record<'light' | 'dark', Palette> = {
 };
 
 // Custom fonts carry their weight in the family name; fontWeight would make Android fall back.
+// Web gets a CSS fallback stack in case the font files fail to load.
+const family = (name: string) => (Platform.OS === 'web' ? `${name}, system-ui, sans-serif` : name);
+
 export const font = {
-  regular: 'Onest_400Regular',
-  medium: 'Onest_500Medium',
-  semibold: 'Onest_600SemiBold',
-  bold: 'Onest_700Bold',
-  displaySemibold: 'Gabarito_600SemiBold',
-  display: 'Gabarito_700Bold',
+  regular: family('Onest_400Regular'),
+  medium: family('Onest_500Medium'),
+  semibold: family('Onest_600SemiBold'),
+  bold: family('Onest_700Bold'),
+  displaySemibold: family('Gabarito_600SemiBold'),
+  display: family('Gabarito_700Bold'),
 } as const;
 
 export const space = { xs: 4, s: 8, m: 12, l: 16, xl: 24, xxl: 32 } as const;

@@ -223,7 +223,8 @@ const styles = StyleSheet.create({
   pillText: { fontFamily: font.medium, fontSize: 13 },
   section: { gap: 10 },
   card: {
-    height: 76,
+    minHeight: 76,
+    paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
@@ -241,7 +242,8 @@ const styles = StyleSheet.create({
   footer: { paddingTop: space.s, paddingBottom: space.l },
   footerButtons: { paddingHorizontal: space.l + 4, gap: 10 },
   continue: {
-    height: 68,
+    minHeight: 68,
+    paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
@@ -254,7 +256,8 @@ const styles = StyleSheet.create({
   continueDetail: { fontFamily: font.medium, fontSize: 13 },
   continueTime: { fontFamily: font.displaySemibold, fontSize: 15, fontVariant: ['tabular-nums'] },
   newButton: {
-    height: 54,
+    minHeight: 54,
+    paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

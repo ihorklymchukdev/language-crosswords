@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   lead: { fontFamily: font.regular, fontSize: 14, lineHeight: 20, marginTop: -space.s },
   section: { gap: 10 },
   segments: { flexDirection: 'row', gap: 4, padding: 4, borderRadius: 18 },
-  segment: { flex: 1, height: 52, borderRadius: 14, alignItems: 'center', justifyContent: 'center', gap: 1 },
+  segment: { flex: 1, minHeight: 52, paddingVertical: 6, borderRadius: 14, alignItems: 'center', justifyContent: 'center', gap: 1 },
   segmentOn: {
     shadowColor: '#18181B',
     shadowOpacity: 0.12,
@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', gap: space.s },
   chip: {
     flex: 1,
-    height: 56,
+    minHeight: 56,
+    paddingVertical: space.s,
     flexDirection: 'row',
     alignItems: 'center',
     gap: space.s,
@@ -171,7 +172,8 @@ const styles = StyleSheet.create({
   footer: { paddingTop: space.m, paddingBottom: space.l, borderTopWidth: StyleSheet.hairlineWidth },
   play: {
     marginHorizontal: space.l + 4,
-    height: 60,
+    minHeight: 60,
+    paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: space.m,

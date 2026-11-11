@@ -26,7 +26,9 @@ type CellProps = {
 const Cell = memo(function Cell({ cell, row, col, letter, number, tone, green, revealed, size, palette, onSelect }: CellProps) {
   // Green outranks the word tint so a finished word shows at once, even while it is selected.
   const cursor = tone === 'cursor';
-  const bg = cursor ? palette.accent : green ? palette.correctBg : tone === 'slot' ? palette.slotTint : palette.cell;
+  // On a locked cell the cursor takes the lock's colour, so solved and revealed stay visible.
+  const cursorBg = green ? palette.correctText : revealed ? palette.revealedText : palette.accent;
+  const bg = cursor ? cursorBg : green ? palette.correctBg : tone === 'slot' ? palette.slotTint : palette.cell;
   const color = cursor ? palette.cursorText : revealed ? palette.revealedText : green ? palette.correctText : palette.text;
   const numberColor = cursor ? palette.cursorText : tone === 'slot' ? palette.accentStrong : palette.textMuted;
   const state = green ? ', solved' : revealed ? ', revealed' : '';

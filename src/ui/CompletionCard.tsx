@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
   actions: { flexDirection: 'row', gap: 10 },
   button: {
     flex: 1,
-    height: 54,
+    minHeight: 54,
+    paddingVertical: space.s,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
