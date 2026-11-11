@@ -9,8 +9,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
-    "test": "jest",
-    "catalogue:validate": "tsx scripts/validate-catalogue.ts"
+    "test": "TZ=Europe/Madrid jest",
+    "catalogue:validate": "tsx scripts/validate-catalogue.ts",
+    "daily:build": "tsx scripts/build-daily-schedule.ts",
+    "daily:preview": "tsx scripts/daily-preview.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.17",
