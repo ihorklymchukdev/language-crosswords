@@ -14,12 +14,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
       - run: npx expo export --platform web
         env:
           WEB_BASE: '1'
@@ -27,7 +29,7 @@ jobs:
       # lets deep links route client-side.
       - run: cp dist/index.html dist/404.html
       - run: touch dist/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
   deploy:

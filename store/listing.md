@@ -5,22 +5,24 @@ Bundle id / package: `com.ihorklymchuk.crosswords`. Version: 1.0.0.
 
 ## Shared
 
+- Play hi-res icon: `store/play-icon-512.png` (512x512). Play feature graphic: `store/play-feature-graphic.png` (1024x500).
+
 - Support URL: https://ihorklymchukdev.github.io/language-crosswords/support
 - Privacy policy URL: https://ihorklymchukdev.github.io/language-crosswords/privacy
 - Contact email: ihorklymchuk.dev@gmail.com
-- Category: Education (secondary: Word games / Puzzle)
+- Category: primary Education; secondary Games > Word (App Store) / Education (Play)
 
 ## App Store (iOS)
 
 **Name** (30 max): Crossword Spanish
 
-**Subtitle** (30 max): Daily mini crosswords in Spanish
+**Subtitle** (30 max): Daily Spanish mini crosswords
 
 **Promotional text** (170 max):
 A fresh Spanish mini crossword every day at your level, plus unlimited themed practice. Works offline, no account, no ads.
 
 **Keywords** (100 max):
-spanish,crossword,vocabulary,learn spanish,puzzle,words,language,A2,B1,B2,daily,offline
+vocabulary,learn,language,puzzle,word,game,mini,daily,offline,A2,B1,B2,español,crucigrama,study
 
 **Description** (4000 max):
 
@@ -56,6 +58,11 @@ All answers None / No:
 - Alcohol, tobacco, or drug use or references: None
 - Simulated gambling, contests: None
 - Medical or wellness topics: None
+- Advertising: No
+- Parental controls: No
+- Age assurance: No
+- Messaging and chat: No
+- Loot boxes: No
 - Unrestricted web access: No
 - User-generated content / messaging: No
 - Result: 4+
@@ -107,7 +114,7 @@ Category: Reference, News or Educational (or Game > Puzzle if the questionnaire 
 ## Owner checklist
 
 1. Create an Expo account (expo.dev), then `npx eas-cli login`.
-2. `npx eas-cli init` (adds `owner` and `extra.eas.projectId` to the config; commit the change).
+2. `npx eas-cli init`. It cannot write to a dynamic `app.config.ts`, so tell Claude (or add by hand) `owner` and `extra.eas.projectId` in `app.config.ts`.
 3. iOS: create the app record in App Store Connect (bundle id `com.ihorklymchuk.crosswords`, name, primary language English (US), SKU), then
    `npx eas-cli build -p ios --profile production` and `npx eas-cli submit -p ios --profile production` (it prompts for the ascAppId and Apple credentials).
    Fill in the listing, privacy label, age rating, screenshots (`store/screenshots/`), and press Submit for Review.
