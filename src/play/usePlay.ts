@@ -66,7 +66,8 @@ export function usePlay({ puzzle, initial, onChange, onComplete, physicalKeys }:
     return () => clearInterval(id);
   }, [running]);
 
-  const keysOn = Platform.OS === 'web' && physicalKeys && focused;
+  // Off once solved so Tab, Space and Enter reach the completion card's buttons.
+  const keysOn = Platform.OS === 'web' && physicalKeys && focused && state.completedAt === undefined;
   useEffect(() => {
     if (!keysOn) return;
     const onKey = (e: KeyboardEvent) => {

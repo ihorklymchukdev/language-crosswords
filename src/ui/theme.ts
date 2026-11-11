@@ -1,4 +1,4 @@
-import { useColorScheme } from 'react-native';
+import { Platform, useColorScheme } from 'react-native';
 
 export type Palette = {
   scheme: 'light' | 'dark';
@@ -64,6 +64,10 @@ export function usePalette(): Palette {
   return useColorScheme() === 'dark' ? palettes.dark : palettes.light;
 }
 
-// RN Web holds onPressIn back 50 ms and drops it for a faster tap; native fires it at once.
-// The prop is web-only, hence passed by spread.
-export const instantPressIn = { delayPressIn: 0 };
+// Web: RN Web holds onPressIn back 50 ms and drops it on a faster tap, so press-in with no delay
+// (keyboard Enter/Space also arrives as press-in there). Native: onPress, so screen-reader
+// activation works and a touch that turns into the back swipe types nothing.
+// One handler per platform: wiring both would fire twice. delayPressIn is web-only, hence the spread.
+export function tapProps(handler: () => void): { onPress?: () => void; onPressIn?: () => void } {
+  return Platform.OS === 'web' ? { onPressIn: handler, ...{ delayPressIn: 0 } } : { onPress: handler };
+}

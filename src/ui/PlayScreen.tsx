@@ -273,7 +273,7 @@ function makeStyles(p: Palette) {
   return StyleSheet.create({
     timer: { color: p.textMuted, fontSize: 15, fontWeight: '600', fontVariant: ['tabular-nums'], minWidth: 40 },
     headerButton: {
-      minHeight: MIN_TOUCH - 8,
+      minHeight: MIN_TOUCH,
       paddingHorizontal: space.m,
       borderRadius: radius.card,
       borderWidth: 1,

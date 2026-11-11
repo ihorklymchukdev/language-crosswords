@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { upper } from './format';
-import { instantPressIn, radius, space, type Palette } from './theme';
+import { tapProps, radius, space, type Palette } from './theme';
 
 const BACKSPACE = '⌫';
 const ROWS: readonly (readonly string[])[] = [
@@ -36,8 +36,7 @@ export const Keyboard = memo(function Keyboard({ palette, onLetter, onBackspace 
               return (
                 <Pressable
                   key={k}
-                  onPressIn={() => (isBack ? onBackspace() : onLetter(k))}
-                  {...instantPressIn}
+                  {...tapProps(() => (isBack ? onBackspace() : onLetter(k)))}
                   accessibilityRole="button"
                   accessibilityLabel={isBack ? 'Delete' : upper(k)}
                   style={({ pressed }) => [

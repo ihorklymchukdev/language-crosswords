@@ -2,7 +2,7 @@ import { memo, useMemo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Puzzle } from '../play/puzzle';
 import { upper } from './format';
-import { instantPressIn, radius, type Palette } from './theme';
+import { tapProps, radius, type Palette } from './theme';
 
 export const GRID_GAP = 2;
 export const GRID_PAD = 2;
@@ -31,10 +31,9 @@ const Cell = memo(function Cell({ cell, row, col, letter, number, tone, green, r
   const state = green ? ', solved' : revealed ? ', revealed' : '';
   return (
     <Pressable
-      onPressIn={() => onSelect(cell)}
-      {...instantPressIn}
+      {...tapProps(() => onSelect(cell))}
       accessibilityRole="button"
-      accessibilityLabel={`Row ${row + 1}, column ${col + 1}${letter ? `, ${upper(letter)}` : ', empty'}${state}`}
+      accessibilityLabel={`Row ${row + 1}, column ${col + 1}, ${letter ? `letter ${upper(letter)}` : 'empty'}${state}`}
       accessibilityState={{ selected: tone === 'cursor' }}
       style={[styles.cell, { width: size, height: size, backgroundColor: bg }]}
     >
