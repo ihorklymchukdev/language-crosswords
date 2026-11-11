@@ -1,14 +1,23 @@
 import { router } from 'expo-router';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import { dailyPuzzleId, getDailySpec } from '../../src/daily/daily';
 import { LEVEL_NAMES, type Level } from '../../src/domain/levels';
-import { missedDailies, streakLine, todaysDailies, type DailyRef, type DailyStatus } from '../../src/home/today';
+import { getThemes } from '../../src/catalogue/catalogue';
+import {
+  latestUnfinishedPractice,
+  missedDailies,
+  streakLine,
+  todaysDailies,
+  type DailyRef,
+  type DailyStatus,
+} from '../../src/home/today';
 import { useLocalToday } from '../../src/home/useLocalToday';
 import { useProgress } from '../../src/progress/progress-context';
 import { currentStreak } from '../../src/progress/streak';
 import { useHydrated } from '../../src/ui/useHydrated';
-import { formatLongDate, formatShortDate } from '../../src/ui/format';
+import { formatLongDate, formatShortDate, formatTime } from '../../src/ui/format';
+import { NewPuzzleSheet } from '../../src/ui/NewPuzzleSheet';
 import { Card, LinkRow, SectionLabel, TabPage } from '../../src/ui/Page';
 import { MIN_TOUCH, radius, space, usePalette, type Palette } from '../../src/ui/theme';
 
@@ -22,11 +31,16 @@ function openDaily(date: string, level: Level) {
   router.push({ pathname: '/puzzle/daily/[level]/[date]', params: { level, date } });
 }
 
+function openPractice(params: { level: Level; id?: string }) {
+  router.push({ pathname: '/puzzle/practice/[level]', params });
+}
+
 export default function TodayScreen() {
   const palette = usePalette();
   const today = useLocalToday();
   const hydrated = useHydrated();
   const { state, ready } = useProgress();
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   const { cards, missed, streak } = useMemo(() => {
     // A daily that was opened keeps its stored spec, so it stays playable even if lookup fails.
@@ -38,6 +52,8 @@ export default function TodayScreen() {
       streak: currentStreak(state.dailyCompletions, today),
     };
   }, [today, state.dailyCompletions, state.plays]);
+  const unfinished = useMemo(() => latestUnfinishedPractice(state.plays), [state.plays]);
+  const unfinishedTheme = getThemes().find((t) => t.id === unfinished?.spec.themeId)?.nameEn;
 
   const solvedToday = cards.some((c) => c.status === 'solved');
 
@@ -66,6 +82,36 @@ export default function TodayScreen() {
             )}
           </View>
 
+          <View style={styles.playButtons}>
+            {unfinished && (
+              <Pressable
+                onPress={() => openPractice({ level: unfinished.spec.level, id: unfinished.spec.id })}
+                accessibilityRole="button"
+                style={({ pressed }) => [styles.bigButton, { backgroundColor: palette.accent }, pressed && styles.dimmed]}
+              >
+                <Text style={[styles.bigButtonText, { color: palette.accentText }]}>Continue</Text>
+                <Text style={[styles.bigButtonDetail, { color: palette.accentText }]}>
+                  {[formatTime(unfinished.elapsedMs), unfinished.spec.level, unfinishedTheme].filter(Boolean).join(' · ')}
+                </Text>
+              </Pressable>
+            )}
+            <Pressable
+              onPress={() => setSheetOpen(true)}
+              accessibilityRole="button"
+              style={({ pressed }) => [
+                styles.bigButton,
+                unfinished
+                  ? { backgroundColor: palette.surface, borderColor: palette.border, borderWidth: 1 }
+                  : { backgroundColor: palette.accent },
+                pressed && styles.dimmed,
+              ]}
+            >
+              <Text style={[styles.bigButtonText, { color: unfinished ? palette.text : palette.accentText }]}>
+                New crossword
+              </Text>
+            </Pressable>
+          </View>
+
           {missed.length > 0 && (
             <View style={styles.missed}>
               <SectionLabel>Missed</SectionLabel>
@@ -87,6 +133,18 @@ export default function TodayScreen() {
           )}
         </>
       )}
+      <NewPuzzleSheet
+        visible={sheetOpen}
+        onPick={(level) => {
+          setSheetOpen(false);
+          openPractice({ level });
+        }}
+        onThemes={() => {
+          setSheetOpen(false);
+          router.push('/practice');
+        }}
+        onClose={() => setSheetOpen(false)}
+      />
     </TabPage>
   );
 }
@@ -153,6 +211,17 @@ const styles = StyleSheet.create({
   cardTitle: { fontSize: 17, fontWeight: '600' },
   cardStatus: { fontSize: 14, fontWeight: '500' },
   chevron: { fontSize: 26, lineHeight: 28, fontWeight: '300' },
+  playButtons: { gap: space.m },
+  bigButton: {
+    minHeight: MIN_TOUCH + 16,
+    borderRadius: radius.card,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: space.s,
+  },
+  bigButtonText: { fontSize: 18, fontWeight: '700' },
+  bigButtonDetail: { fontSize: 13, fontWeight: '500', opacity: 0.9, fontVariant: ['tabular-nums'] },
+  dimmed: { opacity: 0.85 },
   missed: { gap: space.m },
   note: { fontSize: 13, lineHeight: 18 },
 });

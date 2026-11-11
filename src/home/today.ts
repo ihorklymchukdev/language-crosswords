@@ -80,3 +80,13 @@ export function streakLine(streak: number, solvedToday: boolean): string {
   const days = `${streak}-day streak`;
   return solvedToday ? days : `${days} · solve one today to keep it going`;
 }
+
+// Plays are re-inserted on save, so key order runs from least to most recently touched.
+export function latestUnfinishedPractice(plays: Readonly<Record<string, StoredPlay>>): StoredPlay | undefined {
+  const all = Object.values(plays);
+  for (let i = all.length - 1; i >= 0; i--) {
+    const p = all[i]!;
+    if (p.spec.kind === 'practice' && p.completedAt === undefined) return p;
+  }
+  return undefined;
+}

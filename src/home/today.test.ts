@@ -2,7 +2,7 @@ import { dailyPuzzleId } from '../daily/daily';
 import type { Level } from '../domain/levels';
 import type { DailyCompletion, StoredPlay } from '../progress/storage';
 import { formatLongDate, formatShortDate } from '../ui/format';
-import { dailyStatus, missedDailies, todaysDailies } from './today';
+import { dailyStatus, latestUnfinishedPractice, missedDailies, todaysDailies } from './today';
 
 const TODAY = '2026-11-01';
 const done = (date: string, level: Level, completedOn = date): DailyCompletion => ({ date, level, completedOn });
@@ -89,6 +89,23 @@ describe('missedDailies', () => {
   it('marks a missed daily that was started as in progress', () => {
     const refs = missedDailies(TODAY, veteran, play('2026-10-31', 'B1', ['c']), always);
     expect(refs.find((r) => r.level === 'B1')?.status).toBe('in-progress');
+  });
+});
+
+describe('latestUnfinishedPractice', () => {
+  const practice = (id: string, completedAt?: number): Record<string, StoredPlay> => {
+    const base = Object.values(play(TODAY, 'B1', ['a']))[0]!;
+    const spec = { ...base.spec, id, kind: 'practice' as const, date: undefined };
+    return { [id]: { ...base, puzzleId: id, spec, ...(completedAt !== undefined ? { completedAt } : {}) } };
+  };
+
+  it('picks the most recently saved unfinished practice, skipping solved ones and dailies', () => {
+    const plays = { ...practice('old'), ...practice('newer'), ...practice('solved', 1000), ...play(TODAY, 'A2', ['a']) };
+    expect(latestUnfinishedPractice(plays)?.spec.id).toBe('newer');
+  });
+
+  it('has nothing to continue when every practice is solved', () => {
+    expect(latestUnfinishedPractice({ ...practice('solved', 1000), ...play(TODAY, 'A2', ['a']) })).toBeUndefined();
   });
 });
 
