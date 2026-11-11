@@ -19,6 +19,7 @@ import { ClueList } from './ClueList';
 import { CompletionCard, type CardAction } from './CompletionCard';
 import { formatTime } from './format';
 import { GRID_GAP, GRID_PAD, Grid, gridExtent } from './Grid';
+import { GridViewport } from './GridViewport';
 import { Keyboard } from './Keyboard';
 import { Icon, type IconName } from './Icon';
 import { Header, ScreenFrame, goBack } from './ScreenFrame';
@@ -26,6 +27,8 @@ import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette, type Pal
 
 const MAX_GRID_WIDTH = MAX_CONTENT_WIDTH;
 const MAX_CELL = 60;
+// Smallest readable, tappable cell; below this the grid scrolls instead of shrinking.
+const MIN_CELL = 36;
 // Below this much spare height the inline clue list would be a sliver; the Clues sheet covers it.
 const MIN_INLINE_LIST = 150;
 // Shorter windows get a tighter keyboard and spacing so the grid keeps a usable size.
@@ -45,16 +48,24 @@ type Props = {
 };
 
 type Area = { w: number; h: number };
-type Fit = { cellSize: number; heightBound: boolean };
+type Fit = { cellSize: number; heightBound: boolean; viewW: number; viewH: number };
 
 const fit = (extent: number, n: number) => (extent - GRID_PAD * 2 - (n - 1) * GRID_GAP) / n;
 
 // The clue bar's tallest (translated) height is held back, so translating never pushes it off screen.
 // The grid runs edge to edge; only the clue bar and list are inset.
 function fitGrid(area: Area, rows: number, cols: number, barHeight: number, gap: number): Fit {
-  const byWidth = Math.min(fit(Math.min(area.w, MAX_GRID_WIDTH), cols), MAX_CELL);
-  const byHeight = fit(area.h - space.s - gap - barHeight, rows);
-  return { cellSize: Math.max(16, Math.floor(Math.min(byWidth, byHeight))), heightBound: byHeight < byWidth };
+  const width = Math.min(area.w, MAX_GRID_WIDTH);
+  const height = area.h - space.s - gap - barHeight;
+  const byWidth = Math.min(fit(width, cols), MAX_CELL);
+  const byHeight = fit(height, rows);
+  const cellSize = Math.floor(Math.max(MIN_CELL, Math.min(byWidth, byHeight)));
+  return {
+    cellSize,
+    heightBound: byHeight < byWidth,
+    viewW: Math.min(width, gridExtent(cols, cellSize)),
+    viewH: Math.max(cellSize, Math.min(height, gridExtent(rows, cellSize))),
+  };
 }
 
 export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChange, onComplete, onNext }: Props) {
@@ -111,7 +122,7 @@ export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChang
   const cellSize = grid?.cellSize ?? 0;
   // When height is what limits the grid, the bar keeps its tallest size so nothing shifts on Translate.
   const barMin = grid?.heightBound && barHeight !== undefined ? barHeight : CLUE_BAR_MIN_HEIGHT;
-  const spare = area ? area.h - gridExtent(rows, cellSize) - barMin - space.s - gap * 2 : 0;
+  const spare = area && grid ? area.h - grid.viewH - barMin - space.s - gap * 2 : 0;
   const translated = slot !== undefined && state.translated.includes(slot.index);
   const cursorLocked = (green[state.cursor] ?? false) || (state.revealed[state.cursor] ?? false);
   const revealedCount = state.revealed.filter(Boolean).length;
@@ -167,17 +178,28 @@ export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChang
         )}
         {grid && (
           <>
-            <Grid
-              puzzle={puzzle}
-              letters={letters}
-              green={green}
-              revealed={state.revealed}
+            <GridViewport
+              width={grid.viewW}
+              height={grid.viewH}
+              contentWidth={gridExtent(cols, cellSize)}
+              contentHeight={gridExtent(rows, cellSize)}
+              cols={cols}
+              cellSize={cellSize}
               cursor={complete ? -1 : state.cursor}
               activeCells={complete ? NO_CELLS : (slot?.cells ?? NO_CELLS)}
-              cellSize={cellSize}
-              palette={palette}
-              onSelect={onSelect}
-            />
+            >
+              <Grid
+                puzzle={puzzle}
+                letters={letters}
+                green={green}
+                revealed={state.revealed}
+                cursor={complete ? -1 : state.cursor}
+                activeCells={complete ? NO_CELLS : (slot?.cells ?? NO_CELLS)}
+                cellSize={cellSize}
+                palette={palette}
+                onSelect={onSelect}
+              />
+            </GridViewport>
             <View style={styles.inset}>
               <ClueBar
                 slot={slot}
