@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import { APP_NAME } from '../../src/ui/app-info';
 import { Bullets, Card, LinkRow, SectionLabel, TabPage } from '../../src/ui/Page';
-import { space, usePalette } from '../../src/ui/theme';
+import { font, space, usePalette } from '../../src/ui/theme';
 
 const HOW_TO_PLAY = [
   'Tap a square and type with the keyboard below the grid.',
@@ -47,8 +47,8 @@ export default function AboutScreen() {
 }
 
 const styles = StyleSheet.create({
-  lead: { fontSize: 15, lineHeight: 21, marginTop: -space.m },
-  section: { gap: space.m },
+  lead: { fontFamily: font.regular, fontSize: 15, lineHeight: 22, marginTop: -space.s },
+  section: { gap: 10 },
   meta: { gap: space.xs, alignItems: 'center', marginTop: space.s },
-  metaText: { fontSize: 13 },
+  metaText: { fontFamily: font.regular, fontSize: 13 },
 });

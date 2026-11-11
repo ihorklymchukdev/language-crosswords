@@ -2,8 +2,9 @@ import type { ReactNode } from 'react';
 import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { DocumentTitle } from './DocumentTitle';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Icon } from './Icon';
 import { Header } from './ScreenFrame';
-import { MAX_CONTENT_WIDTH, MIN_TOUCH, radius, space, usePalette } from './theme';
+import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette } from './theme';
 
 // Unlike ScreenFrame, the scroll view spans the window so on desktop the scrollbar sits at the
 // window edge and the wheel works over the side margins; only the content is centred.
@@ -26,17 +27,26 @@ export function ContentColumn({ children }: { children: ReactNode }) {
   return <View style={styles.column}>{children}</View>;
 }
 
-type TabPageProps = { title: string; eyebrow: string; children: ReactNode; footer?: ReactNode };
+type TabPageProps = {
+  title: string;
+  eyebrow: string;
+  eyebrowAside?: ReactNode;
+  children: ReactNode;
+  footer?: ReactNode;
+};
 
 // The tab bar pads the bottom safe area, so tab pages don't.
-export function TabPage({ title, eyebrow, children, footer }: TabPageProps) {
+export function TabPage({ title, eyebrow, eyebrowAside, children, footer }: TabPageProps) {
   const palette = usePalette();
   return (
     <PageFrame padBottom={false}>
       <DocumentTitle title={eyebrow} />
       <ScrollView contentContainerStyle={[styles.column, styles.tabContent]}>
         <View style={styles.titleBlock}>
-          <Text style={[styles.eyebrow, { color: palette.textMuted }]}>{eyebrow}</Text>
+          <View style={styles.eyebrowRow}>
+            <Text style={[styles.label, { color: palette.textMuted }]}>{eyebrow.toUpperCase()}</Text>
+            {eyebrowAside}
+          </View>
           <Text style={[styles.title, { color: palette.text }]} accessibilityRole="header">
             {title}
           </Text>
@@ -50,7 +60,7 @@ export function TabPage({ title, eyebrow, children, footer }: TabPageProps) {
 
 export function SectionLabel({ children }: { children: string }) {
   const palette = usePalette();
-  return <Text style={[styles.sectionLabel, { color: palette.textMuted }]}>{children.toUpperCase()}</Text>;
+  return <Text style={[styles.label, { color: palette.textMuted }]}>{children.toUpperCase()}</Text>;
 }
 
 export function TextPage({ title, children }: { title: string; children: ReactNode }) {
@@ -106,7 +116,7 @@ export function ExternalLink({ url, children }: { url: string; children: string 
     <Text
       accessibilityRole="link"
       onPress={() => void Linking.openURL(url).catch(() => {})}
-      style={[styles.link, { color: palette.accent }]}
+      style={[styles.link, { color: palette.accentStrong }]}
     >
       {children}
     </Text>
@@ -124,43 +134,43 @@ export function LinkRow({ label, detail, onPress, first }: RowProps) {
       style={({ pressed }) => [
         styles.row,
         !first && { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.border },
-        pressed && { backgroundColor: palette.surfaceAlt },
+        pressed && { backgroundColor: palette.border },
       ]}
     >
       <View style={styles.rowText}>
         <Text style={[styles.rowLabel, { color: palette.text }]}>{label}</Text>
         {detail !== undefined && <Text style={[styles.rowDetail, { color: palette.textMuted }]}>{detail}</Text>}
       </View>
-      <Text style={[styles.chevron, { color: palette.textMuted }]}>›</Text>
+      <Icon name="forward" color={palette.textMuted} />
     </Pressable>
   );
 }
 
 export function Card({ children }: { children: ReactNode }) {
   const palette = usePalette();
-  return <View style={[styles.card, { backgroundColor: palette.surface, borderColor: palette.border }]}>{children}</View>;
+  return <View style={[styles.card, { backgroundColor: palette.surface }]}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
   frame: { flex: 1 },
   column: { width: '100%', maxWidth: MAX_CONTENT_WIDTH, alignSelf: 'center' },
-  tabContent: { paddingHorizontal: space.l, paddingTop: space.xl, paddingBottom: space.xxl, gap: space.xl },
-  titleBlock: { gap: space.xs },
-  eyebrow: { fontSize: 15, fontWeight: '500' },
-  title: { fontSize: 28, lineHeight: 34, fontWeight: '700' },
-  sectionLabel: { fontSize: 12, fontWeight: '700', letterSpacing: 0.8, marginBottom: space.xs },
-  textContent: { paddingHorizontal: space.l, paddingTop: space.s, paddingBottom: space.xxl, gap: space.m },
+  tabContent: { paddingHorizontal: space.l + 4, paddingTop: 28, paddingBottom: space.xxl, gap: space.xl },
+  titleBlock: { gap: space.m },
+  eyebrowRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', minHeight: 30 },
+  label: { fontFamily: font.semibold, fontSize: 13, letterSpacing: 1 },
+  title: { fontFamily: font.display, fontSize: 34, lineHeight: 37, letterSpacing: -0.7 },
+  textContent: { paddingHorizontal: space.l + 4, paddingTop: space.s, paddingBottom: space.xxl, gap: space.m },
   textTitle: { marginBottom: space.xs },
-  h2: { fontSize: 17, lineHeight: 22, fontWeight: '700', marginTop: space.m },
-  p: { fontSize: 15, lineHeight: 22 },
+  h2: { fontFamily: font.display, fontSize: 19, lineHeight: 24, marginTop: space.m },
+  p: { fontFamily: font.regular, fontSize: 15, lineHeight: 22 },
   link: { textDecorationLine: 'underline' },
   bullets: { gap: space.s },
   bulletRow: { flexDirection: 'row', alignItems: 'flex-start', gap: space.m },
-  bulletDot: { width: 5, height: 5, borderRadius: 3, marginTop: 9 },
+  bulletDot: { width: 6, height: 6, borderRadius: 3, marginTop: 8 },
   bulletText: { flex: 1 },
-  card: { borderRadius: radius.card, borderWidth: StyleSheet.hairlineWidth, overflow: 'hidden' },
+  card: { borderRadius: radius.card, overflow: 'hidden' },
   row: {
-    minHeight: MIN_TOUCH + 8,
+    minHeight: MIN_TOUCH + 12,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: space.l,
@@ -168,7 +178,6 @@ const styles = StyleSheet.create({
     gap: space.m,
   },
   rowText: { flex: 1, gap: 2 },
-  rowLabel: { fontSize: 16, fontWeight: '500' },
-  rowDetail: { fontSize: 13 },
-  chevron: { fontSize: 24, lineHeight: 26, fontWeight: '300' },
+  rowLabel: { fontFamily: font.semibold, fontSize: 16 },
+  rowDetail: { fontFamily: font.medium, fontSize: 13 },
 });

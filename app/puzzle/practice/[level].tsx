@@ -117,7 +117,8 @@ export default function PracticePuzzleScreen() {
       key={session.puzzle.spec.id}
       puzzle={session.puzzle}
       initial={session.initial}
-      title={['Practice', level, themeName].filter(Boolean).join(' · ')}
+      title={themeName ?? 'Practice'}
+      badge={level}
       doneMessage={themeName ? `${themeName} practice, solved.` : `${level} practice, solved.`}
       onChange={onChange}
       onComplete={onComplete}

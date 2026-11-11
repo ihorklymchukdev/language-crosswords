@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Direction } from '../domain/types';
 import type { Slot } from '../play/puzzle';
 import { directionLabel } from './ClueBar';
-import { MIN_TOUCH, radius, space, type Palette } from './theme';
+import { MIN_TOUCH, font, radius, space, type Palette } from './theme';
 
 type Props = {
   slots: readonly Slot[];
@@ -37,7 +37,7 @@ export const ClueList = memo(function ClueList({ slots, activeIndex, translated,
                   accessibilityState={{ selected: active }}
                   style={({ pressed }) => [
                     styles.item,
-                    (active || pressed) && { backgroundColor: active ? palette.slotTint : palette.surfaceAlt },
+                    (active || pressed) && { backgroundColor: active ? palette.accentTint : palette.surface },
                   ]}
                 >
                   <Text style={[styles.number, { color: done ? palette.correctText : palette.text }]}>{s.number}</Text>
@@ -59,17 +59,17 @@ export const ClueList = memo(function ClueList({ slots, activeIndex, translated,
 
 const styles = StyleSheet.create({
   list: { gap: space.m },
-  heading: { fontSize: 11, fontWeight: '700', letterSpacing: 0.8, marginBottom: space.xs, paddingHorizontal: space.s },
+  heading: { fontFamily: font.semibold, fontSize: 12, letterSpacing: 1, marginBottom: space.xs, paddingHorizontal: space.s },
   item: {
     flexDirection: 'row',
     gap: space.s,
     minHeight: MIN_TOUCH,
     paddingVertical: space.s,
     paddingHorizontal: space.s,
-    borderRadius: radius.card - 2,
+    borderRadius: radius.s,
   },
-  number: { width: 22, fontSize: 15, lineHeight: 20, fontWeight: '700', textAlign: 'right' },
+  number: { width: 24, fontFamily: font.display, fontSize: 15, lineHeight: 20, textAlign: 'right' },
   texts: { flex: 1 },
-  clue: { fontSize: 15, lineHeight: 20 },
-  translation: { fontSize: 13, lineHeight: 18, fontStyle: 'italic', marginTop: 2 },
+  clue: { fontFamily: font.regular, fontSize: 15, lineHeight: 20 },
+  translation: { fontFamily: font.regular, fontSize: 13, lineHeight: 18, fontStyle: 'italic', marginTop: 2 },
 });

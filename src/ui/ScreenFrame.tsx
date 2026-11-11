@@ -3,7 +3,8 @@ import type { ReactNode } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { DocumentTitle } from './DocumentTitle';
-import { MAX_CONTENT_WIDTH, MIN_TOUCH, radius, space, usePalette, type Palette } from './theme';
+import { Icon } from './Icon';
+import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette, type Palette } from './theme';
 
 // Deep links on web open with no history to go back to.
 export function goBack() {
@@ -11,9 +12,9 @@ export function goBack() {
   else router.replace('/');
 }
 
-type HeaderProps = { title: string; palette: Palette; right?: ReactNode };
+type HeaderProps = { title: string; badge?: string; palette: Palette; right?: ReactNode };
 
-export function Header({ title, palette, right }: HeaderProps) {
+export function Header({ title, badge, palette, right }: HeaderProps) {
   return (
     <View style={styles.header}>
       <Pressable
@@ -21,13 +22,20 @@ export function Header({ title, palette, right }: HeaderProps) {
         accessibilityRole="button"
         accessibilityLabel="Back"
         hitSlop={6}
-        style={({ pressed }) => [styles.back, pressed && { backgroundColor: palette.surfaceAlt }]}
+        style={({ pressed }) => [styles.back, pressed && { backgroundColor: palette.surface }]}
       >
-        <Text style={[styles.backGlyph, { color: palette.text }]}>‹</Text>
+        <Icon name="back" size={22} color={palette.text} />
       </Pressable>
-      <Text style={[styles.title, { color: palette.text }]} numberOfLines={1} accessibilityRole="header">
-        {title}
-      </Text>
+      <View style={styles.titleRow}>
+        <Text style={[styles.title, { color: palette.text }]} numberOfLines={1} accessibilityRole="header">
+          {title}
+        </Text>
+        {badge !== undefined && (
+          <View style={[styles.badge, { backgroundColor: palette.accentTint }]}>
+            <Text style={[styles.badgeText, { color: palette.accentStrong }]}>{badge}</Text>
+          </View>
+        )}
+      </View>
       <View style={styles.right}>{right}</View>
     </View>
   );
@@ -71,10 +79,8 @@ export function MessageScreen({ title, heading, body, actions = [], loading }: M
                   accessibilityRole="button"
                   style={({ pressed }) => [
                     styles.button,
-                    i === 0
-                      ? { backgroundColor: palette.accent, borderColor: palette.accent }
-                      : { borderColor: palette.border },
-                    pressed && { opacity: 0.75 },
+                    { backgroundColor: i === 0 ? palette.accent : palette.surface },
+                    pressed && { opacity: 0.8 },
                   ]}
                 >
                   <Text style={[styles.buttonText, { color: i === 0 ? palette.accentText : palette.text }]}>
@@ -93,23 +99,24 @@ export function MessageScreen({ title, heading, body, actions = [], loading }: M
 const styles = StyleSheet.create({
   screen: { flex: 1 },
   column: { flex: 1, width: '100%', maxWidth: MAX_CONTENT_WIDTH, alignSelf: 'center' },
-  header: { flexDirection: 'row', alignItems: 'center', height: 52, paddingHorizontal: space.xs, gap: space.xs },
-  back: { width: MIN_TOUCH, height: MIN_TOUCH, borderRadius: radius.card, alignItems: 'center', justifyContent: 'center' },
-  backGlyph: { fontSize: 34, lineHeight: 38, fontWeight: '300', marginTop: -3 },
-  title: { flex: 1, fontSize: 17, fontWeight: '600' },
-  right: { flexDirection: 'row', alignItems: 'center', gap: space.xs, paddingEnd: space.s },
+  header: { flexDirection: 'row', alignItems: 'center', height: 60, paddingStart: space.s, paddingEnd: space.m, gap: space.s },
+  back: { width: MIN_TOUCH, height: MIN_TOUCH, borderRadius: MIN_TOUCH / 2, alignItems: 'center', justifyContent: 'center' },
+  titleRow: { flex: 1, minWidth: 0, flexDirection: 'row', alignItems: 'center', gap: space.s },
+  title: { flexShrink: 1, fontFamily: font.display, fontSize: 18, letterSpacing: -0.2 },
+  badge: { height: 24, paddingHorizontal: space.s, borderRadius: 8, justifyContent: 'center' },
+  badgeText: { fontFamily: font.display, fontSize: 13 },
+  right: { flexDirection: 'row', alignItems: 'center', gap: space.m },
   message: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: space.xl, gap: space.m },
-  heading: { fontSize: 20, fontWeight: '700', textAlign: 'center' },
-  body: { fontSize: 15, lineHeight: 21, textAlign: 'center', maxWidth: 340 },
+  heading: { fontFamily: font.display, fontSize: 24, textAlign: 'center', letterSpacing: -0.3 },
+  body: { fontFamily: font.regular, fontSize: 15, lineHeight: 22, textAlign: 'center', maxWidth: 340 },
   actions: { gap: space.m, marginTop: space.s, alignSelf: 'stretch', alignItems: 'center' },
   button: {
-    minHeight: MIN_TOUCH + 4,
-    minWidth: 200,
-    borderRadius: radius.card,
-    borderWidth: 1,
+    minHeight: 54,
+    minWidth: 220,
+    borderRadius: radius.card - 2,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: space.xl,
   },
-  buttonText: { fontSize: 16, fontWeight: '600' },
+  buttonText: { fontFamily: font.semibold, fontSize: 16 },
 });

@@ -4,14 +4,17 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { themesForLevel } from '../../src/catalogue/catalogue';
 import { LEVEL_NAMES, LEVELS, type Level } from '../../src/domain/levels';
 import type { Theme } from '../../src/domain/types';
+import { Icon } from '../../src/ui/Icon';
 import { ContentColumn, SectionLabel, TabPage } from '../../src/ui/Page';
-import { MIN_TOUCH, radius, space, usePalette, type Palette } from '../../src/ui/theme';
+import { font, radius, space, usePalette, type Palette } from '../../src/ui/theme';
 
 const MIN_THEME_WORDS = 12;
+// Keeps three segments on one line at phone width.
+const SHORT_LEVEL_NAMES: Record<Level, string> = { A2: 'Elementary', B1: 'Intermediate', B2: 'Upper-interm.' };
 
-type ChipProps = { title: string; subtitle?: string; selected: boolean; onPress: () => void; palette: Palette };
+type ChipProps = { title: string; subtitle: string; selected: boolean; onPress: () => void; palette: Palette };
 
-function Chip({ title, subtitle, selected, onPress, palette }: ChipProps) {
+function ThemeChip({ title, subtitle, selected, onPress, palette }: ChipProps) {
   return (
     <Pressable
       onPress={onPress}
@@ -19,19 +22,21 @@ function Chip({ title, subtitle, selected, onPress, palette }: ChipProps) {
       accessibilityState={{ checked: selected }}
       style={({ pressed }) => [
         styles.chip,
-        selected
-          ? { backgroundColor: palette.slotTint, borderColor: palette.accent }
-          : { backgroundColor: palette.surface, borderColor: palette.border },
-        pressed && !selected && { backgroundColor: palette.surfaceAlt },
+        { backgroundColor: selected ? palette.inverse : pressed ? palette.border : palette.surface },
       ]}
     >
-      <Text style={[styles.chipTitle, { color: palette.text }]} numberOfLines={1}>
-        {title}
-      </Text>
-      {subtitle !== undefined && (
-        <Text style={[styles.chipSubtitle, { color: palette.textMuted }]} numberOfLines={2}>
+      <View style={styles.chipText}>
+        <Text style={[styles.chipTitle, { color: selected ? palette.inverseText : palette.text }]} numberOfLines={1}>
+          {title}
+        </Text>
+        <Text style={[styles.chipSubtitle, { color: selected ? palette.inverseMuted : palette.textMuted }]} numberOfLines={1}>
           {subtitle}
         </Text>
+      </View>
+      {selected && (
+        <View style={[styles.check, { backgroundColor: palette.accent }]}>
+          <Icon name="check" size={12} strokeWidth={3.2} color={palette.accentText} />
+        </View>
       )}
     </Pressable>
   );
@@ -64,7 +69,7 @@ export default function PracticeScreen() {
       eyebrow="Practice"
       title="A fresh crossword"
       footer={
-        <View style={[styles.footer, { borderTopColor: palette.border, backgroundColor: palette.bg }]}>
+        <View style={[styles.footer, { backgroundColor: palette.bg, borderTopColor: palette.border }]}>
           <ContentColumn>
             <Pressable
               onPress={play}
@@ -72,8 +77,9 @@ export default function PracticeScreen() {
               accessibilityLabel={`Play ${level} ${theme?.nameEn ?? 'any theme'}`}
               style={({ pressed }) => [styles.play, { backgroundColor: palette.accent }, pressed && { opacity: 0.85 }]}
             >
+              <Icon name="play" size={16} color={palette.accentText} />
               <Text style={[styles.playText, { color: palette.accentText }]}>Play</Text>
-              <Text style={[styles.playDetail, { color: palette.accentText }]}>
+              <Text style={[styles.playDetail, { color: palette.accentText }]} numberOfLines={1}>
                 {level} · {theme?.nameEn ?? 'Any theme'}
               </Text>
             </Pressable>
@@ -82,22 +88,31 @@ export default function PracticeScreen() {
       }
     >
       <Text style={[styles.lead, { color: palette.textMuted }]}>
-        Pick a level and a theme. Any theme gives a full-size grid of 20+ words; a single theme makes a mini. Every puzzle is new.
+        Pick a level and a theme. Any theme gives a full-size grid of 20+ words; a single theme makes a mini. Every
+        puzzle is new.
       </Text>
 
-      <View style={styles.section} accessibilityRole="radiogroup">
+      <View style={styles.section}>
         <SectionLabel>Level</SectionLabel>
-        <View style={styles.row}>
-          {LEVELS.map((l) => (
-            <Chip
-              key={l}
-              title={l}
-              subtitle={LEVEL_NAMES[l]}
-              selected={l === level}
-              onPress={() => setLevel(l)}
-              palette={palette}
-            />
-          ))}
+        <View style={[styles.segments, { backgroundColor: palette.segment }]} accessibilityRole="radiogroup">
+          {LEVELS.map((l) => {
+            const selected = l === level;
+            return (
+              <Pressable
+                key={l}
+                onPress={() => setLevel(l)}
+                accessibilityRole="radio"
+                accessibilityLabel={`${l} ${LEVEL_NAMES[l]}`}
+                accessibilityState={{ checked: selected }}
+                style={[styles.segment, selected && [styles.segmentOn, { backgroundColor: palette.raised }]]}
+              >
+                <Text style={[styles.segmentCode, { color: selected ? palette.accentStrong : palette.text }]}>{l}</Text>
+                <Text style={[styles.segmentName, { color: palette.textMuted }]} numberOfLines={1}>
+                  {SHORT_LEVEL_NAMES[l]}
+                </Text>
+              </Pressable>
+            );
+          })}
         </View>
       </View>
 
@@ -106,7 +121,7 @@ export default function PracticeScreen() {
         {pairs(options).map((row) => (
           <View key={row[0]?.id ?? 'any'} style={styles.row}>
             {row.map((t) => (
-              <Chip
+              <ThemeChip
                 key={t?.id ?? 'any'}
                 title={t?.nameEn ?? 'Any theme'}
                 subtitle={t?.nameEs ?? 'Cualquier tema'}
@@ -124,31 +139,45 @@ export default function PracticeScreen() {
 }
 
 const styles = StyleSheet.create({
-  lead: { fontSize: 15, lineHeight: 21, marginTop: -space.m },
-  section: { gap: space.s },
+  lead: { fontFamily: font.regular, fontSize: 14, lineHeight: 20, marginTop: -space.s },
+  section: { gap: 10 },
+  segments: { flexDirection: 'row', gap: 4, padding: 4, borderRadius: 18 },
+  segment: { flex: 1, height: 52, borderRadius: 14, alignItems: 'center', justifyContent: 'center', gap: 1 },
+  segmentOn: {
+    shadowColor: '#18181B',
+    shadowOpacity: 0.12,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 1 },
+    elevation: 1,
+  },
+  segmentCode: { fontFamily: font.display, fontSize: 16 },
+  segmentName: { fontFamily: font.medium, fontSize: 11 },
   row: { flexDirection: 'row', gap: space.s },
   chip: {
     flex: 1,
-    minHeight: MIN_TOUCH + 12,
-    justifyContent: 'center',
-    paddingHorizontal: space.m,
-    paddingVertical: space.s,
-    borderRadius: radius.card,
-    borderWidth: 1.5,
-    gap: 2,
-  },
-  chipTitle: { fontSize: 16, fontWeight: '600' },
-  chipSubtitle: { fontSize: 12 },
-  spacer: { flex: 1 },
-  footer: { paddingVertical: space.m, borderTopWidth: StyleSheet.hairlineWidth },
-  play: {
-    marginHorizontal: space.l,
-    minHeight: MIN_TOUCH + 12,
-    borderRadius: radius.card,
+    height: 56,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: space.s,
+    gap: space.s,
+    paddingStart: 14,
+    paddingEnd: space.m,
+    borderRadius: radius.m,
   },
-  playText: { fontSize: 18, fontWeight: '700' },
-  playDetail: { fontSize: 13, fontWeight: '500', opacity: 0.9 },
+  chipText: { flex: 1, minWidth: 0, gap: 1 },
+  chipTitle: { fontFamily: font.semibold, fontSize: 15 },
+  chipSubtitle: { fontFamily: font.medium, fontSize: 12 },
+  check: { width: 22, height: 22, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
+  spacer: { flex: 1 },
+  footer: { paddingTop: space.m, paddingBottom: space.l, borderTopWidth: StyleSheet.hairlineWidth },
+  play: {
+    marginHorizontal: space.l + 4,
+    height: 60,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.m,
+    paddingHorizontal: space.l + 4,
+    borderRadius: radius.card,
+  },
+  playText: { flex: 1, fontFamily: font.semibold, fontSize: 17 },
+  playDetail: { fontFamily: font.medium, fontSize: 14, flexShrink: 1 },
 });

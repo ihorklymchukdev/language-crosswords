@@ -1,14 +1,14 @@
 import { Tabs } from 'expo-router/js-tabs';
 import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { TabIcon, type TabIconName } from '../../src/ui/TabIcon';
-import { MAX_CONTENT_WIDTH, usePalette } from '../../src/ui/theme';
+import { Icon, type IconName } from '../../src/ui/Icon';
+import { MAX_CONTENT_WIDTH, font, usePalette } from '../../src/ui/theme';
 import { useHydrated } from '../../src/ui/useHydrated';
 
-// The default height clips labels under a 22px drawn icon.
-const TAB_BAR_HEIGHT = 62;
+// Room for the active pill around a 22px icon and its label.
+const TAB_BAR_HEIGHT = 76;
 
-const TABS: readonly { name: string; title: string; icon: TabIconName }[] = [
+const TABS: readonly { name: string; title: string; icon: IconName }[] = [
   { name: 'index', title: 'Today', icon: 'today' },
   { name: 'practice', title: 'Practice', icon: 'practice' },
   { name: 'about', title: 'About', icon: 'about' },
@@ -26,15 +26,17 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         sceneStyle: { backgroundColor: palette.bg },
-        tabBarActiveTintColor: palette.accent,
+        tabBarActiveTintColor: palette.accentStrong,
         tabBarInactiveTintColor: palette.textMuted,
+        tabBarActiveBackgroundColor: palette.accentTint,
         tabBarLabelPosition: 'below-icon',
-        tabBarLabelStyle: { fontSize: 12, lineHeight: 16, fontWeight: '600' },
+        tabBarLabelStyle: { fontFamily: font.semibold, fontSize: 12, lineHeight: 16 },
+        tabBarItemStyle: { borderRadius: 16, overflow: 'hidden', marginHorizontal: 4, marginVertical: 8 },
         tabBarStyle: {
-          backgroundColor: palette.surface,
+          backgroundColor: palette.bg,
           borderTopColor: palette.border,
-          paddingHorizontal: inset,
-          paddingTop: 4,
+          paddingHorizontal: inset + 16,
+          paddingTop: 0,
           height: TAB_BAR_HEIGHT + insets.bottom,
         },
       }}
@@ -43,7 +45,7 @@ export default function TabsLayout() {
         <Tabs.Screen
           key={t.name}
           name={t.name}
-          options={{ title: t.title, tabBarIcon: ({ color }) => <TabIcon name={t.icon} color={color} /> }}
+          options={{ title: t.title, tabBarIcon: ({ color }) => <Icon name={t.icon} size={22} strokeWidth={2} color={color} /> }}
         />
       ))}
     </Tabs>

@@ -1,9 +1,10 @@
 import { memo, useCallback } from 'react';
 import { Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from 'react-native';
 import type { Slot } from '../play/puzzle';
-import { MIN_TOUCH, radius, space, type Palette } from './theme';
+import { Icon, type IconName } from './Icon';
+import { MIN_TOUCH, font, radius, space, type Palette } from './theme';
 
-export const CLUE_BAR_MIN_HEIGHT = 84;
+export const CLUE_BAR_MIN_HEIGHT = 68;
 
 export const directionLabel = (d: Slot['direction']) => (d === 'across' ? 'Across' : 'Down');
 
@@ -18,7 +19,7 @@ type Props = {
 };
 
 export const ClueBar = memo(function ClueBar({ slot, translated, minHeight, palette, onPrev, onNext, onToggle }: Props) {
-  const chevron = (label: string, glyph: string, onPress: () => void) => (
+  const chevron = (label: string, icon: IconName, onPress: () => void) => (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
@@ -26,13 +27,13 @@ export const ClueBar = memo(function ClueBar({ slot, translated, minHeight, pale
       hitSlop={4}
       style={({ pressed }) => [styles.chevron, pressed && { backgroundColor: palette.border }]}
     >
-      <Text style={[styles.chevronText, { color: palette.textMuted }]}>{glyph}</Text>
+      <Icon name={icon} color={palette.textMuted} />
     </Pressable>
   );
 
   return (
-    <View style={[styles.bar, { minHeight, backgroundColor: palette.surfaceAlt }]}>
-      {chevron('Previous clue', '‹', onPrev)}
+    <View style={[styles.bar, { minHeight, backgroundColor: palette.surface }]}>
+      {chevron('Previous clue', 'back', onPrev)}
       <Pressable
         onPress={onToggle}
         accessibilityRole="button"
@@ -41,7 +42,7 @@ export const ClueBar = memo(function ClueBar({ slot, translated, minHeight, pale
       >
         {slot && <ClueText slot={slot} translated={translated} palette={palette} />}
       </Pressable>
-      {chevron('Next clue', '›', onNext)}
+      {chevron('Next clue', 'forward', onNext)}
     </View>
   );
 });
@@ -49,7 +50,7 @@ export const ClueBar = memo(function ClueBar({ slot, translated, minHeight, pale
 function ClueText({ slot, translated, palette }: { slot: Slot; translated: boolean; palette: Palette }) {
   return (
     <>
-      <Text style={[styles.label, { color: palette.accent }]}>
+      <Text style={[styles.label, { color: palette.accentStrong }]}>
         {slot.number} {directionLabel(slot.direction).toUpperCase()}
       </Text>
       <Text style={[styles.clue, { color: palette.text }]} numberOfLines={3}>
@@ -95,19 +96,20 @@ const styles = StyleSheet.create({
   bar: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 2,
     borderRadius: radius.card,
     paddingVertical: space.s,
+    paddingHorizontal: space.xs,
   },
   chevron: {
-    width: MIN_TOUCH - 4,
-    height: MIN_TOUCH + 12,
-    borderRadius: radius.card,
+    width: MIN_TOUCH,
+    height: MIN_TOUCH,
+    borderRadius: MIN_TOUCH / 2,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  chevronText: { fontSize: 30, lineHeight: 34, fontWeight: '300' },
-  body: { flex: 1, paddingHorizontal: space.xs, justifyContent: 'center', minHeight: MIN_TOUCH },
-  label: { fontSize: 11, fontWeight: '700', letterSpacing: 0.8, marginBottom: 2 },
-  clue: { fontSize: 16, lineHeight: 21, fontWeight: '500' },
-  translation: { fontSize: 14, lineHeight: 19, fontStyle: 'italic', marginTop: 3 },
+  body: { flex: 1, minWidth: 0, justifyContent: 'center', minHeight: MIN_TOUCH },
+  label: { fontFamily: font.bold, fontSize: 11, letterSpacing: 0.9, marginBottom: 3 },
+  clue: { fontFamily: font.medium, fontSize: 15, lineHeight: 19 },
+  translation: { fontFamily: font.regular, fontSize: 14, lineHeight: 19, fontStyle: 'italic', marginTop: 3 },
 });

@@ -1,7 +1,8 @@
 import { memo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { upper } from './format';
-import { tapProps, radius, space, type Palette } from './theme';
+import { Icon } from './Icon';
+import { font, radius, space, tapProps, type Palette } from './theme';
 
 const BACKSPACE = '⌫';
 const ROWS: readonly (readonly string[])[] = [
@@ -13,9 +14,9 @@ const ROWS: readonly (readonly string[])[] = [
 // Every row is laid out on the same 10-unit width so keys line up between rows.
 const ROW_UNITS = 10;
 const BACKSPACE_UNITS = 1.5;
-const KEY_HEIGHT = 46;
+const KEY_HEIGHT = 48;
 const KEY_GAP = 6;
-const COMPACT_KEY_HEIGHT = 38;
+const COMPACT_KEY_HEIGHT = 40;
 const COMPACT_KEY_GAP = 5;
 
 type Props = {
@@ -47,17 +48,17 @@ export const Keyboard = memo(function Keyboard({ palette, compact, onLetter, onB
                     compact && styles.keyCompact,
                     {
                       flex: isBack ? BACKSPACE_UNITS : 1,
-                      backgroundColor: pressed ? palette.border : palette.surface,
-                      borderColor: palette.border,
+                      backgroundColor: pressed ? palette.keyAlt : isBack ? palette.keyAlt : palette.raised,
                     },
                   ]}
                 >
-                  <Text
-                    style={[styles.label, { color: palette.text }, isBack && styles.backLabel]}
-                    allowFontScaling={false}
-                  >
-                    {isBack ? k : upper(k)}
-                  </Text>
+                  {isBack ? (
+                    <Icon name="backspace" size={22} strokeWidth={2} color={palette.text} />
+                  ) : (
+                    <Text style={[styles.label, { color: palette.text }]} allowFontScaling={false}>
+                      {upper(k)}
+                    </Text>
+                  )}
                 </Pressable>
               );
             })}
@@ -77,12 +78,15 @@ const styles = StyleSheet.create({
   key: {
     height: KEY_HEIGHT,
     minWidth: 0,
-    borderRadius: radius.card - 2,
-    borderBottomWidth: 1,
+    borderRadius: radius.s,
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#101319',
+    shadowOpacity: 0.16,
+    shadowRadius: 0,
+    shadowOffset: { width: 0, height: 1 },
+    elevation: 1,
   },
   keyCompact: { height: COMPACT_KEY_HEIGHT },
-  label: { fontSize: 19, fontWeight: '500' },
-  backLabel: { fontSize: 20 },
+  label: { fontFamily: font.medium, fontSize: 18 },
 });
