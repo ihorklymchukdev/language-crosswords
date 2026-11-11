@@ -130,23 +130,8 @@
       "common-verbs"
     ],
     "clue": "Dar las gracias por un favor recibido",
-    "clueEn": "To give thanks for a favour received",
+    "clueEn": "To give thanks for a favor received",
     "translationEn": "to thank",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-aguacate",
-    "language": "es",
-    "word": "aguacate",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "food"
-    ],
-    "clue": "Fruta verde de pulpa cremosa y un hueso grande",
-    "clueEn": "Green fruit with creamy flesh and a big pit",
-    "translationEn": "avocado",
     "status": "auto-only"
   },
   {
@@ -234,8 +219,8 @@
     "themes": [
       "food"
     ],
-    "clue": "Dicho del salmón o el jamón curado con humo",
-    "clueEn": "Said of salmon or ham cured with smoke",
+    "clue": "Dicho del salmón o el jamón curado con el calor de leña",
+    "clueEn": "Said of salmon or ham cured with the heat of burning wood",
     "translationEn": "smoked",
     "status": "auto-only"
   },
@@ -510,21 +495,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-ancho",
-    "language": "es",
-    "word": "ancho",
-    "pos": "adjective",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "common-adjectives"
-    ],
-    "clue": "Que mide mucho de un lado a otro, lo contrario de estrecho",
-    "clueEn": "Measuring a lot from one side to the other, the opposite of narrow",
-    "translationEn": "wide",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-ancla",
     "language": "es",
     "word": "ancla",
@@ -552,21 +522,6 @@
     "clue": "Sufrimiento profundo mezclado con miedo",
     "clueEn": "Deep suffering mixed with fear",
     "translationEn": "anguish",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-antaño",
-    "language": "es",
-    "word": "antaño",
-    "pos": "adverb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "En tiempos pasados, hace mucho",
-    "clueEn": "In past times, long ago",
-    "translationEn": "long ago",
     "status": "auto-only"
   },
   {
@@ -705,21 +660,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-arrollar",
-    "language": "es",
-    "word": "arrollar",
-    "pos": "verb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "transport"
-    ],
-    "clue": "Pasar un vehículo por encima de alguien o algo sin poder evitarlo",
-    "clueEn": "To run over someone or something with a vehicle",
-    "translationEn": "to run over",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-arteria",
     "language": "es",
     "word": "arteria",
@@ -777,21 +717,6 @@
     "clue": "Aceptar una responsabilidad o una situación",
     "clueEn": "To accept a responsibility or a situation",
     "translationEn": "to take on",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-aula",
-    "language": "es",
-    "word": "aula",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "school"
-    ],
-    "clue": "Sala donde se da la clase",
-    "clueEn": "Room where the lesson takes place",
-    "translationEn": "classroom",
     "status": "auto-only"
   },
   {
@@ -1105,38 +1030,8 @@
       "city"
     ],
     "clue": "Hilera de piedras que separa la acera de la calzada",
-    "clueEn": "Row of stones separating the pavement from the road",
+    "clueEn": "Row of stones separating the sidewalk from the road",
     "translationEn": "curb",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-borrador",
-    "language": "es",
-    "word": "borrador",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "school"
-    ],
-    "clue": "Objeto que se usa para quitar lo escrito en la pizarra",
-    "clueEn": "Object used to remove what is written on the board",
-    "translationEn": "eraser",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-borrar",
-    "language": "es",
-    "word": "borrar",
-    "pos": "verb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "technology"
-    ],
-    "clue": "Quitar un texto o un archivo para que ya no aparezca",
-    "clueEn": "To remove a text or file so it no longer appears",
-    "translationEn": "to delete",
     "status": "auto-only"
   },
   {
@@ -1315,7 +1210,7 @@
       "food"
     ],
     "clue": "Hortaliza grande y naranja con la que se hace crema en otoño",
-    "clueEn": "Large orange vegetable used for soup in autumn",
+    "clueEn": "Large orange vegetable used for soup in fall",
     "translationEn": "pumpkin",
     "status": "auto-only"
   },
@@ -1392,21 +1287,6 @@
     "clue": "Persona que conduce vehículos pesados de carga",
     "clueEn": "Person who drives heavy cargo vehicles",
     "translationEn": "truck driver",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-canícula",
-    "language": "es",
-    "word": "canícula",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "weather"
-    ],
-    "clue": "Época del año de más calor",
-    "clueEn": "Time of year with the greatest heat",
-    "translationEn": "dog days",
     "status": "auto-only"
   },
   {
@@ -1555,7 +1435,7 @@
       "clothing"
     ],
     "clue": "Conjunto cómodo de pantalón y chaqueta para hacer deporte (España)",
-    "clueEn": "Comfortable trousers-and-jacket set for exercising (Spain)",
+    "clueEn": "Comfortable pants-and-jacket set for exercising (Spain)",
     "translationEn": "tracksuit",
     "status": "auto-only"
   },
@@ -1765,7 +1645,7 @@
       "work"
     ],
     "clue": "Acuerdo laboral entre una empresa y sus trabajadores",
-    "clueEn": "Labour agreement between a company and its workers",
+    "clueEn": "Labor agreement between a company and its workers",
     "translationEn": "agreement",
     "status": "auto-only"
   },
@@ -1824,8 +1704,8 @@
     "themes": [
       "food"
     ],
-    "clue": "Que hace ruido al morderlo, como las patatas fritas",
-    "clueEn": "Making noise when bitten, like crisps",
+    "clue": "Que hace ruido al morderlo, como una galleta tostada",
+    "clueEn": "Making noise when bitten, like a toasted cracker",
     "translationEn": "crunchy",
     "status": "auto-only"
   },
@@ -1899,9 +1779,9 @@
     "themes": [
       "nature"
     ],
-    "clue": "Parte más alta de una montaña",
-    "clueEn": "Highest part of a mountain",
-    "translationEn": "summit",
+    "clue": "Reunión de jefes de Estado para tratar temas importantes",
+    "clueEn": "Meeting of heads of state to discuss important matters",
+    "translationEn": "summit (meeting)",
     "status": "auto-only"
   },
   {
@@ -1992,21 +1872,6 @@
     "clue": "Palabra formal para la persona con quien estás casado",
     "clueEn": "Formal word for the person you are married to",
     "translationEn": "spouse",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-deberes",
-    "language": "es",
-    "word": "deberes",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "school"
-    ],
-    "clue": "Tareas que los alumnos hacen en casa",
-    "clueEn": "Tasks pupils do at home",
-    "translationEn": "homework",
     "status": "auto-only"
   },
   {
@@ -2325,21 +2190,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-dopaje",
-    "language": "es",
-    "word": "dopaje",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "sports"
-    ],
-    "clue": "Uso de sustancias prohibidas para rendir más en una competición",
-    "clueEn": "Use of banned substances to perform better in a competition",
-    "translationEn": "doping",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-dorsal",
     "language": "es",
     "word": "dorsal",
@@ -2370,21 +2220,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-dunas",
-    "language": "es",
-    "word": "dunas",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "nature"
-    ],
-    "clue": "Montes de arena que forma el viento",
-    "clueEn": "Hills of sand shaped by the wind",
-    "translationEn": "dunes",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-efímero",
     "language": "es",
     "word": "efímero",
@@ -2410,8 +2245,8 @@
       "work"
     ],
     "clue": "Practicar una profesión, como médico o abogado",
-    "clueEn": "To practise a profession, such as doctor or lawyer",
-    "translationEn": "to practise",
+    "clueEn": "To practice a profession, such as doctor or lawyer",
+    "translationEn": "to practice",
     "status": "auto-only"
   },
   {
@@ -2700,36 +2535,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-estirpe",
-    "language": "es",
-    "word": "estirpe",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Conjunto de antepasados de una familia noble",
-    "clueEn": "Set of ancestors of a noble family",
-    "translationEn": "lineage",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-estío",
-    "language": "es",
-    "word": "estío",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "Palabra poética para la época más calurosa del año",
-    "clueEn": "Poetic word for the hottest time of the year",
-    "translationEn": "summer",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-evaluar",
     "language": "es",
     "word": "evaluar",
@@ -2788,21 +2593,6 @@
     "clue": "Pérdida de una maleta que no llega a su destino",
     "clueEn": "Loss of a suitcase that does not reach its destination",
     "translationEn": "mislaying",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-factura",
-    "language": "es",
-    "word": "factura",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "shopping"
-    ],
-    "clue": "Documento detallado con el importe que debe pagar el cliente",
-    "clueEn": "Detailed document with the amount a customer must pay",
-    "translationEn": "invoice",
     "status": "auto-only"
   },
   {
@@ -3151,21 +2941,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-gorro",
-    "language": "es",
-    "word": "gorro",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "clothing"
-    ],
-    "clue": "Prenda de lana que cubre la cabeza",
-    "clueEn": "Wool garment that covers the head",
-    "translationEn": "hat / beanie",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-gotera",
     "language": "es",
     "word": "gotera",
@@ -3340,8 +3115,8 @@
     "themes": [
       "common-adjectives"
     ],
-    "clue": "Que tiene mucha distancia desde la superficie hasta el fondo",
-    "clueEn": "With a great distance from surface to bottom",
+    "clue": "Que está muy abajo, como el fondo de un pozo",
+    "clueEn": "Located far down, like the bottom of a well",
     "translationEn": "deep",
     "status": "auto-only"
   },
@@ -3490,8 +3265,8 @@
     "themes": [
       "health"
     ],
-    "clue": "Dolor de cabeza muy fuerte y repetido",
-    "clueEn": "Very strong, recurring pain in the head",
+    "clue": "Dolor de cabeza intenso, sobre todo en un lado",
+    "clueEn": "Intense headache, especially on one side",
     "translationEn": "migraine",
     "status": "auto-only"
   },
@@ -3554,21 +3329,6 @@
     "clue": "Lado inclinado de una montaña",
     "clueEn": "Sloping side of a mountain",
     "translationEn": "hillside",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-ladrar",
-    "language": "es",
-    "word": "ladrar",
-    "pos": "verb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "animals"
-    ],
-    "clue": "Hacer el perro su sonido típico",
-    "clueEn": "For a dog to make its typical sound",
-    "translationEn": "to bark",
     "status": "auto-only"
   },
   {
@@ -3761,7 +3521,7 @@
     "themes": [
       "family"
     ],
-    "clue": "Mujer casada con el progenitor de unos niños que no son suyos",
+    "clue": "Mujer casada con el padre de unos niños que no son suyos",
     "clueEn": "Woman married to the father of children who are not hers",
     "translationEn": "stepmother",
     "status": "auto-only"
@@ -3900,7 +3660,7 @@
     ],
     "clue": "Placa con letras y números que identifica un vehículo",
     "clueEn": "Plate with letters and numbers identifying a vehicle",
-    "translationEn": "licence plate",
+    "translationEn": "license plate",
     "status": "auto-only"
   },
   {
@@ -4099,21 +3859,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-monumento",
-    "language": "es",
-    "word": "monumento",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "city"
-    ],
-    "clue": "Obra grande que recuerda a una persona o un hecho famoso",
-    "clueEn": "Large work that remembers a famous person or event",
-    "translationEn": "monument",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-mosto",
     "language": "es",
     "word": "mosto",
@@ -4123,8 +3868,8 @@
     "themes": [
       "drinks"
     ],
-    "clue": "Zumo de uva que todavía no ha fermentado",
-    "clueEn": "Grape juice that has not fermented yet",
+    "clue": "Jugo de uva recién exprimida, sin alcohol",
+    "clueEn": "Freshly squeezed grape juice, with no alcohol",
     "translationEn": "grape juice",
     "status": "auto-only"
   },
@@ -4260,7 +4005,7 @@
     ],
     "clue": "Pieza de goma llena de aire que rodea la rueda",
     "clueEn": "Rubber piece filled with air around the wheel",
-    "translationEn": "tyre",
+    "translationEn": "tire",
     "status": "auto-only"
   },
   {
@@ -4604,23 +4349,8 @@
       "city"
     ],
     "clue": "Zona alejada del centro, en los límites de una ciudad",
-    "clueEn": "Area far from the centre, at the edge of a city",
+    "clueEn": "Area far from the center, at the edge of a city",
     "translationEn": "outskirts",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-pernoctar",
-    "language": "es",
-    "word": "pernoctar",
-    "pos": "verb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "travel"
-    ],
-    "clue": "Pasar la noche en un lugar que no es tu casa",
-    "clueEn": "To spend the night somewhere that is not your home",
-    "translationEn": "to stay overnight",
     "status": "auto-only"
   },
   {
@@ -4664,7 +4394,7 @@
       "transport"
     ],
     "clue": "Agujero en la rueda que la deja sin aire",
-    "clueEn": "Hole in a tyre that leaves it without air",
+    "clueEn": "Hole in a tire that leaves it without air",
     "translationEn": "puncture",
     "status": "auto-only"
   },
@@ -4849,21 +4579,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-pulsera",
-    "language": "es",
-    "word": "pulsera",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "clothing"
-    ],
-    "clue": "Joya que se lleva alrededor de la muñeca",
-    "clueEn": "Jewel worn around the wrist",
-    "translationEn": "bracelet",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-pupitre",
     "language": "es",
     "word": "pupitre",
@@ -4935,7 +4650,7 @@
     ],
     "clue": "Que ocurre una vez cada dos semanas",
     "clueEn": "Happening once every two weeks",
-    "translationEn": "fortnightly",
+    "translationEn": "biweekly",
     "status": "auto-only"
   },
   {
@@ -5179,21 +4894,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B2-regresar",
-    "language": "es",
-    "word": "regresar",
-    "pos": "verb",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "travel"
-    ],
-    "clue": "Volver al lugar de donde saliste",
-    "clueEn": "To go back to the place you left from",
-    "translationEn": "to return",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B2-regreso",
     "language": "es",
     "word": "regreso",
@@ -5416,21 +5116,6 @@
     "clue": "Dirección que sigue un barco, un avión o un viajero",
     "clueEn": "Direction followed by a ship, plane or traveller",
     "translationEn": "course",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-ruta",
-    "language": "es",
-    "word": "ruta",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "travel"
-    ],
-    "clue": "Camino planeado para ir de un sitio a otro",
-    "clueEn": "Planned way to go from one place to another",
-    "translationEn": "route",
     "status": "auto-only"
   },
   {
@@ -5745,7 +5430,7 @@
     ],
     "clue": "Hacer algo por costumbre, con frecuencia",
     "clueEn": "To do something out of habit, often",
-    "translationEn": "to usually",
+    "translationEn": "to be in the habit of",
     "status": "auto-only"
   },
   {
@@ -5984,7 +5669,7 @@
     "themes": [
       "technology"
     ],
-    "clue": "Escribir pulsando las letras de un ordenador",
+    "clue": "Escribir pulsando las letras de una computadora",
     "clueEn": "To write by pressing the keys of a computer",
     "translationEn": "to type",
     "status": "auto-only"
@@ -6152,21 +5837,6 @@
     "clue": "Mercado ambulante al aire libre donde se venden frutas y ropa (México)",
     "clueEn": "Open-air traveling market where fruit and clothes are sold (Mexico)",
     "translationEn": "street market",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-tiburón",
-    "language": "es",
-    "word": "tiburón",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "animals"
-    ],
-    "clue": "Pez grande y peligroso con muchos dientes afilados",
-    "clueEn": "Large dangerous fish with many sharp teeth",
-    "translationEn": "shark",
     "status": "auto-only"
   },
   {
@@ -6406,7 +6076,7 @@
     ],
     "clue": "Conjunto de personas que viven cerca unas de otras",
     "clueEn": "Group of people who live near one another",
-    "translationEn": "neighbourhood community",
+    "translationEn": "neighborhood community",
     "status": "auto-only"
   },
   {
@@ -6497,21 +6167,6 @@
     "clue": "Mueble con cristal donde una tienda expone sus objetos",
     "clueEn": "Glass cabinet where a store displays its items",
     "translationEn": "display case",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B2-vástago",
-    "language": "es",
-    "word": "vástago",
-    "pos": "noun",
-    "level": "B2",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Hijo o descendiente, en lenguaje elegante",
-    "clueEn": "Child or descendant, in formal language",
-    "translationEn": "offspring",
     "status": "auto-only"
   },
   {

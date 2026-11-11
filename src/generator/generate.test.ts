@@ -143,4 +143,24 @@ describe('checkLayout', () => {
     const layout: Placement[] = [...valid, { entryId: 'pan', row: 2, col: 3, direction: 'across' }];
     expect(checkLayout(layout, words, 3, 6)).toEqual(reports('touches its start or end'));
   });
+
+  it('never places two answers sharing a 4-letter stem', () => {
+    const stemmed = [...['freno', 'frenar'].map((w) => makeEntry(w)), ...pool300.slice(0, 120)];
+    for (const seed of SEEDS) {
+      const result = expectOk(generateLayout(request(seed, { candidates: stemmed })));
+      const words = result.placements.map((p) => stemmed.find((e) => e.id === p.entryId)!.word);
+      const stems = words.filter((w) => w.length >= 4).map((w) => w.slice(0, 4));
+      expect(new Set(stems).size).toBe(stems.length);
+    }
+  });
+
+  it('never places an answer that appears in another clue', () => {
+    const base = pool300.slice(0, 120);
+    const withClues = base.map((e, i) => ({ ...e, clue: `Se parece a ${base[(i + 1) % base.length]!.word}` }));
+    for (const seed of SEEDS) {
+      const result = expectOk(generateLayout(request(seed, { candidates: withClues })));
+      const placed = result.placements.map((p) => withClues.find((e) => e.id === p.entryId)!);
+      for (const a of placed) for (const b of placed) expect(a.clue.endsWith(` ${b.word}`)).toBe(false);
+    }
+  });
 });

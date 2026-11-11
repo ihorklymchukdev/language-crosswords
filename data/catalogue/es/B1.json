@@ -151,6 +151,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-aguacate",
+    "language": "es",
+    "word": "aguacate",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "food"
+    ],
+    "clue": "Fruta verde de pulpa cremosa y un hueso grande",
+    "clueEn": "Green fruit with creamy flesh and a big pit",
+    "translationEn": "avocado",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-aguacero",
     "language": "es",
     "word": "aguacero",
@@ -181,21 +196,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-ajo",
-    "language": "es",
-    "word": "ajo",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "food"
-    ],
-    "clue": "Bulbo blanco de olor fuerte que se usa para cocinar",
-    "clueEn": "White bulb with a strong smell used in cooking",
-    "translationEn": "garlic",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-albañil",
     "language": "es",
     "word": "albañil",
@@ -208,6 +208,21 @@
     "clue": "Obrero que construye muros con ladrillos",
     "clueEn": "Worker who builds walls with bricks",
     "translationEn": "bricklayer",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-albergue",
+    "language": "es",
+    "word": "albergue",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Lugar barato donde duermen los jóvenes que viajan",
+    "clueEn": "Cheap place where young travellers sleep",
+    "translationEn": "hostel",
     "status": "auto-only"
   },
   {
@@ -266,7 +281,7 @@
       "house"
     ],
     "clue": "Dinero que pagas cada mes por vivir en un piso que no es tuyo",
-    "clueEn": "Money you pay each month to live in a flat that is not yours",
+    "clueEn": "Money you pay each month to live in a apartment that is not yours",
     "translationEn": "rent",
     "status": "auto-only"
   },
@@ -406,21 +421,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-apellido",
-    "language": "es",
-    "word": "apellido",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Nombre de familia que se hereda de los padres",
-    "clueEn": "Family name inherited from the parents",
-    "translationEn": "surname",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-aperitivo",
     "language": "es",
     "word": "aperitivo",
@@ -506,7 +506,7 @@
       "weather"
     ],
     "clue": "Línea de colores que aparece en el cielo tras la lluvia",
-    "clueEn": "Line of colours appearing in the sky after the rain",
+    "clueEn": "Line of colors appearing in the sky after the rain",
     "translationEn": "rainbow",
     "status": "auto-only"
   },
@@ -568,22 +568,6 @@
     "clue": "Línea que sale en la piel con la edad",
     "clueEn": "Line that appears on the skin with age",
     "translationEn": "wrinkle",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-ascensor",
-    "language": "es",
-    "word": "ascensor",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "house",
-      "transport"
-    ],
-    "clue": "Cabina que sube y baja por el edificio",
-    "clueEn": "Cabin that goes up and down the building",
-    "translationEn": "lift",
     "status": "auto-only"
   },
   {
@@ -656,7 +640,7 @@
     "themes": [
       "city"
     ],
-    "clue": "Situación en que los coches casi no pueden avanzar",
+    "clue": "Situación en que los autos casi no pueden avanzar",
     "clueEn": "Situation in which cars can hardly move forward",
     "translationEn": "traffic jam",
     "status": "auto-only"
@@ -792,7 +776,7 @@
       "house"
     ],
     "clue": "Espacio con barandilla que sale de la fachada de un piso",
-    "clueEn": "Space with a railing sticking out from a flat's front",
+    "clueEn": "Space with a railing sticking out from a apartment's front",
     "translationEn": "balcony",
     "status": "auto-only"
   },
@@ -836,8 +820,8 @@
     "themes": [
       "body"
     ],
-    "clue": "Parte de la cara debajo de la boca",
-    "clueEn": "Part of the face below the mouth",
+    "clue": "Parte inferior de la cara, bajo la boca, donde sale la barba",
+    "clueEn": "Lower part of the face, under the mouth, where the beard grows",
     "translationEn": "chin",
     "status": "auto-only"
   },
@@ -928,7 +912,7 @@
     ],
     "clue": "Pelo que crece sobre el labio",
     "clueEn": "Hair that grows above the lip",
-    "translationEn": "moustache",
+    "translationEn": "mustache",
     "status": "auto-only"
   },
   {
@@ -1007,21 +991,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-boda",
-    "language": "es",
-    "word": "boda",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Fiesta en la que dos personas se casan",
-    "clueEn": "Party in which two people get married",
-    "translationEn": "wedding",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-boina",
     "language": "es",
     "word": "boina",
@@ -1032,7 +1001,7 @@
       "clothing"
     ],
     "clue": "Gorro redondo y plano de lana",
-    "clueEn": "Round, flat woollen cap",
+    "clueEn": "Round, apartment woolen cap",
     "translationEn": "beret",
     "status": "auto-only"
   },
@@ -1064,6 +1033,21 @@
     "clue": "Pieza de cristal que da luz al encender la lámpara",
     "clueEn": "Glass piece that gives light when the lamp is switched on",
     "translationEn": "light bulb",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-borrador",
+    "language": "es",
+    "word": "borrador",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Objeto que se usa para quitar lo escrito en la pizarra",
+    "clueEn": "Object used to remove what is written on the board",
+    "translationEn": "eraser",
     "status": "auto-only"
   },
   {
@@ -1377,8 +1361,8 @@
     "themes": [
       "sports"
     ],
-    "clue": "Terreno de juego de tenis o baloncesto",
-    "clueEn": "Playing area for tennis or basketball",
+    "clue": "Lugar marcado con líneas para jugar al baloncesto o al fútbol sala",
+    "clueEn": "Marked area for playing basketball or indoor soccer",
     "translationEn": "court",
     "status": "auto-only"
   },
@@ -1497,7 +1481,7 @@
     "themes": [
       "travel"
     ],
-    "clue": "Remolque con cama y cocina que se engancha al coche",
+    "clue": "Remolque con cama y cocina que se engancha al auto",
     "clueEn": "Trailer with a bed and kitchen hitched to the car",
     "translationEn": "caravan",
     "status": "auto-only"
@@ -1572,7 +1556,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Cada una de las franjas de una vía para los coches",
+    "clue": "Cada una de las franjas de una vía para los autos",
     "clueEn": "Each of the strips of a road for cars",
     "translationEn": "lane",
     "status": "auto-only"
@@ -1590,6 +1574,21 @@
     "clue": "Objeto de bolsillo donde guardas billetes y tarjetas",
     "clueEn": "Pocket item where you keep notes and cards",
     "translationEn": "wallet",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-cascada",
+    "language": "es",
+    "word": "cascada",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "nature"
+    ],
+    "clue": "Agua de un río que cae desde lo alto",
+    "clueEn": "Water from a river that falls from a height",
+    "translationEn": "waterfall",
     "status": "auto-only"
   },
   {
@@ -1623,21 +1622,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-cebolla",
-    "language": "es",
-    "word": "cebolla",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "food"
-    ],
-    "clue": "Verdura de capas que hace llorar al cortarla",
-    "clueEn": "Layered vegetable that makes you cry when cut",
-    "translationEn": "onion",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-cebra",
     "language": "es",
     "word": "cebra",
@@ -1665,6 +1649,21 @@
     "clue": "Línea de pelo sobre cada ojo",
     "clueEn": "Line of hair above each eye",
     "translationEn": "eyebrow",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-celos",
+    "language": "es",
+    "word": "celos",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "emotions"
+    ],
+    "clue": "Sentimiento malo cuando temes perder a tu pareja",
+    "clueEn": "Bad feeling when you fear losing your partner",
+    "translationEn": "jealousy",
     "status": "auto-only"
   },
   {
@@ -1992,8 +1991,8 @@
     "themes": [
       "city"
     ],
-    "clue": "Persona que vive en una urbe y tiene derechos y deberes",
-    "clueEn": "Person who lives in a metropolis and has rights and duties",
+    "clue": "Persona que pertenece a un país, con derechos y deberes",
+    "clueEn": "Person who belongs to a country, with rights and duties",
     "translationEn": "citizen",
     "status": "auto-only"
   },
@@ -2037,7 +2036,7 @@
     "themes": [
       "technology"
     ],
-    "clue": "Calidad de la señal del móvil en un lugar",
+    "clue": "Calidad de la señal del teléfono en un lugar",
     "clueEn": "Quality of the phone signal in a place",
     "translationEn": "coverage",
     "status": "auto-only"
@@ -2157,7 +2156,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Persona que maneja un coche o un autobús",
+    "clue": "Persona que maneja un auto o un autobús",
     "clueEn": "Person who drives a car or a bus",
     "translationEn": "driver",
     "status": "auto-only"
@@ -2283,6 +2282,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-crucero",
+    "language": "es",
+    "word": "crucero",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Viaje de vacaciones en un barco muy grande",
+    "clueEn": "Vacation trip on a very large ship",
+    "translationEn": "cruise",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-cucharón",
     "language": "es",
     "word": "cucharón",
@@ -2383,9 +2397,24 @@
     "themes": [
       "technology"
     ],
-    "clue": "Información concreta que guarda un ordenador",
+    "clue": "Información concreta que guarda una computadora",
     "clueEn": "Specific piece of information a computer stores",
     "translationEn": "data",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-deberes",
+    "language": "es",
+    "word": "deberes",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "school"
+    ],
+    "clue": "Tareas que los alumnos hacen en casa",
+    "clueEn": "Tasks pupils do at home",
+    "translationEn": "homework",
     "status": "auto-only"
   },
   {
@@ -2430,7 +2459,7 @@
     ],
     "clue": "Jugadores que intentan evitar que el rival marque",
     "clueEn": "Players who try to stop the rival from scoring",
-    "translationEn": "defence",
+    "translationEn": "defense",
     "status": "auto-only"
   },
   {
@@ -2446,21 +2475,6 @@
     "clue": "Jugador que ataca y trata de meter goles",
     "clueEn": "Player who attacks and tries to score goals",
     "translationEn": "forward",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-delgado",
-    "language": "es",
-    "word": "delgado",
-    "pos": "adjective",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "common-adjectives"
-    ],
-    "clue": "Con poca grasa en el cuerpo",
-    "clueEn": "With little fat on the body",
-    "translationEn": "thin",
     "status": "auto-only"
   },
   {
@@ -2506,21 +2520,6 @@
     "clue": "Lugar de la casa donde se guardan los alimentos",
     "clueEn": "Place in the home where food is kept",
     "translationEn": "pantry",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-devolver",
-    "language": "es",
-    "word": "devolver",
-    "pos": "verb",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "shopping"
-    ],
-    "clue": "Llevar un producto a la tienda para recuperar el dinero",
-    "clueEn": "Take a product back to the shop to get the money back",
-    "translationEn": "to return",
     "status": "auto-only"
   },
   {
@@ -2644,21 +2643,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-ducha",
-    "language": "es",
-    "word": "ducha",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "house"
-    ],
-    "clue": "Lugar del baño donde te limpias bajo el agua que cae",
-    "clueEn": "Place in the bathroom where you clean yourself under falling water",
-    "translationEn": "shower",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-duna",
     "language": "es",
     "word": "duna",
@@ -2729,7 +2713,7 @@
       "school"
     ],
     "clue": "Problema que haces en clase para practicar",
-    "clueEn": "Problem you do in class to practise",
+    "clueEn": "Problem you do in class to practice",
     "translationEn": "exercise",
     "status": "auto-only"
   },
@@ -3244,6 +3228,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-factura",
+    "language": "es",
+    "word": "factura",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "shopping"
+    ],
+    "clue": "Documento detallado con el importe que debe pagar el cliente",
+    "clueEn": "Detailed document with the amount a customer must pay",
+    "translationEn": "invoice",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-facultad",
     "language": "es",
     "word": "facultad",
@@ -3359,7 +3358,7 @@
       "work"
     ],
     "clue": "Profesional que arregla tuberías y grifos (España)",
-    "clueEn": "Professional who fixes pipes and taps (Spain)",
+    "clueEn": "Professional who fixes pipes and faucets (Spain)",
     "translationEn": "plumber",
     "status": "auto-only"
   },
@@ -3433,7 +3432,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Pieza que sirve para detener el coche",
+    "clue": "Pieza que sirve para detener el auto",
     "clueEn": "Part used to stop the car",
     "translationEn": "brake",
     "status": "auto-only"
@@ -3463,8 +3462,8 @@
     "themes": [
       "food"
     ],
-    "clue": "Cocinar patatas o huevos en aceite caliente",
-    "clueEn": "Cook potatoes or eggs in hot oil",
+    "clue": "Cocinar huevos o pescado en aceite caliente",
+    "clueEn": "Cook eggs or fish in hot oil",
     "translationEn": "to fry",
     "status": "auto-only"
   },
@@ -3514,21 +3513,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-futuro",
-    "language": "es",
-    "word": "futuro",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "Tiempo que todavía no ha llegado",
-    "clueEn": "Time that has not yet arrived",
-    "translationEn": "future",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-gamba",
     "language": "es",
     "word": "gamba",
@@ -3568,7 +3552,7 @@
     "themes": [
       "city"
     ],
-    "clue": "Lugar cubierto donde se guarda el coche",
+    "clue": "Lugar cubierto donde se guarda el auto",
     "clueEn": "Covered place where the car is kept",
     "translationEn": "garage",
     "status": "auto-only"
@@ -3724,6 +3708,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-granizo",
+    "language": "es",
+    "word": "granizo",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Bolitas de hielo que caen en una tormenta",
+    "clueEn": "Little balls of ice falling in a storm",
+    "translationEn": "hail",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-gratitud",
     "language": "es",
     "word": "gratitud",
@@ -3750,7 +3749,7 @@
     ],
     "clue": "Pieza del lavabo por donde sale el agua",
     "clueEn": "Part of the sink where water comes out",
-    "translationEn": "tap",
+    "translationEn": "faucet",
     "status": "auto-only"
   },
   {
@@ -3763,7 +3762,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Vehículo que se lleva los coches mal aparcados",
+    "clue": "Vehículo que se lleva los autos mal aparcados",
     "clueEn": "Vehicle that takes away badly parked cars",
     "translationEn": "tow truck",
     "status": "auto-only"
@@ -3889,6 +3888,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-helada",
+    "language": "es",
+    "word": "helada",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "weather"
+    ],
+    "clue": "Frío tan fuerte que el agua se convierte en hielo",
+    "clueEn": "Cold so strong that water turns to ice",
+    "translationEn": "frost",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-heredar",
     "language": "es",
     "word": "heredar",
@@ -4009,21 +4023,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-hueso",
-    "language": "es",
-    "word": "hueso",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "body"
-    ],
-    "clue": "Pieza dura y blanca del esqueleto",
-    "clueEn": "Hard white piece of the skeleton",
-    "translationEn": "bone",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-huracán",
     "language": "es",
     "word": "huracán",
@@ -4124,8 +4123,8 @@
     "themes": [
       "common-verbs"
     ],
-    "clue": "Crear una imagen en la mente de algo que no ves",
-    "clueEn": "To form a mental picture of something you can't see",
+    "clue": "Pensar en algo que no ves o que no existe",
+    "clueEn": "To think of something you don't see or that doesn't exist",
     "translationEn": "to imagine",
     "status": "auto-only"
   },
@@ -4190,6 +4189,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-infusión",
+    "language": "es",
+    "word": "infusión",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "drinks"
+    ],
+    "clue": "Bebida caliente de hierbas, como la manzanilla",
+    "clueEn": "Hot herbal drink, such as chamomile",
+    "translationEn": "herbal tea",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-ingeniero",
     "language": "es",
     "word": "ingeniero",
@@ -4214,7 +4228,7 @@
     "themes": [
       "technology"
     ],
-    "clue": "Poner un programa nuevo en el ordenador para poder usarlo",
+    "clue": "Poner un programa nuevo en la computadora para poder usarlo",
     "clueEn": "To put a new program on the computer so you can use it",
     "translationEn": "to install",
     "status": "auto-only"
@@ -4250,21 +4264,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-intentar",
-    "language": "es",
-    "word": "intentar",
-    "pos": "verb",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "common-verbs"
-    ],
-    "clue": "Hacer un esfuerzo para conseguir algo",
-    "clueEn": "To make an effort to get something",
-    "translationEn": "to try",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-inyección",
     "language": "es",
     "word": "inyección",
@@ -4292,21 +4291,6 @@
     "clue": "Cerdo salvaje con colmillos",
     "clueEn": "Wild pig with tusks",
     "translationEn": "wild boar",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-jabón",
-    "language": "es",
-    "word": "jabón",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "house"
-    ],
-    "clue": "Producto con el que te lavas las manos y hace espuma",
-    "clueEn": "Product you wash your hands with that makes foam",
-    "translationEn": "soap",
     "status": "auto-only"
   },
   {
@@ -4805,21 +4789,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-mediodía",
-    "language": "es",
-    "word": "mediodía",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "Las doce de la mañana",
-    "clueEn": "Twelve o'clock in the morning",
-    "translationEn": "noon",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-medusa",
     "language": "es",
     "word": "medusa",
@@ -4919,8 +4888,8 @@
     "themes": [
       "body"
     ],
-    "clue": "Parte de la cara bajo los labios",
-    "clueEn": "Part of the face under the lips",
+    "clue": "Parte de la cara que tocas al pensar, bajo los labios",
+    "clueEn": "Part of the face you touch when thinking, under the lips",
     "translationEn": "chin",
     "status": "auto-only"
   },
@@ -5060,6 +5029,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-monumento",
+    "language": "es",
+    "word": "monumento",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "city"
+    ],
+    "clue": "Obra grande que recuerda a una persona o un hecho famoso",
+    "clueEn": "Large work that remembers a famous person or event",
+    "translationEn": "monument",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-mosquito",
     "language": "es",
     "word": "mosquito",
@@ -5102,21 +5086,6 @@
     "clue": "Traslado de tus cosas a una casa nueva",
     "clueEn": "Moving your things to a new home",
     "translationEn": "move",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-mueble",
-    "language": "es",
-    "word": "mueble",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "house"
-    ],
-    "clue": "Silla, mesa o armario de una casa",
-    "clueEn": "Chair, table or wardrobe in a home",
-    "translationEn": "piece of furniture",
     "status": "auto-only"
   },
   {
@@ -5249,8 +5218,8 @@
     "themes": [
       "weather"
     ],
-    "clue": "Caída de copos blancos del cielo",
-    "clueEn": "Fall of white flakes from the sky",
+    "clue": "Gran cantidad de nieve caída en poco tiempo",
+    "clueEn": "Large amount of snow fallen in a short time",
     "translationEn": "snowfall",
     "status": "auto-only"
   },
@@ -5285,21 +5254,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-novio",
-    "language": "es",
-    "word": "novio",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Hombre que va a casarse, o pareja de una chica",
-    "clueEn": "Man who is about to marry, or a girl's partner",
-    "translationEn": "boyfriend",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-nuca",
     "language": "es",
     "word": "nuca",
@@ -5327,6 +5281,21 @@
     "clue": "Ganas de vomitar",
     "clueEn": "Feeling of wanting to throw up",
     "translationEn": "nausea",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-oficio",
+    "language": "es",
+    "word": "oficio",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "work"
+    ],
+    "clue": "Trabajo manual, como el de carpintero o albañil",
+    "clueEn": "Manual work, like that of a carpenter or bricklayer",
+    "translationEn": "trade",
     "status": "auto-only"
   },
   {
@@ -5372,36 +5341,6 @@
     "clue": "Borde de un río, un lago o el mar",
     "clueEn": "Edge of a river, a lake or the sea",
     "translationEn": "shore",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-oscuro",
-    "language": "es",
-    "word": "oscuro",
-    "pos": "adjective",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "common-adjectives"
-    ],
-    "clue": "Con poca o ninguna luz",
-    "clueEn": "With little or no light",
-    "translationEn": "dark",
-    "status": "auto-only"
-  },
-  {
-    "id": "es-B1-otoño",
-    "language": "es",
-    "word": "otoño",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "Estación en la que caen las hojas de los árboles",
-    "clueEn": "Season when the leaves fall from the trees",
-    "translationEn": "autumn",
     "status": "auto-only"
   },
   {
@@ -5495,21 +5434,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-pasado",
-    "language": "es",
-    "word": "pasado",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "time"
-    ],
-    "clue": "Tiempo que ya ocurrió, antes del presente",
-    "clueEn": "Time that already happened, before the present",
-    "translationEn": "past",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-pasaje",
     "language": "es",
     "word": "pasaje",
@@ -5520,7 +5444,7 @@
       "transport"
     ],
     "clue": "Boleto para viajar en avión o autobús (América Latina)",
-    "clueEn": "Ticket for travelling by plane or bus (Latin America)",
+    "clueEn": "Ticket for traveling by plane or bus (Latin America)",
     "translationEn": "ticket",
     "status": "auto-only"
   },
@@ -5825,21 +5749,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-piel",
-    "language": "es",
-    "word": "piel",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "body"
-    ],
-    "clue": "Capa exterior que cubre todo el cuerpo",
-    "clueEn": "Outer layer covering the whole body",
-    "translationEn": "skin",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-pimienta",
     "language": "es",
     "word": "pimienta",
@@ -5894,8 +5803,8 @@
     "themes": [
       "sports"
     ],
-    "clue": "Terreno donde se juega al tenis o al baloncesto",
-    "clueEn": "Ground where tennis or basketball is played",
+    "clue": "Superficie de hielo para patinar o de tierra para correr",
+    "clueEn": "Surface of ice for skating or of dirt for running",
     "translationEn": "court",
     "status": "auto-only"
   },
@@ -5960,21 +5869,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-postre",
-    "language": "es",
-    "word": "postre",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "food"
-    ],
-    "clue": "Lo dulce que se toma al terminar la comida",
-    "clueEn": "The sweet thing eaten at the end of a meal",
-    "translationEn": "dessert",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-pradera",
     "language": "es",
     "word": "pradera",
@@ -6020,21 +5914,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-prima",
-    "language": "es",
-    "word": "prima",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "La hija de tu tío",
-    "clueEn": "Your uncle's daughter",
-    "translationEn": "female cousin",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-probador",
     "language": "es",
     "word": "probador",
@@ -6059,8 +5938,8 @@
     "themes": [
       "common-adjectives"
     ],
-    "clue": "Con mucha distancia desde la superficie hasta el fondo",
-    "clueEn": "With a long distance from the surface to the bottom",
+    "clue": "Dicho de un lago o un mar: con mucha distancia hasta el fondo",
+    "clueEn": "Said of a lake or sea: with a long distance down to the bottom",
     "translationEn": "deep",
     "status": "auto-only"
   },
@@ -6140,6 +6019,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-pulsera",
+    "language": "es",
+    "word": "pulsera",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "clothing"
+    ],
+    "clue": "Joya que se lleva alrededor de la muñeca",
+    "clueEn": "Jewel worn around the wrist",
+    "translationEn": "bracelet",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-puntual",
     "language": "es",
     "word": "puntual",
@@ -6209,8 +6103,8 @@
     "themes": [
       "health"
     ],
-    "clue": "Medicina pequeña y redonda que se traga",
-    "clueEn": "Small round medicine that you swallow",
+    "clue": "Pastilla de medicina; se toma con agua",
+    "clueEn": "Medicine tablet; taken with water",
     "translationEn": "pill",
     "status": "auto-only"
   },
@@ -6241,7 +6135,7 @@
     ],
     "clue": "Periodo de dos semanas",
     "clueEn": "Period of two weeks",
-    "translationEn": "fortnight",
+    "translationEn": "two-week period",
     "status": "auto-only"
   },
   {
@@ -6449,7 +6343,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Vehículo sin motor que un coche lleva detrás",
+    "clue": "Vehículo sin motor que un auto lleva detrás",
     "clueEn": "Vehicle without an engine that a car pulls behind",
     "translationEn": "trailer",
     "status": "auto-only"
@@ -6585,7 +6479,7 @@
     "themes": [
       "city"
     ],
-    "clue": "Cruce circular donde los coches giran alrededor de un centro",
+    "clue": "Cruce circular donde los autos giran alrededor de un centro",
     "clueEn": "Circular junction where cars go around a center",
     "translationEn": "roundabout",
     "status": "auto-only"
@@ -6601,8 +6495,23 @@
       "school"
     ],
     "clue": "Lápiz con tinta de colores y punta gruesa",
-    "clueEn": "Pen with coloured ink and a thick tip",
+    "clueEn": "Pen with colored ink and a thick tip",
     "translationEn": "marker pen",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-ruta",
+    "language": "es",
+    "word": "ruta",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "travel"
+    ],
+    "clue": "Camino planeado para ir de un sitio a otro",
+    "clueEn": "Planned way to go from one place to another",
+    "translationEn": "route",
     "status": "auto-only"
   },
   {
@@ -6736,7 +6645,7 @@
       "work"
     ],
     "clue": "Lugar principal donde está una organización",
-    "clueEn": "Main place where an organisation is based",
+    "clueEn": "Main place where an organization is based",
     "translationEn": "headquarters",
     "status": "auto-only"
   },
@@ -6855,8 +6764,8 @@
     "themes": [
       "drinks"
     ],
-    "clue": "Agua con gas, sin sabor ni azúcar",
-    "clueEn": "Fizzy water, without flavour or sugar",
+    "clue": "Agua con burbujas, sin sabor ni azúcar",
+    "clueEn": "Water with bubbles, without flavor or sugar",
     "translationEn": "soda water",
     "status": "auto-only"
   },
@@ -7176,21 +7085,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-tarta",
-    "language": "es",
-    "word": "tarta",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "food"
-    ],
-    "clue": "Dulce grande y redondo con velas en un cumpleaños",
-    "clueEn": "Big round sweet with candles on a birthday",
-    "translationEn": "cake",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-techo",
     "language": "es",
     "word": "techo",
@@ -7321,7 +7215,7 @@
       "shopping"
     ],
     "clue": "Dueño de una tienda pequeña de barrio",
-    "clueEn": "Owner of a small neighbourhood shop",
+    "clueEn": "Owner of a small neighborhood shop",
     "translationEn": "shopkeeper",
     "status": "auto-only"
   },
@@ -7353,6 +7247,21 @@
     "clue": "Espacio abierto de una casa o de un bar, para estar al aire libre",
     "clueEn": "Open space of a home or bar, to be outdoors",
     "translationEn": "terrace",
+    "status": "auto-only"
+  },
+  {
+    "id": "es-B1-tiburón",
+    "language": "es",
+    "word": "tiburón",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "animals"
+    ],
+    "clue": "Pez grande y peligroso con muchos dientes afilados",
+    "clueEn": "Large dangerous fish with many sharp teeth",
+    "translationEn": "shark",
     "status": "auto-only"
   },
   {
@@ -7401,21 +7310,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-toalla",
-    "language": "es",
-    "word": "toalla",
-    "pos": "noun",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "house"
-    ],
-    "clue": "Tela suave con la que te secas después de la ducha",
-    "clueEn": "Soft cloth you dry yourself with after the shower",
-    "translationEn": "towel",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-tobillo",
     "language": "es",
     "word": "tobillo",
@@ -7451,12 +7345,12 @@
     "word": "tortilla",
     "pos": "noun",
     "level": "B1",
-    "region": "neutral",
+    "region": "es-ES",
     "themes": [
       "food"
     ],
-    "clue": "En España, plato de huevo y patata",
-    "clueEn": "In Spain, a dish of egg and potato",
+    "clue": "Plato de huevo y patata cuajado en la sartén (España)",
+    "clueEn": "Dish of egg and potato set in a frying pan (Spain)",
     "translationEn": "omelette",
     "status": "auto-only"
   },
@@ -7500,8 +7394,8 @@
     "themes": [
       "drinks"
     ],
-    "clue": "Cantidad grande de bebida que se toma de golpe",
-    "clueEn": "Large amount of drink taken in one go",
+    "clue": "Cantidad de líquido que se bebe de una vez",
+    "clueEn": "Amount of liquid drunk at once",
     "translationEn": "gulp",
     "status": "auto-only"
   },
@@ -7656,6 +7550,21 @@
     "status": "auto-only"
   },
   {
+    "id": "es-B1-vacuna",
+    "language": "es",
+    "word": "vacuna",
+    "pos": "noun",
+    "level": "B1",
+    "region": "neutral",
+    "themes": [
+      "health"
+    ],
+    "clue": "Te la ponen con una aguja para evitar enfermedades",
+    "clueEn": "They give it to you with a needle to prevent diseases",
+    "translationEn": "vaccine",
+    "status": "auto-only"
+  },
+  {
     "id": "es-B1-vagón",
     "language": "es",
     "word": "vagón",
@@ -7726,7 +7635,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Rapidez con que se mueve un coche",
+    "clue": "Rapidez con que se mueve un auto",
     "clueEn": "How fast a car moves",
     "translationEn": "speed",
     "status": "auto-only"
@@ -7861,7 +7770,7 @@
     "themes": [
       "technology"
     ],
-    "clue": "Programa malicioso que daña el ordenador",
+    "clue": "Programa malicioso que daña la computadora",
     "clueEn": "Malicious program that damages the computer",
     "translationEn": "virus",
     "status": "auto-only"
@@ -7897,21 +7806,6 @@
     "status": "auto-only"
   },
   {
-    "id": "es-B1-viudo",
-    "language": "es",
-    "word": "viudo",
-    "pos": "adjective",
-    "level": "B1",
-    "region": "neutral",
-    "themes": [
-      "family"
-    ],
-    "clue": "Dicho de quien ha perdido a su esposa o esposo por muerte",
-    "clueEn": "Said of someone who has lost a spouse to death",
-    "translationEn": "widowed",
-    "status": "auto-only"
-  },
-  {
     "id": "es-B1-volante",
     "language": "es",
     "word": "volante",
@@ -7921,7 +7815,7 @@
     "themes": [
       "transport"
     ],
-    "clue": "Pieza redonda que el conductor gira para dirigir el coche",
+    "clue": "Pieza redonda que el conductor gira para dirigir el auto",
     "clueEn": "Round part the driver turns to steer the car",
     "translationEn": "steering wheel",
     "status": "auto-only"
