@@ -6,7 +6,6 @@ export type IconName =
   | 'forward'
   | 'play'
   | 'plus'
-  | 'flame'
   | 'clock'
   | 'list'
   | 'bulb'
@@ -29,6 +28,16 @@ export function Icon({ name, size = 18, color, strokeWidth = 2.2 }: Props) {
   );
 }
 
+// Two-tone filled flame for the streak pill; viewBox is taller than the stroke icons.
+export function FlameIcon({ size, outer, inner }: { size: number; outer: ColorValue; inner: ColorValue }) {
+  return (
+    <Svg width={size} height={(size * 28) / 24} viewBox="0 0 24 28" aria-hidden pointerEvents="none">
+      <Path d="M12 1c1.2 5 7 8 7 15a7 7 0 0 1-14 0c0-2.6 1.1-4.5 2.6-6 .4 2.3 1.7 3.5 2.9 3.8C9.8 9.5 10.5 4.5 12 1z" fill={outer} />
+      <Path d="M12 14c.6 2 2.6 3 2.6 5.6a2.6 2.6 0 0 1-5.2 0c0-2.2 1.8-3.4 2.6-5.6z" fill={inner} />
+    </Svg>
+  );
+}
+
 type Stroke = { stroke: ColorValue; strokeWidth: number; strokeLinecap: 'round'; strokeLinejoin: 'round'; fill: 'none' };
 
 function glyph(name: IconName, color: ColorValue, s: Stroke) {
@@ -41,8 +50,6 @@ function glyph(name: IconName, color: ColorValue, s: Stroke) {
       return <Path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" fill={color} />;
     case 'plus':
       return <Path d="M12 5v14M5 12h14" {...s} />;
-    case 'flame':
-      return <Path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-1.8.8-3 1.8-4 .3 1.6 1.2 2.4 2 2.6C10.5 9 11 5.5 12 3z" {...s} />;
     case 'clock':
       return (
         <>

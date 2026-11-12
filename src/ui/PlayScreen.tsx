@@ -23,7 +23,7 @@ import { GridViewport } from './GridViewport';
 import { Keyboard } from './Keyboard';
 import { Icon, type IconName } from './Icon';
 import { Header, ScreenFrame, goBack } from './ScreenFrame';
-import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette, type Palette } from './theme';
+import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, glass, radius, space, usePalette, type Palette } from './theme';
 
 const MAX_GRID_WIDTH = MAX_CONTENT_WIDTH;
 const MAX_CELL = 60;
@@ -164,9 +164,10 @@ export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChang
               onPress={() => setCluesOpen(true)}
               accessibilityRole="button"
               accessibilityLabel="Clues"
-              style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.cluesButton, pressed && styles.pressedGlass]}
             >
-              <Icon name="list" size={18} color={palette.text} />
+              <Icon name="list" size={16} color={palette.text} />
+              <Text style={styles.cluesText}>Clues</Text>
             </Pressable>
           </>
         }
@@ -344,14 +345,17 @@ function makeStyles(p: Palette) {
       fontVariant: ['tabular-nums'],
       minWidth: 34,
     },
-    iconButton: {
-      width: MIN_TOUCH,
-      height: MIN_TOUCH,
+    cluesButton: {
+      ...glass(p),
+      minHeight: MIN_TOUCH,
+      paddingHorizontal: space.l,
       borderRadius: MIN_TOUCH / 2,
-      backgroundColor: p.surface,
+      flexDirection: 'row',
       alignItems: 'center',
-      justifyContent: 'center',
+      gap: space.s,
     },
+    cluesText: { color: p.text, fontFamily: font.semibold, fontSize: 14 },
+    pressedGlass: { opacity: 0.8 },
     headerButton: {
       minHeight: MIN_TOUCH,
       paddingHorizontal: space.l,
@@ -385,7 +389,7 @@ function makeStyles(p: Palette) {
       width: '100%',
       maxWidth: MAX_CONTENT_WIDTH,
       alignSelf: 'center',
-      backgroundColor: p.bg,
+      backgroundColor: p.sheet,
       borderTopLeftRadius: 28,
       borderTopRightRadius: 28,
       paddingTop: space.s,

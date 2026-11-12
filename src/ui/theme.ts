@@ -1,14 +1,27 @@
 import { Platform, useColorScheme } from 'react-native';
+import type { Level } from '../domain/levels';
 import { useHydrated } from './useHydrated';
+
+export type Gradient = readonly string[];
+type Tint = { bg: string; text: string };
 
 export type Palette = {
   scheme: 'light' | 'dark';
+  // Solid stand-in for the gradient: under the tab bar's rounded corners and behind the web page.
   bg: string;
-  // Soft fill for cards, chips and secondary buttons.
+  // Top-to-bottom screen background, stops at BACKDROP_STOPS.
+  backdrop: Gradient;
+  // Translucent cards that sit on the backdrop.
+  glass: string;
+  glassBorder: string;
+  glassShadow: string;
+  // Modal sheets, and the rows and pressed states inside them.
+  sheet: string;
   surface: string;
   // The keyboard panel; keys and action buttons sit on it in `raised`.
   panel: string;
   raised: string;
+  tabBar: string;
   border: string;
   text: string;
   textMuted: string;
@@ -17,10 +30,15 @@ export type Palette = {
   accentTint: string;
   // Accent-coloured text and icons that sit on `accentTint` or `bg`.
   accentStrong: string;
-  // High-contrast fill for the main call to action.
-  inverse: string;
+  // Main call to action (Continue, Play, the picked theme).
+  hero: Gradient;
+  heroShadow: string;
   inverseText: string;
   inverseMuted: string;
+  streakBg: string;
+  flameOuter: string;
+  flameInner: string;
+  level: Record<Level, Tint>;
   segment: string;
   cell: string;
   slotTint: string;
@@ -31,26 +49,43 @@ export type Palette = {
   revealedText: string;
 };
 
+export const BACKDROP_STOPS = [0, 0.24, 0.52, 1] as const;
+
 export const palettes: Record<'light' | 'dark', Palette> = {
   light: {
     scheme: 'light',
-    bg: '#FFFFFF',
-    surface: '#F3F4F6',
-    panel: '#ECEEF2',
+    bg: '#ECEAFB',
+    backdrop: ['#B9D5FB', '#DCE9FD', '#EEF2FD', '#ECEAFB'],
+    glass: 'rgba(255,255,255,0.66)',
+    glassBorder: 'rgba(255,255,255,0.9)',
+    glassShadow: '0px 8px 24px rgba(70,90,170,0.10)',
+    sheet: '#F7F8FE',
+    surface: '#E9EDFB',
+    panel: 'rgba(255,255,255,0.56)',
     raised: '#FFFFFF',
-    border: '#E5E7EB',
-    text: '#101319',
-    textMuted: '#5B616E',
+    tabBar: '#FAF9FE',
+    border: '#DDE2F2',
+    text: '#0E1220',
+    textMuted: '#3D4663',
     accent: '#2F5BEA',
     accentText: '#FFFFFF',
-    accentTint: '#E8EEFF',
-    accentStrong: '#1E3FAE',
-    inverse: '#101319',
+    accentTint: '#CFE1FC',
+    accentStrong: '#1A3FA8',
+    hero: ['#131831', '#1A2150', '#3B2F8F'],
+    heroShadow: '0px 10px 24px rgba(26,33,80,0.30)',
     inverseText: '#FFFFFF',
-    inverseMuted: '#C5CAD3',
-    segment: '#E5E7EB',
-    cell: '#E9ECF1',
-    slotTint: '#C9D8FF',
+    inverseMuted: '#C9CEE6',
+    streakBg: '#2B3A73',
+    flameOuter: '#FF8A1F',
+    flameInner: '#FFD15C',
+    level: {
+      A2: { bg: '#C9EFD8', text: '#0B6B3A' },
+      B1: { bg: '#CFE1FC', text: '#1A3FA8' },
+      B2: { bg: '#DCD6FA', text: '#3A22A0' },
+    },
+    segment: 'rgba(255,255,255,0.5)',
+    cell: 'rgba(255,255,255,0.84)',
+    slotTint: '#B7CBFF',
     cursorText: '#FFFFFF',
     keyAlt: '#CDD1D9',
     correctBg: '#D7F2E1',
@@ -59,25 +94,40 @@ export const palettes: Record<'light' | 'dark', Palette> = {
   },
   dark: {
     scheme: 'dark',
-    bg: '#0E1116',
-    surface: '#1A1E26',
-    panel: '#161A21',
-    raised: '#262B35',
-    border: '#2A303B',
-    text: '#F2F4F7',
-    textMuted: '#A0A7B4',
+    bg: '#15132A',
+    backdrop: ['#13213F', '#111A33', '#0F1529', '#15132A'],
+    glass: 'rgba(255,255,255,0.07)',
+    glassBorder: 'rgba(255,255,255,0.10)',
+    glassShadow: '0px 8px 24px rgba(0,0,0,0.25)',
+    sheet: '#161B2E',
+    surface: '#222943',
+    panel: 'rgba(255,255,255,0.05)',
+    raised: '#2A3150',
+    tabBar: '#1A1830',
+    border: '#2C3452',
+    text: '#F2F4FA',
+    textMuted: '#A5ADC6',
     accent: '#5B82FF',
     accentText: '#0E1116',
-    accentTint: '#1C2747',
+    accentTint: '#22305C',
     accentStrong: '#A9BEFF',
-    inverse: '#F2F4F7',
-    inverseText: '#101319',
-    inverseMuted: '#4A505C',
-    segment: '#262B35',
-    cell: '#232833',
-    slotTint: '#28396A',
+    hero: ['#2D45B8', '#3A3CB0', '#5A3FC4'],
+    heroShadow: '0px 10px 24px rgba(0,0,0,0.35)',
+    inverseText: '#FFFFFF',
+    inverseMuted: '#D3D8F0',
+    streakBg: '#2B3A73',
+    flameOuter: '#FF8A1F',
+    flameInner: '#FFD15C',
+    level: {
+      A2: { bg: '#163824', text: '#6FD69A' },
+      B1: { bg: '#22305C', text: '#A9BEFF' },
+      B2: { bg: '#2E2560', text: '#C6B9FF' },
+    },
+    segment: 'rgba(255,255,255,0.06)',
+    cell: 'rgba(255,255,255,0.12)',
+    slotTint: '#2D427E',
     cursorText: '#0E1116',
-    keyAlt: '#3A414F',
+    keyAlt: '#3A425F',
     correctBg: '#163824',
     correctText: '#6FD69A',
     revealedText: '#E6B450',
@@ -115,4 +165,8 @@ export function usePalette(): Palette {
 // One handler per platform: wiring both would fire twice. delayPressIn is web-only, hence the spread.
 export function tapProps(handler: () => void): { onPress?: () => void; onPressIn?: () => void } {
   return Platform.OS === 'web' ? { onPressIn: handler, ...{ delayPressIn: 0 } } : { onPress: handler };
+}
+
+export function glass(p: Palette) {
+  return { backgroundColor: p.glass, borderWidth: 1, borderColor: p.glassBorder, boxShadow: p.glassShadow } as const;
 }

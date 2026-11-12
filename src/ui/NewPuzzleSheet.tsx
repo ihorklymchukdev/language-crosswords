@@ -1,6 +1,7 @@
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LEVEL_NAMES, LEVELS, type Level } from '../domain/levels';
+import { HeroFill } from './GradientFill';
 import { Icon } from './Icon';
 import { MAX_CONTENT_WIDTH, font, radius, space, usePalette } from './theme';
 
@@ -20,7 +21,7 @@ export function NewPuzzleSheet({ visible, onPick, onThemes, onClose }: Props) {
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
       <View style={styles.root}>
         <Pressable style={styles.backdrop} onPress={onClose} accessibilityLabel="Close" />
-        <View style={[styles.sheet, { backgroundColor: palette.bg, paddingBottom: insets.bottom + space.l }]}>
+        <View style={[styles.sheet, { backgroundColor: palette.sheet, paddingBottom: insets.bottom + space.l }]}>
           <View style={[styles.grabber, { backgroundColor: palette.border }]} />
           <Text style={[styles.title, { color: palette.text }]} accessibilityRole="header">
             New crossword
@@ -33,16 +34,16 @@ export function NewPuzzleSheet({ visible, onPick, onThemes, onClose }: Props) {
               accessibilityLabel={`New ${level} ${LEVEL_NAMES[level]} crossword`}
               style={({ pressed }) => row(pressed)}
             >
-              <View style={[styles.badge, { backgroundColor: palette.accentTint }]}>
-                <Text style={[styles.badgeText, { color: palette.accentStrong }]}>{level}</Text>
+              <View style={[styles.badge, { backgroundColor: palette.level[level].bg }]}>
+                <Text style={[styles.badgeText, { color: palette.level[level].text }]}>{level}</Text>
               </View>
               <Text style={[styles.label, { color: palette.text }]}>{LEVEL_NAMES[level]}</Text>
               <Icon name="forward" color={palette.textMuted} />
             </Pressable>
           ))}
           <Pressable onPress={onThemes} accessibilityRole="button" style={({ pressed }) => row(pressed)}>
-            <View style={[styles.badge, { backgroundColor: palette.segment }]}>
-              <Icon name="practice" size={20} strokeWidth={2} color={palette.text} />
+            <View style={[styles.badge, { backgroundColor: palette.accentTint }]}>
+              <Icon name="practice" size={20} strokeWidth={2} color={palette.accentStrong} />
             </View>
             <Text style={[styles.label, { color: palette.text }]}>Pick a theme</Text>
             <Icon name="forward" color={palette.textMuted} />
@@ -50,8 +51,9 @@ export function NewPuzzleSheet({ visible, onPick, onThemes, onClose }: Props) {
           <Pressable
             onPress={onClose}
             accessibilityRole="button"
-            style={({ pressed }) => [styles.cancel, { backgroundColor: palette.inverse }, pressed && { opacity: 0.85 }]}
+            style={({ pressed }) => [styles.cancel, { boxShadow: palette.heroShadow }, pressed && { opacity: 0.85 }]}
           >
+            <HeroFill palette={palette} radius={CANCEL_RADIUS} />
             <Text style={[styles.cancelText, { color: palette.inverseText }]}>Cancel</Text>
           </Pressable>
         </View>
@@ -59,6 +61,8 @@ export function NewPuzzleSheet({ visible, onPick, onThemes, onClose }: Props) {
     </Modal>
   );
 }
+
+const CANCEL_RADIUS = 22;
 
 const styles = StyleSheet.create({
   root: { flex: 1, justifyContent: 'flex-end' },
@@ -87,6 +91,6 @@ const styles = StyleSheet.create({
   badge: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
   badgeText: { fontFamily: font.display, fontSize: 16 },
   label: { flex: 1, fontFamily: font.semibold, fontSize: 16 },
-  cancel: { minHeight: 56, paddingVertical: space.m, marginTop: space.xs, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  cancel: { minHeight: 56, paddingVertical: space.m, marginTop: space.xs, borderRadius: CANCEL_RADIUS, alignItems: 'center', justifyContent: 'center' },
   cancelText: { fontFamily: font.semibold, fontSize: 17 },
 });

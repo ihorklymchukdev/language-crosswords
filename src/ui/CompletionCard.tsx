@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { formatTime } from './format';
+import { HeroFill } from './GradientFill';
 import { font, radius, space, type Palette } from './theme';
 
 export type CardAction = { label: string; onPress: () => void; primary?: boolean };
@@ -44,17 +45,20 @@ export function CompletionCard({ palette, timeMs, revealed, translated, message,
             accessibilityRole="button"
             style={({ pressed }) => [
               styles.button,
-              { backgroundColor: a.primary ? palette.accent : palette.surface },
+              a.primary ? { boxShadow: palette.heroShadow } : { backgroundColor: palette.surface },
               pressed && styles.pressed,
             ]}
           >
-            <Text style={[styles.buttonText, { color: a.primary ? palette.accentText : palette.text }]}>{a.label}</Text>
+            {a.primary && <HeroFill palette={palette} radius={BUTTON_RADIUS} />}
+            <Text style={[styles.buttonText, { color: a.primary ? palette.inverseText : palette.text }]}>{a.label}</Text>
           </Pressable>
         ))}
       </View>
     </View>
   );
 }
+
+const BUTTON_RADIUS = 18;
 
 const styles = StyleSheet.create({
   card: { borderRadius: radius.sheet, padding: space.l + 4, gap: space.m, marginHorizontal: space.xs },
@@ -69,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     minHeight: 54,
     paddingVertical: space.s,
-    borderRadius: 18,
+    borderRadius: BUTTON_RADIUS,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: space.m,

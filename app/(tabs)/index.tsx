@@ -16,10 +16,11 @@ import { useLocalToday } from '../../src/home/useLocalToday';
 import { useProgress } from '../../src/progress/progress-context';
 import { currentStreak } from '../../src/progress/streak';
 import { formatLongDate, formatShortDate, formatTime } from '../../src/ui/format';
-import { Icon } from '../../src/ui/Icon';
+import { HeroFill } from '../../src/ui/GradientFill';
+import { FlameIcon, Icon } from '../../src/ui/Icon';
 import { NewPuzzleSheet } from '../../src/ui/NewPuzzleSheet';
 import { Card, ContentColumn, LinkRow, SectionLabel, TabPage } from '../../src/ui/Page';
-import { font, radius, space, usePalette, type Palette } from '../../src/ui/theme';
+import { font, glass, radius, space, usePalette, type Palette } from '../../src/ui/theme';
 import { useHydrated } from '../../src/ui/useHydrated';
 
 const STATUS_LABEL: Record<DailyStatus, string> = {
@@ -59,19 +60,23 @@ export default function TodayScreen() {
 
   const streakPill = ready && (
     <View
-      style={[styles.pill, { backgroundColor: palette.surface }]}
+      style={[styles.pill, { backgroundColor: palette.streakBg }]}
       accessible
       accessibilityLabel={streakLine(streak, solvedToday)}
     >
-      <Icon name="flame" size={14} color={solvedToday ? palette.accent : palette.textMuted} />
-      <Text style={[styles.pillText, { color: palette.textMuted }]}>
+      <FlameIcon
+        size={14}
+        outer={solvedToday ? palette.flameOuter : palette.inverseMuted}
+        inner={solvedToday ? palette.flameInner : palette.streakBg}
+      />
+      <Text style={[styles.pillText, { color: palette.inverseText }]}>
         {streak === 0 ? 'Start your streak today' : `${streak}-day streak`}
       </Text>
     </View>
   );
 
   const footer = ready && (
-    <View style={[styles.footer, { backgroundColor: palette.bg }]}>
+    <View style={styles.footer}>
       <ContentColumn>
         <View style={styles.footerButtons}>
           {unfinished && (
@@ -79,10 +84,11 @@ export default function TodayScreen() {
               onPress={() => openPractice({ level: unfinished.spec.level, id: unfinished.spec.id })}
               accessibilityRole="button"
               accessibilityLabel={`Continue ${[unfinished.spec.level, unfinishedTheme].filter(Boolean).join(' ')} crossword, ${formatTime(unfinished.elapsedMs)}`}
-              style={({ pressed }) => [styles.continue, { backgroundColor: palette.inverse }, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.continue, { boxShadow: palette.heroShadow }, pressed && styles.pressed]}
             >
+              <HeroFill palette={palette} radius={CTA_RADIUS} />
               <View style={[styles.playCircle, { backgroundColor: palette.accent }]}>
-                <Icon name="play" size={16} color={palette.accentText} />
+                <Icon name="play" size={16} color={palette.inverseText} />
               </View>
               <View style={styles.continueText}>
                 <Text style={[styles.continueTitle, { color: palette.inverseText }]}>Continue</Text>
@@ -100,10 +106,11 @@ export default function TodayScreen() {
             accessibilityRole="button"
             style={({ pressed }) => [
               styles.newButton,
-              { backgroundColor: unfinished ? palette.surface : palette.inverse },
+              unfinished ? glass(palette) : { boxShadow: palette.heroShadow },
               pressed && styles.pressed,
             ]}
           >
+            {!unfinished && <HeroFill palette={palette} radius={NEW_RADIUS} />}
             <Icon name="plus" color={unfinished ? palette.text : palette.inverseText} />
             <Text style={[styles.newText, { color: unfinished ? palette.text : palette.inverseText }]}>New crossword</Text>
           </Pressable>
@@ -177,22 +184,16 @@ function DailyCard({ daily, palette }: { daily: DailyRef; palette: Palette }) {
   const started = daily.status !== 'not-started';
   const solved = daily.status === 'solved';
   const statusColor = solved ? palette.correctText : started ? palette.accentStrong : palette.textMuted;
+  const tint = palette.level[daily.level];
   return (
     <Pressable
       onPress={() => openDaily(daily.date, daily.level)}
       accessibilityRole="button"
       accessibilityLabel={`${daily.level} ${LEVEL_NAMES[daily.level]} daily, ${STATUS_LABEL[daily.status]}`}
-      style={({ pressed }) => [styles.card, { backgroundColor: pressed ? palette.border : palette.surface }]}
+      style={({ pressed }) => [styles.card, glass(palette), pressed && styles.pressed]}
     >
-      <View
-        style={[
-          styles.badge,
-          { backgroundColor: solved ? palette.correctBg : started ? palette.accentTint : palette.segment },
-        ]}
-      >
-        <Text style={[styles.badgeText, { color: solved ? palette.correctText : started ? palette.accentStrong : palette.text }]}>
-          {daily.level}
-        </Text>
+      <View style={[styles.badge, { backgroundColor: tint.bg }]}>
+        <Text style={[styles.badgeText, { color: tint.text }]}>{daily.level}</Text>
       </View>
       <View style={styles.cardText}>
         <Text style={[styles.cardTitle, { color: palette.text }]}>{LEVEL_NAMES[daily.level]}</Text>
@@ -210,6 +211,9 @@ function DailyCard({ daily, palette }: { daily: DailyRef; palette: Palette }) {
   );
 }
 
+const CTA_RADIUS = 24;
+const NEW_RADIUS = 22;
+
 const styles = StyleSheet.create({
   loading: { marginTop: space.xxl },
   pill: {
@@ -217,53 +221,57 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 6,
     height: 30,
-    paddingHorizontal: space.m,
+    paddingStart: 10,
+    paddingEnd: space.m,
     borderRadius: radius.pill,
+    boxShadow: '0px 4px 12px rgba(43,58,115,0.28)',
   },
-  pillText: { fontFamily: font.medium, fontSize: 13 },
-  section: { gap: 10 },
+  pillText: { fontFamily: font.semibold, fontSize: 13 },
+  section: { gap: space.m },
   card: {
-    minHeight: 76,
+    minHeight: 78,
     paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
-    paddingHorizontal: space.l,
-    borderRadius: radius.card,
+    paddingStart: 14,
+    paddingEnd: space.l,
+    borderRadius: radius.sheet,
   },
-  badge: { width: 48, height: 48, borderRadius: 14, alignItems: 'center', justifyContent: 'center' },
-  badgeText: { fontFamily: font.display, fontSize: 17 },
+  badge: { width: 50, height: 50, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
+  badgeText: { fontFamily: font.display, fontSize: 18 },
   cardText: { flex: 1, gap: 3 },
-  cardTitle: { fontFamily: font.semibold, fontSize: 17 },
+  cardTitle: { fontFamily: font.displaySemibold, fontSize: 18 },
   statusRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   dot: { width: 6, height: 6, borderRadius: 3 },
-  cardStatus: { fontFamily: font.medium, fontSize: 13 },
+  cardStatus: { fontFamily: font.medium, fontSize: 14 },
   note: { fontFamily: font.regular, fontSize: 13, lineHeight: 18 },
   footer: { paddingTop: space.s, paddingBottom: space.l },
-  footerButtons: { paddingHorizontal: space.l + 4, gap: 10 },
+  footerButtons: { paddingHorizontal: space.l + 4, gap: space.m },
   continue: {
-    minHeight: 68,
+    minHeight: 72,
     paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
-    paddingHorizontal: space.l + 4,
-    borderRadius: 22,
+    paddingStart: space.l,
+    paddingEnd: space.l + 4,
+    borderRadius: CTA_RADIUS,
   },
-  playCircle: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
+  playCircle: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
   continueText: { flex: 1, minWidth: 0, gap: 2 },
-  continueTitle: { fontFamily: font.semibold, fontSize: 17 },
+  continueTitle: { fontFamily: font.displaySemibold, fontSize: 18 },
   continueDetail: { fontFamily: font.medium, fontSize: 13 },
-  continueTime: { fontFamily: font.displaySemibold, fontSize: 15, fontVariant: ['tabular-nums'] },
+  continueTime: { fontFamily: font.displaySemibold, fontSize: 16, fontVariant: ['tabular-nums'] },
   newButton: {
-    minHeight: 54,
+    minHeight: 56,
     paddingVertical: space.m,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: space.s,
-    borderRadius: 18,
+    borderRadius: NEW_RADIUS,
   },
-  newText: { fontFamily: font.semibold, fontSize: 16 },
+  newText: { fontFamily: font.displaySemibold, fontSize: 17 },
   pressed: { opacity: 0.85 },
 });
