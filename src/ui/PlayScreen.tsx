@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
 import {
-  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -14,6 +13,7 @@ import { lettersMatch } from '../play/matching';
 import { activeSlot, displayLetter, type PlayState } from '../play/play-state';
 import type { Puzzle } from '../play/puzzle';
 import { usePlay } from '../play/usePlay';
+import { BottomSheet } from './BottomSheet';
 import { CLUE_BAR_MIN_HEIGHT, ClueBar, ClueBarSizer } from './ClueBar';
 import { ClueList } from './ClueList';
 import { CompletionCard, type CardAction } from './CompletionCard';
@@ -259,25 +259,25 @@ export function PlayScreen({ puzzle, initial, title, badge, doneMessage, onChang
         )}
       </View>
 
-      <Modal visible={cluesOpen} transparent animationType="slide" onRequestClose={() => setCluesOpen(false)}>
-        <View style={styles.sheetRoot}>
-          <Pressable style={styles.backdrop} onPress={() => setCluesOpen(false)} accessibilityLabel="Close clues" />
-          <View style={[styles.sheet, { paddingBottom: insets.bottom + space.l }]}>
-            <View style={styles.grabber} />
-            <View style={styles.sheetHeader}>
-              <Text style={styles.sheetTitle}>Clues</Text>
-              <Pressable
-                onPress={() => setCluesOpen(false)}
-                accessibilityRole="button"
-                style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
-              >
-                <Text style={styles.headerButtonText}>Close</Text>
-              </Pressable>
-            </View>
-            <ScrollView contentContainerStyle={styles.sheetContent}>{clueList}</ScrollView>
-          </View>
+      <BottomSheet
+        visible={cluesOpen}
+        onClose={() => setCluesOpen(false)}
+        closeLabel="Close clues"
+        style={[styles.sheet, { paddingBottom: insets.bottom + space.l }]}
+      >
+        <View style={styles.grabber} />
+        <View style={styles.sheetHeader}>
+          <Text style={styles.sheetTitle}>Clues</Text>
+          <Pressable
+            onPress={() => setCluesOpen(false)}
+            accessibilityRole="button"
+            style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
+          >
+            <Text style={styles.headerButtonText}>Close</Text>
+          </Pressable>
         </View>
-      </Modal>
+        <ScrollView contentContainerStyle={styles.sheetContent}>{clueList}</ScrollView>
+      </BottomSheet>
     </ScreenFrame>
   );
 }
@@ -382,8 +382,6 @@ function makeStyles(p: Palette) {
     },
     bottomCompact: { paddingTop: space.s, gap: 6 },
     actions: { flexDirection: 'row', gap: space.s, paddingHorizontal: space.xs, paddingBottom: space.xs },
-    sheetRoot: { flex: 1, justifyContent: 'flex-end' },
-    backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(16,19,25,0.4)' },
     sheet: {
       maxHeight: '75%',
       width: '100%',
