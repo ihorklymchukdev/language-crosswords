@@ -12,7 +12,8 @@
     "test": "TZ=Europe/Madrid jest",
     "catalogue:validate": "tsx scripts/validate-catalogue.ts",
     "daily:build": "tsx scripts/build-daily-schedule.ts",
-    "daily:preview": "tsx scripts/daily-preview.ts"
+    "daily:preview": "tsx scripts/daily-preview.ts",
+    "screenshots:frame": "node scripts/frame-screenshots.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/gabarito": "^0.4.2",

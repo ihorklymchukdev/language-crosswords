@@ -12,14 +12,22 @@ Suggested shots: one per unique screen, no repeats (a dark-mode copy of a screen
 
 Google Play also needs `store/play-icon-512.png` (512 x 512) and `store/play-feature-graphic.png` (1024 x 500), already generated from `assets/icon.svg`.
 
-## Captured set
+## Framed set
+
+The upload files (`ios-N.png`, `android-N.png`) are marketing frames: headline, subtitle and a phone frame around the raw capture in `raw/`. Headlines live in `COPY` in `frame.html`. To rebuild after changing copy or replacing a raw capture:
+
+```bash
+npm run screenshots:frame   # needs Google Chrome (override with CHROME=/path/to/chrome)
+```
+
+## Raw captures (`raw/`)
 
 One shot per unique screen, no repeats. Web dev build in headless Chrome with seeded progress, light mode, iPhone 440x956 @3x and Android 432x768 @2.5x, local date 2026-11-12.
 
-| Screen | iPhone 6.9" (1320x2868) | Android (1080x1920) |
+| # | Headline | Screen |
 |---|---|---|
-| Today: 4-day streak, A2 solved, B1/B2 in progress, Continue practice | `ios-1.png` | `android-1.png` |
-| Crossword: B1 daily mid-solve, clue translated | `ios-2.png` | `android-2.png` |
-| Clues list sheet over the B1 daily | `ios-3.png` | `android-3.png` |
-| Completion card over the solved A2 daily | `ios-4.png` | `android-4.png` |
-| Practice picker, B1 and Food selected | `ios-5.png` | `android-5.png` |
+| 1 | Learn Spanish with Crosswords | Today: 4-day streak, A2 solved, B1/B2 in progress, Continue practice |
+| 2 | Solve Crosswords to Learn Spanish | B1 daily mid-solve, clue translated |
+| 3 | Use Clues and Learn Naturally | Clues list sheet over the B1 daily |
+| 4 | Build Your Vocabulary | Completion card over the solved A2 daily |
+| 5 | Choose a Level and a Theme | Practice picker, B1 and Food selected |
