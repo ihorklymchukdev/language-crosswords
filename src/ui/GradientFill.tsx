@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Svg, { Defs, LinearGradient, Rect, Stop } from 'react-native-svg';
 import { BACKDROP_STOPS, type Gradient, type Palette } from './theme';
 
@@ -16,16 +16,20 @@ export function GradientFill({ colors, stops, direction = 'vertical', radius = 0
   const id = `g${useId().replace(/[^A-Za-z0-9_-]/g, '')}`;
   const end = direction === 'vertical' ? { x1: '0', y1: '0', x2: '0', y2: '1' } : { x1: '0', y1: '0.35', x2: '1', y2: '0.65' };
   return (
-    <Svg style={StyleSheet.absoluteFill} width="100%" height="100%" pointerEvents="none" aria-hidden>
-      <Defs>
-        <LinearGradient id={id} {...end}>
-          {colors.map((c, i) => (
-            <Stop key={i} offset={stops?.[i] ?? (colors.length > 1 ? i / (colors.length - 1) : 0)} stopColor={c} />
-          ))}
-        </LinearGradient>
-      </Defs>
-      <Rect x="0" y="0" width="100%" height="100%" rx={radius} ry={radius} fill={`url(#${id})`} />
-    </Svg>
+    // On native, Svg's 100% size resolves against the parent's padded content box and wins over
+    // absoluteFill, so the gradient came up short on padded buttons. The wrapper has no padding.
+    <View style={StyleSheet.absoluteFill} pointerEvents="none" aria-hidden>
+      <Svg width="100%" height="100%">
+        <Defs>
+          <LinearGradient id={id} {...end}>
+            {colors.map((c, i) => (
+              <Stop key={i} offset={stops?.[i] ?? (colors.length > 1 ? i / (colors.length - 1) : 0)} stopColor={c} />
+            ))}
+          </LinearGradient>
+        </Defs>
+        <Rect x="0" y="0" width="100%" height="100%" rx={radius} ry={radius} fill={`url(#${id})`} />
+      </Svg>
+    </View>
   );
 }
 
