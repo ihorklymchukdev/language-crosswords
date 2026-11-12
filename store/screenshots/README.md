@@ -14,13 +14,12 @@ Google Play also needs `store/play-icon-512.png` (512 x 512) and `store/play-fea
 
 ## Captured set
 
-Web export in headless Chrome with seeded progress, iPhone 440x956 @3x and Android 432x768 @2.5x, local date 2026-11-12.
+One shot per unique screen, no repeats. Web dev build in headless Chrome with seeded progress, light mode, iPhone 440x956 @3x and Android 432x768 @2.5x, local date 2026-11-12.
 
-| Scene | iPhone 6.9" (1320x2868) | Android (1080x1920) |
+| Screen | iPhone 6.9" (1320x2868) | Android (1080x1920) |
 |---|---|---|
 | Today: 4-day streak, A2 solved, B1/B2 in progress, Continue practice | `ios-1.png` | `android-1.png` |
-| B1 daily in progress, light, clue translated | `ios-2.png` | `android-2.png` |
-| 13x13 practice grid in progress | `ios-3.png` | `android-3.png` |
-| B2 daily, dark mode, mostly solved, one revealed letter | `ios-4.png` | `android-4.png` |
-| Completion card over the solved A2 daily | `ios-5.png` | `android-5.png` |
-| Practice picker, B1 and Food selected | `ios-6.png` | `android-6.png` |
+| Crossword: B1 daily mid-solve, clue translated | `ios-2.png` | `android-2.png` |
+| Clues list sheet over the B1 daily | `ios-3.png` | `android-3.png` |
+| Completion card over the solved A2 daily | `ios-4.png` | `android-4.png` |
+| Practice picker, B1 and Food selected | `ios-5.png` | `android-5.png` |
