@@ -27,7 +27,7 @@ One shot per unique screen, no repeats. Web dev build in headless Chrome with se
 | # | Headline | Screen |
 |---|---|---|
 | 1 | Learn Spanish with Crosswords | Today: 4-day streak, A2 solved, B1/B2 in progress, Continue practice |
-| 2 | Solve Crosswords to Learn Spanish | B1 daily mid-solve, clue translated |
-| 3 | Use Clues and Learn Naturally | Clues list sheet over the B1 daily |
+| 2 | Solve Crosswords to Learn Spanish | B2 daily mid-solve, 3 Down (merluza) translated |
+| 3 | Use Clues and Learn Naturally | Clues list sheet over the B2 daily |
 | 4 | Build Your Vocabulary | Completion card over the solved A2 daily |
 | 5 | Choose a Level and a Theme | Practice picker, B1 and Food selected |
