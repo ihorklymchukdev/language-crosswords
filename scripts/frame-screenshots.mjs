@@ -61,7 +61,8 @@ try {
       for (let i = 0; i < 100 && !ready; i++) {
         await sleep(100);
         ready = await evaluate(
-          `document.readyState === 'complete' && document.getElementById('shot')?.naturalWidth > 0 &&
+          `location.search === ${JSON.stringify(template.search)} && document.readyState === 'complete' &&
+           document.getElementById('shot')?.naturalWidth > 0 &&
            document.fonts.check('800 40px Gabarito') && document.fonts.check('500 40px Onest')`,
         ).catch(() => false);
       }
