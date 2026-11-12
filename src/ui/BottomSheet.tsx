@@ -38,7 +38,8 @@ export function BottomSheet({ visible, onClose, closeLabel, style, children }: P
 
   return (
     <Modal visible={mounted} transparent animationType="none" onRequestClose={onClose} statusBarTranslucent>
-      <View style={styles.root}>
+      {/* Ignore taps while closing so a quick double tap can't fire an action twice. */}
+      <View style={styles.root} pointerEvents={visible ? 'auto' : 'none'}>
         <Animated.View style={[styles.backdrop, { opacity: progress }]}>
           <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityLabel={closeLabel} />
         </Animated.View>
