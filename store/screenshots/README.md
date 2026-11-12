@@ -4,7 +4,8 @@ Capture from the web build (or a simulator) once the UI is final. 2-8 per store 
 
 | Store | Required size | Notes |
 |---|---|---|
-| App Store, iPhone 6.9" | 1320 x 2868 | Required |
+| App Store, iPhone 6.9" | 1320 x 2868 | `ios-N.png` |
+| App Store, iPhone 6.1"/6.3" (medium display) | 1206 x 2622 | `ios-6.3-N.png`, the slot App Store Connect shows first |
 | App Store, iPhone 6.5" | 1284 x 2778 | Optional |
 | Google Play, phone | 1080 x 1920 or larger (16:9 to 9:16) | Required |
 
@@ -14,7 +15,7 @@ Google Play also needs `store/play-icon-512.png` (512 x 512) and `store/play-fea
 
 ## Framed set
 
-The upload files (`ios-N.png`, `android-N.png`) are marketing frames: headline, subtitle and a phone frame around the raw capture in `raw/`. Headlines live in `COPY` in `frame.html`. To rebuild after changing copy or replacing a raw capture:
+The upload files (`ios-N.png`, `ios-6.3-N.png`, `android-N.png`) are marketing frames: headline, subtitle and a phone frame around the raw capture in `raw/`. Headlines live in `COPY` in `frame.html`. To rebuild after changing copy or replacing a raw capture:
 
 ```bash
 npm run screenshots:frame   # needs Google Chrome (override with CHROME=/path/to/chrome)
