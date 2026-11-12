@@ -4,7 +4,9 @@ const DISPLAY_NAME = 'Crossword Spanish';
 
 const config: ExpoConfig = {
   name: DISPLAY_NAME,
+  owner: 'ihorklymchuk',
   slug: 'language-crosswords',
+  extra: { eas: { projectId: '0813f745-457f-468a-b1c6-508376815f1c' } },
   scheme: 'crosswords',
   version: '1.0.0',
   orientation: 'portrait',
