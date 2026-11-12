@@ -1,6 +1,6 @@
 import type { ExpoConfig } from 'expo/config';
 
-const DISPLAY_NAME = 'Crossword Spanish';
+const DISPLAY_NAME = 'Palabrix';
 
 const config: ExpoConfig = {
   name: DISPLAY_NAME,

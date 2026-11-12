@@ -1,6 +1,7 @@
 # Store listing
 
-Working name: **Crossword Spanish** (placeholder; the owner may rename. The name lives in `DISPLAY_NAME` in `app.config.ts`).
+App name: **Palabrix** (`DISPLAY_NAME` in `app.config.ts`, shown under the home-screen icon).
+Store listings use the longer **Palabrix: Spanish Crosswords** so the app shows up in searches for "spanish crossword".
 Bundle id / package: `com.ihorklymchuk.crosswords`. Version: 1.0.0.
 
 ## Shared
@@ -14,7 +15,7 @@ Bundle id / package: `com.ihorklymchuk.crosswords`. Version: 1.0.0.
 
 ## App Store (iOS)
 
-**Name** (30 max): Crossword Spanish
+**Name** (30 max): Palabrix: Spanish Crosswords
 
 **Subtitle** (30 max): Daily Spanish mini crosswords
 
@@ -69,7 +70,7 @@ All answers None / No:
 
 ## Google Play
 
-**App name** (30 max): Crossword Spanish
+**App name** (30 max): Palabrix: Spanish Crosswords
 
 **Short description** (80 max):
 Daily mini crosswords to learn Spanish. Offline, no ads, no account.
@@ -114,11 +115,10 @@ Category: Reference, News or Educational (or Game > Puzzle if the questionnaire 
 ## Owner checklist
 
 1. Create an Expo account (expo.dev), then `npx eas-cli login`.
-2. `npx eas-cli init`. It cannot write to a dynamic `app.config.ts`, so tell Claude (or add by hand) `owner` and `extra.eas.projectId` in `app.config.ts`.
+2. `npx eas-cli init` (done: `owner` and `extra.eas.projectId` are set in `app.config.ts`).
 3. iOS: create the app record in App Store Connect (bundle id `com.ihorklymchuk.crosswords`, name, primary language English (US), SKU), then
    `npx eas-cli build -p ios --profile production` and `npx eas-cli submit -p ios --profile production` (it prompts for the ascAppId and Apple credentials).
    Fill in the listing, privacy label, age rating, screenshots (`store/screenshots/`), and press Submit for Review.
 4. Android: create the app in Play Console, fill the listing, data safety and content rating.
    `npx eas-cli build -p android --profile production` produces an AAB. Upload it manually to the first Closed testing release (the first upload must be manual; later ones can use `eas submit` with a service account key).
 5. New personal Play developer accounts need a closed test with at least 12 testers opted in for 14 continuous days before applying for production access.
-6. Optional: rename the app (`DISPLAY_NAME` in `app.config.ts` and the listing name above).
