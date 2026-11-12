@@ -6,9 +6,11 @@ import { mkdtempSync, readdirSync, readFileSync, writeFileSync, existsSync, rmSy
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
+import { pathToFileURL } from 'node:url';
 
 const dir = resolve(import.meta.dirname, '../store/screenshots');
 const SIZES = { ios: [1320, 2868], android: [1080, 1920] };
+const template = pathToFileURL(join(dir, 'frame.html'));
 const chromePath = process.env.CHROME ?? 'google-chrome';
 
 const profile = mkdtempSync(join(tmpdir(), 'frame-chrome-'));
@@ -49,14 +51,18 @@ try {
     const [, store, n] = raw.match(/^(ios|android)-(\d+)\.png$/);
     const [width, height] = SIZES[store];
     await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false });
-    await send('Page.navigate', { url: `file://${dir}/frame.html?store=${store}&n=${n}` });
-    for (let i = 0; i < 100; i++) {
+    template.search = `?store=${store}&n=${n}`;
+    await send('Page.navigate', { url: template.href });
+    let ready = false;
+    for (let i = 0; i < 100 && !ready; i++) {
       await sleep(100);
-      const ready = await evaluate(
-        `document.readyState === 'complete' && !!document.getElementById('shot')?.complete && document.getElementById('shot').naturalWidth > 0`,
+      ready = await evaluate(
+        `document.readyState === 'complete' && document.getElementById('shot')?.naturalWidth > 0 &&
+         document.fonts.check('800 40px Gabarito') && document.fonts.check('500 40px Onest')`,
       ).catch(() => false);
-      if (ready) break;
     }
+    // A missing COPY entry or font leaves the page half-built; never save that.
+    if (!ready) throw new Error(`${raw}: frame did not finish loading (COPY entry for ${n}? fonts?)`);
     await sleep(200);
     const { data } = await send('Page.captureScreenshot', { format: 'png', clip: { x: 0, y: 0, width, height, scale: 1 } });
     writeFileSync(join(dir, `${store}-${n}.png`), Buffer.from(data, 'base64'));
