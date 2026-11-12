@@ -1,4 +1,4 @@
-# Language Crosswords
+# Palabrix
 
 Offline Spanish mini-crossword app (Expo, iOS/Android/web, no backend).
 

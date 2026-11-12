@@ -1,4 +1,4 @@
-# Language Crosswords
+# Palabrix
 
 An offline Spanish mini-crossword app built with Expo (iOS, Android, web). No backend; progress is stored on the device.
 
