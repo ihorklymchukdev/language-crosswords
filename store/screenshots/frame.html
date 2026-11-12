@@ -57,12 +57,12 @@
     4: ['Build Your', '', 'Vocabulary', 'Practice Spanish words and see your progress'],
     5: ['Choose a Level', 'and a', 'Theme', 'Crosswords for your pace and interests'],
   };
-  const SIZES = { ios: [1320, 2868], android: [1080, 1920] };
 
   const q = new URLSearchParams(location.search);
   const store = q.get('store');
   const n = q.get('n');
-  const [w, h] = SIZES[store];
+  const w = Number(q.get('w'));
+  const h = Number(q.get('h'));
   const [line1, lead, highlight, sub] = COPY[n];
   const u = w / 100;
   const root = document.documentElement.style;
