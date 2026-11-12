@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from 'react-native';
 import type { Slot } from '../play/puzzle';
 import { Icon, type IconName } from './Icon';
-import { MIN_TOUCH, font, radius, space, type Palette } from './theme';
+import { MIN_TOUCH, font, glass, radius, space, type Palette } from './theme';
 
 export const CLUE_BAR_MIN_HEIGHT = 68;
 
@@ -25,14 +25,14 @@ export const ClueBar = memo(function ClueBar({ slot, translated, minHeight, pale
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={4}
-      style={({ pressed }) => [styles.chevron, pressed && { backgroundColor: palette.border }]}
+      style={({ pressed }) => [styles.chevron, pressed && { backgroundColor: palette.glass }]}
     >
       <Icon name={icon} color={palette.textMuted} />
     </Pressable>
   );
 
   return (
-    <View style={[styles.bar, { minHeight, backgroundColor: palette.surface }]}>
+    <View style={[styles.bar, glass(palette), { minHeight }]}>
       {chevron('Previous clue', 'back', onPrev)}
       <Pressable
         onPress={onToggle}
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 2,
-    borderRadius: radius.card,
+    borderRadius: radius.sheet,
     paddingVertical: space.s,
     paddingHorizontal: space.xs,
   },

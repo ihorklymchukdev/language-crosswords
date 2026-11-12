@@ -4,9 +4,10 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { themesForLevel } from '../../src/catalogue/catalogue';
 import { LEVEL_NAMES, LEVELS, type Level } from '../../src/domain/levels';
 import type { Theme } from '../../src/domain/types';
+import { HeroFill } from '../../src/ui/GradientFill';
 import { Icon } from '../../src/ui/Icon';
 import { ContentColumn, SectionLabel, TabPage } from '../../src/ui/Page';
-import { font, radius, space, usePalette, type Palette } from '../../src/ui/theme';
+import { font, glass, space, usePalette, type Palette } from '../../src/ui/theme';
 
 const MIN_THEME_WORDS = 12;
 // Keeps three segments on one line at phone width.
@@ -22,9 +23,11 @@ function ThemeChip({ title, subtitle, selected, onPress, palette }: ChipProps) {
       accessibilityState={{ checked: selected }}
       style={({ pressed }) => [
         styles.chip,
-        { backgroundColor: selected ? palette.inverse : pressed ? palette.border : palette.surface },
+        selected ? { boxShadow: palette.heroShadow } : glass(palette),
+        pressed && !selected && styles.pressed,
       ]}
     >
+      {selected && <HeroFill palette={palette} radius={CHIP_RADIUS} />}
       <View style={styles.chipText}>
         <Text style={[styles.chipTitle, { color: selected ? palette.inverseText : palette.text }]} numberOfLines={1}>
           {title}
@@ -35,7 +38,7 @@ function ThemeChip({ title, subtitle, selected, onPress, palette }: ChipProps) {
       </View>
       {selected && (
         <View style={[styles.check, { backgroundColor: palette.accent }]}>
-          <Icon name="check" size={12} strokeWidth={3.2} color={palette.accentText} />
+          <Icon name="check" size={12} strokeWidth={3.2} color={palette.inverseText} />
         </View>
       )}
     </Pressable>
@@ -69,17 +72,18 @@ export default function PracticeScreen() {
       eyebrow="Practice"
       title="A fresh crossword"
       footer={
-        <View style={[styles.footer, { backgroundColor: palette.bg, borderTopColor: palette.border }]}>
+        <View style={styles.footer}>
           <ContentColumn>
             <Pressable
               onPress={play}
               accessibilityRole="button"
               accessibilityLabel={`Play ${level} ${theme?.nameEn ?? 'any theme'}`}
-              style={({ pressed }) => [styles.play, { backgroundColor: palette.accent }, pressed && { opacity: 0.85 }]}
+              style={({ pressed }) => [styles.play, { boxShadow: palette.heroShadow }, pressed && styles.pressed]}
             >
-              <Icon name="play" size={16} color={palette.accentText} />
-              <Text style={[styles.playText, { color: palette.accentText }]}>Play</Text>
-              <Text style={[styles.playDetail, { color: palette.accentText }]} numberOfLines={1}>
+              <HeroFill palette={palette} radius={PLAY_RADIUS} />
+              <Icon name="play" size={16} color={palette.inverseText} />
+              <Text style={[styles.playText, { color: palette.inverseText }]}>Play</Text>
+              <Text style={[styles.playDetail, { color: palette.inverseText }]} numberOfLines={1}>
                 {level} · {theme?.nameEn ?? 'Any theme'}
               </Text>
             </Pressable>
@@ -138,6 +142,9 @@ export default function PracticeScreen() {
   );
 }
 
+const CHIP_RADIUS = 18;
+const PLAY_RADIUS = 22;
+
 const styles = StyleSheet.create({
   lead: { fontFamily: font.regular, fontSize: 14, lineHeight: 20, marginTop: -space.s },
   section: { gap: 10 },
@@ -162,14 +169,14 @@ const styles = StyleSheet.create({
     gap: space.s,
     paddingStart: 14,
     paddingEnd: space.m,
-    borderRadius: radius.m,
+    borderRadius: CHIP_RADIUS,
   },
   chipText: { flex: 1, minWidth: 0, gap: 1 },
   chipTitle: { fontFamily: font.semibold, fontSize: 15 },
   chipSubtitle: { fontFamily: font.medium, fontSize: 12 },
   check: { width: 22, height: 22, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
   spacer: { flex: 1 },
-  footer: { paddingTop: space.m, paddingBottom: space.l, borderTopWidth: StyleSheet.hairlineWidth },
+  footer: { paddingTop: space.m, paddingBottom: space.l },
   play: {
     marginHorizontal: space.l + 4,
     minHeight: 60,
@@ -178,8 +185,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: space.m,
     paddingHorizontal: space.l + 4,
-    borderRadius: radius.card,
+    borderRadius: PLAY_RADIUS,
   },
   playText: { flex: 1, fontFamily: font.semibold, fontSize: 17 },
   playDetail: { fontFamily: font.medium, fontSize: 14, flexShrink: 1 },
+  pressed: { opacity: 0.85 },
 });

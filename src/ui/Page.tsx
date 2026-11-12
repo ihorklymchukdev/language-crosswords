@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { DocumentTitle } from './DocumentTitle';
+import { Backdrop } from './GradientFill';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Icon } from './Icon';
 import { Header } from './ScreenFrame';
-import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, radius, space, usePalette } from './theme';
+import { MAX_CONTENT_WIDTH, MIN_TOUCH, font, glass, radius, space, usePalette } from './theme';
 
 // Unlike ScreenFrame, the scroll view spans the window so on desktop the scrollbar sits at the
 // window edge and the wheel works over the side margins; only the content is centred.
@@ -18,6 +19,7 @@ function PageFrame({ children, padBottom }: { children: ReactNode; padBottom: bo
         { backgroundColor: palette.bg, paddingTop: insets.top, paddingBottom: padBottom ? insets.bottom : 0 },
       ]}
     >
+      <Backdrop palette={palette} />
       {children}
     </View>
   );
@@ -134,7 +136,7 @@ export function LinkRow({ label, detail, onPress, first }: RowProps) {
       style={({ pressed }) => [
         styles.row,
         !first && { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.border },
-        pressed && { backgroundColor: palette.border },
+        pressed && { backgroundColor: palette.glass },
       ]}
     >
       <View style={styles.rowText}>
@@ -148,7 +150,7 @@ export function LinkRow({ label, detail, onPress, first }: RowProps) {
 
 export function Card({ children }: { children: ReactNode }) {
   const palette = usePalette();
-  return <View style={[styles.card, { backgroundColor: palette.surface }]}>{children}</View>;
+  return <View style={[styles.card, glass(palette)]}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
@@ -168,7 +170,7 @@ const styles = StyleSheet.create({
   bulletRow: { flexDirection: 'row', alignItems: 'flex-start', gap: space.m },
   bulletDot: { width: 6, height: 6, borderRadius: 3, marginTop: 8 },
   bulletText: { flex: 1 },
-  card: { borderRadius: radius.card, overflow: 'hidden' },
+  card: { borderRadius: radius.sheet, overflow: 'hidden' },
   row: {
     minHeight: MIN_TOUCH + 12,
     flexDirection: 'row',
