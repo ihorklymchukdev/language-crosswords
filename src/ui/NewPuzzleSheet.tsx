@@ -1,6 +1,7 @@
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LEVEL_NAMES, LEVELS, type Level } from '../domain/levels';
+import { BottomSheet } from './BottomSheet';
 import { HeroFill } from './GradientFill';
 import { Icon } from './Icon';
 import { MAX_CONTENT_WIDTH, font, radius, space, usePalette } from './theme';
@@ -18,55 +19,53 @@ export function NewPuzzleSheet({ visible, onPick, onThemes, onClose }: Props) {
   const row = (pressed: boolean) => [styles.row, { backgroundColor: pressed ? palette.border : palette.surface }];
 
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-      <View style={styles.root}>
-        <Pressable style={styles.backdrop} onPress={onClose} accessibilityLabel="Close" />
-        <View style={[styles.sheet, { backgroundColor: palette.sheet, paddingBottom: insets.bottom + space.l }]}>
-          <View style={[styles.grabber, { backgroundColor: palette.border }]} />
-          <Text style={[styles.title, { color: palette.text }]} accessibilityRole="header">
-            New crossword
-          </Text>
-          {LEVELS.map((level) => (
-            <Pressable
-              key={level}
-              onPress={() => onPick(level)}
-              accessibilityRole="button"
-              accessibilityLabel={`New ${level} ${LEVEL_NAMES[level]} crossword`}
-              style={({ pressed }) => row(pressed)}
-            >
-              <View style={[styles.badge, { backgroundColor: palette.level[level].bg }]}>
-                <Text style={[styles.badgeText, { color: palette.level[level].text }]}>{level}</Text>
-              </View>
-              <Text style={[styles.label, { color: palette.text }]}>{LEVEL_NAMES[level]}</Text>
-              <Icon name="forward" color={palette.textMuted} />
-            </Pressable>
-          ))}
-          <Pressable onPress={onThemes} accessibilityRole="button" style={({ pressed }) => row(pressed)}>
-            <View style={[styles.badge, { backgroundColor: palette.accentTint }]}>
-              <Icon name="practice" size={20} strokeWidth={2} color={palette.accentStrong} />
-            </View>
-            <Text style={[styles.label, { color: palette.text }]}>Pick a theme</Text>
-            <Icon name="forward" color={palette.textMuted} />
-          </Pressable>
-          <Pressable
-            onPress={onClose}
-            accessibilityRole="button"
-            style={({ pressed }) => [styles.cancel, { boxShadow: palette.heroShadow }, pressed && { opacity: 0.85 }]}
-          >
-            <HeroFill palette={palette} radius={CANCEL_RADIUS} />
-            <Text style={[styles.cancelText, { color: palette.inverseText }]}>Cancel</Text>
-          </Pressable>
+    <BottomSheet
+      visible={visible}
+      onClose={onClose}
+      closeLabel="Close"
+      style={[styles.sheet, { backgroundColor: palette.sheet, paddingBottom: insets.bottom + space.l }]}
+    >
+      <View style={[styles.grabber, { backgroundColor: palette.border }]} />
+      <Text style={[styles.title, { color: palette.text }]} accessibilityRole="header">
+        New crossword
+      </Text>
+      {LEVELS.map((level) => (
+        <Pressable
+          key={level}
+          onPress={() => onPick(level)}
+          accessibilityRole="button"
+          accessibilityLabel={`New ${level} ${LEVEL_NAMES[level]} crossword`}
+          style={({ pressed }) => row(pressed)}
+        >
+          <View style={[styles.badge, { backgroundColor: palette.level[level].bg }]}>
+            <Text style={[styles.badgeText, { color: palette.level[level].text }]}>{level}</Text>
+          </View>
+          <Text style={[styles.label, { color: palette.text }]}>{LEVEL_NAMES[level]}</Text>
+          <Icon name="forward" color={palette.textMuted} />
+        </Pressable>
+      ))}
+      <Pressable onPress={onThemes} accessibilityRole="button" style={({ pressed }) => row(pressed)}>
+        <View style={[styles.badge, { backgroundColor: palette.accentTint }]}>
+          <Icon name="practice" size={20} strokeWidth={2} color={palette.accentStrong} />
         </View>
-      </View>
-    </Modal>
+        <Text style={[styles.label, { color: palette.text }]}>Pick a theme</Text>
+        <Icon name="forward" color={palette.textMuted} />
+      </Pressable>
+      <Pressable
+        onPress={onClose}
+        accessibilityRole="button"
+        style={({ pressed }) => [styles.cancel, { boxShadow: palette.heroShadow }, pressed && { opacity: 0.85 }]}
+      >
+        <HeroFill palette={palette} radius={CANCEL_RADIUS} />
+        <Text style={[styles.cancelText, { color: palette.inverseText }]}>Cancel</Text>
+      </Pressable>
+    </BottomSheet>
   );
 }
 
 const CANCEL_RADIUS = 22;
 
 const styles = StyleSheet.create({
-  root: { flex: 1, justifyContent: 'flex-end' },
-  backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(16,19,25,0.4)' },
   sheet: {
     width: '100%',
     maxWidth: MAX_CONTENT_WIDTH,
