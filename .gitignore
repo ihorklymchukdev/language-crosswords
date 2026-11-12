@@ -8,3 +8,5 @@ web-build/
 expo-env.d.ts
 *.log
 .DS_Store
+
+*.Identifier
